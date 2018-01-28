@@ -1,0 +1,1 @@
+{:rename-macros {}, :renames {}, :use-macros {}, :excludes #{}, :name myfrontend.dev, :imports nil, :requires {core myfrontend.core, myfrontend.core myfrontend.core, devtools devtools.core, devtools.core devtools.core}, :cljs.spec/speced-vars [], :uses nil, :cljs.spec/registry-ref [], :require-macros nil, :doc nil}
