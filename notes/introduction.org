@@ -1,0 +1,72 @@
+* Introduction
+
+** Our company
+The DAC is a german organization dedicated to developing individual software
+solutions for their customers that help them simplify their business processes
+and improve productivity.
+
+The founders of the company are Dennis, Antonio and Christoph, hence the name of
+the company DAC, whereas this abbreviation also stands for "Digital Analog
+Converter", which is a reference to the technical area in which we work.
+
+We pay special attention to the usability of our products and have the desire to
+provide our customers with a software solution customized to their specific
+needs.
+
+We believe that a software-assisted approach can help to make a company's
+activities more environmentally friendly and efficient.
+
+** Staff
+*** Dennis: Frontend Designer
+  The role of the Frontend Designer is to create an eye-catching and easy-to-use
+  user interface for the job. Thereby it is important to be in close contact
+  with the customers and to ask for feedback based on concepts and prototypes.
+*** Tony: System Designer
+The role of the system designer is to ensure the reliable intercommunication between the backend and the hardware components.
+Its job is to keep the costs for the hardware and implementation within the budget provided by the customer.
+*** Christoph: Software Architect
+The role of the software architect is to divide the software solution into
+smaller sub-components and to ensure the cooperation of these sub-components. It
+is important to identify problems and evaluate special software solutions. His
+task in our team is also to develop the backend system that the frontend is
+accessing.
+
+** iCare - our product
+[[./content/iCare.jpeg]]
+Our product iCare, which we have developed as part of a customer order, is
+supposed to be a software solution for a care home that is meant to make the
+daily routine easier for all parties involved, as well as guaranteeing safety
+and comfort.
+
+It was taken into account that these care homes are mainly inhabited by elderly
+people who are uneasy about new technologies. For this reason, we have set
+ourselves the goal of ensuring that residents have as little involvement with
+the system as possible and that most of the interaction is carried out by a
+staff member.
+
+
+** Aim
+In addition to implementing customer requirements, we also focus on respecting
+environmental standards. Our product is designed to provide patients with a
+feel-good experience that excels in terms of high technological requirements and
+efficient energy consumption.
+
+** Objectives
+
+
+We want to ensure that 90 percent of our customers are extremely satisfied with
+the software solution and that it is still in heavy use after 5 years. Also, 90
+percent of the employees who use our software on a daily basis claim that their
+daily work routine has been significantly simplified.
+
+Customer satisfaction is important to us, but not everything can be taken into
+account if the given budget of the contract is not sufficient. We aim to achieve
+a 10 percent increase in sales each year.
+
+We want to invest 30 percent of our revenue in training courses in order to
+invest in the know-how of our employees.
+
+Our product helps customers to better monitor their water and electricity
+consumption and thus make an ecological contribution to environmental
+protection. The aim is to reduce their consumption by 25 percent once the
+product has been introduced.
