@@ -1,0 +1,5 @@
+package iCareServer;
+
+public class GreetingController {
+
+}
