@@ -1,138 +1,49 @@
 
-\chapter{Introduction}
-\label{sec:org4319e3a}
-
-\section{Our company}
-\label{sec:orgd179591}
-
-\begin{center}
-\includegraphics[width=.9\linewidth]{./content/dac-logo.png}
-\end{center}
-The DAC is a german organization dedicated to developing individual software
-solutions for their customers that help them simplify their business processes
-and improve productivity.
-
-The founders of the company are Dennis, Antonio and Christoph, hence the name of
-the company DAC, whereas this abbreviation also stands for "Digital Analog
-Converter", which is a reference to the technical area in which we work.
-
-We pay special attention to the usability of our products and have the desire to
-provide our customers with a software solution customized to their specific
-needs.
-
-We believe that a software-assisted approach can help to make a company's
-activities more environmentally friendly and efficient.
-
-\section{Staff}
-\label{sec:org5dfa11e}
-\subsection{Dennis: Frontend Designer}
-\label{sec:org6caf21f}
-The role of the Frontend Designer is to create an eye-catching and easy-to-use
-user interface for the job. Thereby it is important to be in close contact
-with the customers and to ask for feedback based on concepts and prototypes.
-\subsection{Tony: System Designer}
-\label{sec:orgd672b29}
-The role of the system designer is to ensure the reliable intercommunication between the backend and the hardware components.
-Its job is to keep the costs for the hardware and implementation within the budget provided by the customer.
-\subsection{Christoph: Software Architect}
-\label{sec:orgd60e06e}
-The role of the software architect is to divide the software solution into
-smaller sub-components and to ensure the cooperation of these sub-components. It
-is important to identify problems and evaluate special software solutions. His
-task in our team is also to develop the backend system that the frontend is
-accessing.
-
-\section{iCare - our product}
-\label{sec:org698e8a5}
-\begin{center}
-\includegraphics[width=.9\linewidth]{./content/iCare.jpeg}
-\end{center}
-Our product iCare, which we have developed as part of a customer order, is
-supposed to be a software solution for a care home that is meant to make the
-daily routine easier for all parties involved, as well as guaranteeing safety
-and comfort.
-
-It was taken into account that these care homes are mainly inhabited by elderly
-people who are uneasy about new technologies. For this reason, we have set
-ourselves the goal of ensuring that residents have as little involvement with
-the system as possible and that most of the interaction is carried out by a
-staff member.
-
-
-\section{Aim}
-\label{sec:orgaba15cc}
-In addition to implementing customer requirements, we also focus on respecting
-environmental standards. Our product is designed to provide patients with a
-feel-good experience that excels in terms of high technological requirements and
-efficient energy consumption.
-
-\section{Objectives}
-\label{sec:orgff22d59}
-
-
-We want to ensure that 90 percent of our customers are extremely satisfied with
-the software solution and that it is still in heavy use after 5 years. Also, 90
-percent of the employees who use our software on a daily basis claim that their
-daily work routine has been significantly simplified.
-
-Customer satisfaction is important to us, but not everything can be taken into
-account if the given budget of the contract is not sufficient. We aim to achieve
-a 10 percent increase in sales each year.
-
-We want to invest 30 percent of our revenue in training courses in order to
-invest in the know-how of our employees.
-
-Our product helps customers to better monitor their water and electricity
-consumption and thus make an ecological contribution to environmental
-protection. The aim is to reduce their consumption by 25 percent once the
-product has been introduced.
-
-
 \chapter{Planning}
-\label{sec:orge06dd9d}
+\label{sec:org2610146}
 \section{Requirements}
-\label{sec:org6a5ecd1}
+\label{sec:org945b9f4}
 \subsection{Safety and Security}
-\label{sec:orga1c3bc3}
+\label{sec:org34def69}
 •	Access control with different levels of security for different purposes e.g. medical cabinet, and 24/7 building access.
 •	Surveillance of the public spaces
 •	Smoke detection
 •	Window and door status listed in the central hub
 •	Safe deposit of monitoring feeds
 \subsection{24/7 real-time Health Monitoring facilities}
-\label{sec:org1842f6f}
+\label{sec:orge43b7b8}
 •	Monitoring of inhabitants without breaking the laws of privacy
 •	Heart rate
 •	Location tracking
 •	Blood pressure
 •	Emergency button
 \subsection{Engineering services}
-\label{sec:org2d40135}
+\label{sec:org3b95898}
 •	Central hub that lists the status of the building infrastructure 
 •	A silent alarm to the personal if a critical device is failing
 \subsection{Energy and water consumption}
-\label{sec:org0c88b27}
+\label{sec:orgd85891f}
 •	Monitoring of water and energy consumption
 •	Central heating control
 \subsection{Cleanliness and outbuilding services}
-\label{sec:orgf3e925c}
+\label{sec:orga2926ad}
 •	Tracking of cleaning services
 •	An easy way to report contaminations
 \subsection{Residents satisfaction}
-\label{sec:org2cfcf55}
+\label{sec:orgd7a0521}
 •	A pleasant living temperature all year round that each individual can set in his own room
 •	Optional registration for health services like heart rate and location tracking
 •	Info board for events
 
 
 \section{Specifications}
-\label{sec:org16da3dc}
+\label{sec:org1cd7898}
 
 \subsection{Safety and Security}
-\label{sec:org9a5100a}
+\label{sec:orgdf376cf}
 \begin{enumerate}
 \item Access control with different levels of security for different purposes e.g. medical cabinet, and 24/7 building access.
-\label{sec:org328d6a2}
+\label{sec:orgfd41c27}
 \begin{itemize}
 \item Authorization / Authentication (REST, OAuth2.0)
 \item Roles
@@ -158,7 +69,7 @@ access the info board & x & x & x & x &  & \\
 
 
 \item Surveillance of the public spaces
-\label{sec:org6a6e4cf}
+\label{sec:org073d37f}
 \begin{itemize}
 \item video cameras for (hardware purchase and installation)
 \begin{itemize}
@@ -177,7 +88,7 @@ access the info board & x & x & x & x &  & \\
 \end{itemize}
 \end{itemize}
 \item Smoke detection
-\label{sec:org8ea9f1c}
+\label{sec:orgd44eac6}
 \begin{itemize}
 \item In every room or corridor
 \item Smoke detectors with network capabilities
@@ -186,14 +97,14 @@ access the info board & x & x & x & x &  & \\
 \end{itemize}
 
 \item Window and door status listed in the central hub
-\label{sec:org2c53bb6}
+\label{sec:org4d440ca}
 \begin{itemize}
 \item Buy wireless detectors/ sensors for doors and windows
 \item Create interface for sensors to communicate with the central system
 \item Dashboard should visualize the state of the doors and windows
 \end{itemize}
 \item Safe deposit of monitoring feeds
-\label{sec:org52a31ca}
+\label{sec:orgc8e70b4}
 \begin{itemize}
 \item Central system needs a database for persitent data storage
 \item Redudant backup system
@@ -201,10 +112,10 @@ access the info board & x & x & x & x &  & \\
 \end{enumerate}
 
 \subsection{24/7 real-time Health Monitoring facilities}
-\label{sec:orge998bf6}
+\label{sec:orgb3edcb5}
 \begin{enumerate}
 \item Monitoring of inhabitants without breaking the laws of privacy
-\label{sec:org915ce82}
+\label{sec:orgd852888}
 \begin{itemize}
 \item Buy motion detectors ( + installation)
 \item Create interface for detectors to communicate with the backend
@@ -212,7 +123,7 @@ access the info board & x & x & x & x &  & \\
 \end{itemize}
 
 \item Health Monitoring
-\label{sec:orgbb3713c}
+\label{sec:org97d117c}
 \begin{itemize}
 \item Heart rate  monitoring with smart wrist bands
 \begin{itemize}
@@ -234,10 +145,10 @@ access the info board & x & x & x & x &  & \\
 \end{enumerate}
 
 \subsection{Engineering services}
-\label{sec:org3b4fce3}
+\label{sec:org6af4132}
 \begin{enumerate}
 \item Central hub that lists the status of the building infrastructure
-\label{sec:org5a0176e}
+\label{sec:orgeccf6fd}
 \begin{itemize}
 \item A silent alarm to the personal if a critical device is failing
 \item technical staff should be able to access the state of devices that are out of order
@@ -249,7 +160,7 @@ access the info board & x & x & x & x &  & \\
 \end{itemize}
 \end{itemize}
 \item ticket system for manual issue managment and tracking their state
-\label{sec:org860a184}
+\label{sec:orge41382f}
 \begin{itemize}
 \item technical staff and medical staff can manage the issues (add, update, delete)
 \item design and implement a GUI for the staff that allows them to manage the issues
@@ -257,10 +168,10 @@ access the info board & x & x & x & x &  & \\
 \end{enumerate}
 
 \subsection{Energy and water consumption}
-\label{sec:org93c2ae9}
+\label{sec:orged4964c}
 \begin{enumerate}
 \item Monitoring of water and energy consumption
-\label{sec:org7d05037}
+\label{sec:org2364917}
 \begin{itemize}
 \item Design and implement a GUI for the technical staff to monitor the consumption
 \item Buy smart power meters and water meters that can communicate with the backend
@@ -268,7 +179,7 @@ access the info board & x & x & x & x &  & \\
 \item Implement filtering and searching features for the stored data
 \end{itemize}
 \item Central heating control
-\label{sec:orgf3ef2e0}
+\label{sec:org2012d7b}
 \begin{itemize}
 \item Residents can control the room temperature
 \item Purchase heating controls that can communicate with the backend (installation and integration into  the system)
@@ -277,16 +188,16 @@ access the info board & x & x & x & x &  & \\
 \end{itemize}
 \end{enumerate}
 \subsection{Cleanliness and outbuilding services}
-\label{sec:org867ab04}
+\label{sec:org14b7883}
 \begin{enumerate}
 \item Tracking of cleaning services
-\label{sec:orge67c556}
+\label{sec:org20c4fcd}
 \begin{itemize}
 \item design and implement a GUI for the medical staff to save the date and room for which the cleaning service was done
 \item implement backend and database for storing the data
 \end{itemize}
 \item An easy way to report contaminations
-\label{sec:org4bfd95e}
+\label{sec:orgc4fa354}
 \begin{itemize}
 \item design an GUI for HMI-panels that provide an easy way to report contaminations
 \begin{itemize}
@@ -302,22 +213,22 @@ access the info board & x & x & x & x &  & \\
 \end{itemize}
 \end{enumerate}
 \subsection{Residents satisfaction}
-\label{sec:orgb5c815b}
+\label{sec:org903f351}
 \begin{enumerate}
 \item CORE
-\label{sec:orgf837404}
+\label{sec:orgaf1de29}
 \begin{itemize}
 \item automatic feedback generation based on input of manager (food quality, room
 temperature, cleanliness of rooms, (maybe) staff kindness)
 \end{itemize}
 \item Optional registration for health services like heart rate and location tracking
-\label{sec:org0b51600}
+\label{sec:org0528d08}
 \begin{itemize}
 \item design and implement a GUI for the medical staff for storing which person was given a wrist band
 \item implement backend and database for storing the data
 \end{itemize}
 \item Info board for events
-\label{sec:org3709f8b}
+\label{sec:orgcba1be4}
 \begin{itemize}
 \item Purchase flat screen (installation and integration in the system)
 \item Web frontend that is also accessable on mobile devices
@@ -327,7 +238,7 @@ temperature, cleanliness of rooms, (maybe) staff kindness)
 
 
 \subsection{Technical Specification}
-\label{sec:orgbdd037d}
+\label{sec:org896d172}
 \begin{itemize}
 \item Settings Page
 \item timer for checking for critical states of
@@ -340,4 +251,16 @@ temperature, cleanliness of rooms, (maybe) staff kindness)
 \item generate templates for reports
 \item mobile app for android tablets (for medical staff and cleaning staff, manager)
 \end{itemize}
+
+
+
+
+\section{Implementation}
+\label{sec:orgaa7b811}
+
+\section{Basic Architecture}
+\label{sec:org0a88fdc}
+\section{Project Plan}
+\label{sec:org8452a3e}
+TODO: Do Grant plan and insert picture here.
 \end{document}
