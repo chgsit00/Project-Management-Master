@@ -1,0 +1,200 @@
+% Created 2017-12-06 Wed 21:25
+% Intended LaTeX compiler: pdflatex
+\documentclass
+[
+ 12pt, % Schriftgröße
+       DIV12,
+       a4paper, % Papierformat
+       oneside, % einseitiges Dokument
+       titlepage, % es wird eine Titelseite verwendet
+       parskip=half, % Abstand zwischen Abs�tzen (halbe Zeile)
+       headings=normal, % Gr��e der �berschriften verkleinern
+       listof=totoc, % Verzeichnisse im Inhaltsverzeichnis auff�hren
+       bibliography=totoc, % Literaturverzeichnis im Inhaltsverzeichnis auff�hren
+       index=totoc, % Index im Inhaltsverzeichnis auff�hren
+       captions=tableheading, % Beschriftung von Tabellen unterhalb ausgeben
+       ]{scrreprt}
+\input{/Users/dennismuller/dotfiles/latexConfig.tex}
+\author{Group 1}
+\date{\today}
+\title{Project Specifications}
+\hypersetup{
+ pdfauthor={Dennis Müller},
+ pdftitle={Project Specifications},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.5.1 (Org mode 9.0.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\chapter{Safety and Security}
+\label{sec:org8e80cf1}
+\section{Access control with different levels of security for different purposes e.g. medical cabinet, and 24/7 building access.}
+\label{sec:org497c288}
+\begin{itemize}
+\item Authorization / Authentication (REST, OAuth2.0)
+\item Roles
+\end{itemize}
+\begin{center}
+\begin{tabular}{lllll}
+ & Admin & Medical Staff & Technical Staff & residents\\
+\hline
+survaillance of public spaces & x &  & x & \\
+state of windows and doors & x & x & x & \\
+smoke alarms & x & x & x & \\
+heart rate / blood pressure & x & x &  & \\
+location tracking & x & x &  & \\
+managing information for info board & x & x &  & \\
+technical state of all devices & x &  & x & \\
+access the info board & x & x & x & x\\
+\end{tabular}
+\end{center}
+
+
+
+
+\section{Surveillance of the public spaces}
+\label{sec:orge645e36}
+\begin{itemize}
+\item video cameras for parking lot and entrances and elevators (hardware purchase and installation)
+\item archive backup file system
+\begin{itemize}
+\item NAS with redundance (RAID 2)
+\item Backup also with (RAID 2)
+\item label the files with location and timestamp for searching later
+\end{itemize}
+\end{itemize}
+\section{Smoke detection}
+\label{sec:org27119f7}
+\begin{itemize}
+\item In every room or corridor
+\item Smoke detectors with network capabilities
+\item Tracking the alarms with within the system (location and time)
+\item Dashboard should be able visualize alarms origin
+\end{itemize}
+
+\section{Window and door status listed in the central hub}
+\label{sec:orgfb89528}
+\begin{itemize}
+\item Buy wireless detectors/ sensors for doors and windows
+\item Create interface for sensors to communicate with the central system
+\item Dashboard should visualize the state of the doors and windows
+\end{itemize}
+\section{Safe deposit of monitoring feeds}
+\label{sec:orgc94021b}
+\begin{itemize}
+\item Central system needs a database for persitent data storage
+\item Redudant backup system
+\end{itemize}
+
+\chapter{24/7 real-time Health Monitoring facilities}
+\label{sec:orgf79df84}
+\section{Monitoring of inhabitants without breaking the laws of privacy}
+\label{sec:org7ea218f}
+\begin{itemize}
+\item Buy motion detectors ( + installation)
+\item Create interface for detectors to communicate with the backend
+\item Dashboard should visualize the data of the motion detectors for each room
+\end{itemize}
+
+\section{Health Monitoring}
+\label{sec:org7095bad}
+\begin{itemize}
+\item Heart rate , blood pressure monitoring with smart wrist bands
+\begin{itemize}
+\item wrist band communicate with the backend
+\item not mandatory for every resident - resident can decide for their own (or doctor orders it)
+\item realtime monitoring via frontend for each resident who has a wrist band by their location (GPS)
+\item implement alarm logic, when monitored health data shows critical state
+\end{itemize}
+
+\item Emergency button
+\begin{itemize}
+\item purchase emergency buttons that can communicate with a central hub or backend
+\item installation and create interface for communication with backend
+\item log the frequency of the usage of each button (location / time) and store it in the database
+\item provide access to the logs by the frontend and implement searching and filtering features
+\end{itemize}
+\end{itemize}
+
+\chapter{Engineering services}
+\label{sec:org9bff4f6}
+\section{Central hub that lists the status of the building infrastructure}
+\label{sec:org7e7f71c}
+\begin{itemize}
+\item A silent alarm to the personal if a critical device is failing
+\item technical staff should be able to access the state of devices that are out of order
+\begin{itemize}
+\item sensors
+\item lights
+\item elevators
+\item heating
+\end{itemize}
+\end{itemize}
+\section{ticket system for manual issue managment and tracking their state}
+\label{sec:org5253110}
+\begin{itemize}
+\item technical staff and medical staff can manage the issues (add, update, delete)
+\item design and implement a GUI for the staff that allows them to manage the issues
+\end{itemize}
+
+
+\chapter{Energy and water consumption}
+\label{sec:org641eca5}
+\section{Monitoring of water and energy consumption}
+\label{sec:org8d5461b}
+\begin{itemize}
+\item Design and implement a GUI for the technical staff to monitor the consumption
+\item Buy smart power meters and water meters that can communicate with the backend
+\item Log and aggragate the data in the database
+\item Implement filtering and searching features for the stored data
+\end{itemize}
+\section{Central heating control}
+\label{sec:orgce3cc51}
+\begin{itemize}
+\item Residents can control the room temperature
+\item Purchase heating controls that can communicate with the backend (installation and integration into  the system)
+\item Purchase temperature sensors that can communicate with the backend (installation and integration into  the system)
+\item Dashboard should visualize the temperature and heating settings of each room
+\end{itemize}
+\chapter{Cleanliness and outbuilding services}
+\label{sec:org5fc046d}
+\section{Tracking of cleaning services}
+\label{sec:orgf9a4e45}
+\begin{itemize}
+\item design and implement a GUI for the medical staff to save the date and room for which the cleaning service was done
+\item implement backend and database for storing the data
+\end{itemize}
+\section{An easy way to report contaminations}
+\label{sec:orgb90ba73}
+\begin{itemize}
+\item design and implement a GUI for the medical staff to report contaminations
+\item implement backend and database for storing the data
+\end{itemize}
+\chapter{Residents satisfaction}
+\label{sec:org01d99e4}
+\section{Optional registration for health services like heart rate and location tracking}
+\label{sec:org6e3ace2}
+\begin{itemize}
+\item design and implement a GUI for the medical staff for storing which person was given a wrist band
+\item implement backend and database for storing the data
+\end{itemize}
+\section{Info board for events}
+\label{sec:orgd5f5818}
+\begin{itemize}
+\item Purchase flat screen (installation and integration in the system)
+\item Web frontend that is also accessable on mobile devices
+\item implement backend and database for storing the data
+\end{itemize}
+
+
+\chapter{Technical Specification}
+\label{sec:org2777fd5}
+\begin{itemize}
+\item Database for data persitents
+\end{itemize}
+\end{document}
