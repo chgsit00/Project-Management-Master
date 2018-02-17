@@ -73,7 +73,7 @@ goog.addDependency("../cljs/repl.js", ['cljs.repl'], ['cljs.core', 'cljs.spec.al
 goog.addDependency("../figwheel/client.js", ['figwheel.client'], ['goog.userAgent.product', 'goog.Uri', 'cljs.core', 'goog.object', 'cljs.core.async', 'figwheel.client.file_reloading', 'figwheel.client.utils', 'cljs.repl', 'figwheel.client.heads_up', 'figwheel.client.socket', 'clojure.string', 'cljs.reader']);
 goog.addDependency("../github_user/component.js", ['github_user.component'], ['reagent.core', 'cljs.core', 'cljs_http.client', 'cljs.core.async']);
 goog.addDependency("../secretary/core.js", ['secretary.core'], ['cljs.core', 'clojure.string', 'clojure.walk']);
-goog.addDependency("../myfrontend/core.js", ['myfrontend.core'], ['github_user.component', 'reagent.core', 'cljs.core', 'cljs_http.client', 'hello_seymore.components', 'cljs.core.async', 'secretary.core']);
+goog.addDependency("../myfrontend/core.js", ['myfrontend.core'], ['greeting.component', 'github_user.component', 'reagent.core', 'cljs.core', 'cljs_http.client', 'hello_seymore.components', 'cljs.core.async', 'secretary.core']);
 goog.addDependency("../devtools/toolbox.js", ['devtools.toolbox'], ['devtools.formatters.markup', 'devtools.formatters.templating', 'cljs.core', 'devtools.protocols']);
 goog.addDependency("../devtools/async.js", ['devtools.async'], ['cljs.core', 'goog.async.nextTick']);
 goog.addDependency("../devtools/reporter.js", ['devtools.reporter'], ['devtools.util', 'cljs.core', 'devtools.context']);
