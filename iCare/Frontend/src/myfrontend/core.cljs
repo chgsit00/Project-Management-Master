@@ -2,6 +2,7 @@
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require
    [github-user.component :refer [github-user-component]]
+   [greeting.component :refer [greeting-component]]
    [reagent.core :as r]
    [secretary.core :as secretary :refer-macros [defroute]]
    [hello-seymore.components :refer [navi-component content-component]]
@@ -18,11 +19,13 @@
      [navi-component]]
     [:div {:class "col-sm-10"}
      [content-component]
+     [greeting-component]
      [github-user-component]]]])
 
 
 (defroute "/users/:id" {:as params}
   (js/console.log (str "User: " (:id params))))
+
 
 ;; -------------------------
 ;; Initialize app
