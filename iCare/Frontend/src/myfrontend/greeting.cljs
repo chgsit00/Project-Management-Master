@@ -1,4 +1,4 @@
-(ns github-user.component
+(ns greeting.component
     (:require-macros [cljs.core.async.macros :refer [go]])
     (:require 
         [reagent.core :as r]
@@ -6,33 +6,26 @@
         [cljs.core.async :refer [<!]]
         ))
         
-(defonce click-count (r/atom 0))
-(defonce github-name (r/atom "username"))
+(defonce json-response (r/atom 0))
 
-(defn github-user-component []
+(defn greeting-component []
     (let 
         [x 12]
         [:div 
-        [:h2 "Welcome to Github user finder"]
-        [:p "type in the user name an press the button"]
-        [:input {
-            :type "text" 
-            :value @github-name
-            :on-change #(reset! github-name (-> % .-target .-value))}]
+        [:h2 "Get Greeting from Java REST Endpoint"]
         [:button.btn-primary {:on-click #(
             (go (let [response 
             (<! (http/get "http://localhost:8080/greeting"
                 {:with-credentials? false})
             )]
-            (reset! click-count (:body response))
+            (reset! json-response (:body response))
             )))}
-            "load github users"]
+            "Call Endpoint"]
         [:button.btn-danger {:on-click #(        
-                (swap! click-count (fn [_] "cleared")))
+                (swap! json-response (fn [_] "cleared")))
                 }
             "clear"]
         [:br]
-        [:img {:src (:avatar_url @click-count) :width "100px" :style {:padding "10px"} }]
         [:table.table 
             [:thead 
             [:tr 
@@ -42,18 +35,13 @@
             ]
         [:tbody
             [:tr
-            [:td {:width "20%"} "Login name:"]
-            [:td (:id @click-count)]
+            [:td {:width "20%"} "ID:"]
+            [:td (:id @json-response)]
             ]
             
             [:tr
-            [:td "Public repos:"]
-            [:td (:content @click-count)]
-            ]
-    
-            [:tr
-            [:td "Url:"]
-            [:td [:a  {:href (:html_url @click-count)} (:html_url @click-count)]]
+            [:td "Content:"]
+            [:td (:content @json-response)]
             ]
         ]
         ] 

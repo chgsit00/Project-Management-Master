@@ -60,6 +60,7 @@ goog.addDependency("../cljs/spec/gen/alpha.js", ['cljs.spec.gen.alpha'], ['cljs.
 goog.addDependency("../figwheel/client/file_reloading.js", ['figwheel.client.file_reloading'], ['goog.string', 'goog.net.jsloader', 'goog.Uri', 'cljs.core', 'goog.object', 'cljs.core.async', 'clojure.set', 'goog.html.legacyconversions', 'figwheel.client.utils', 'goog.async.Deferred', 'clojure.string']);
 goog.addDependency("../devtools/protocols.js", ['devtools.protocols'], ['cljs.core']);
 goog.addDependency("../hello_seymore/components.js", ['hello_seymore.components'], ['reagent.core', 'cljs.core', 'cljs_http.client', 'cljs.core.async']);
+goog.addDependency("../greeting/component.js", ['greeting.component'], ['reagent.core', 'cljs.core', 'cljs_http.client', 'cljs.core.async']);
 goog.addDependency("../devtools/format.js", ['devtools.format'], ['cljs.core', 'devtools.context']);
 goog.addDependency("../devtools/munging.js", ['devtools.munging'], ['cljs.core', 'goog.object', 'goog.string.StringBuffer', 'devtools.context', 'clojure.string']);
 goog.addDependency("../devtools/formatters/helpers.js", ['devtools.formatters.helpers'], ['cljs.core', 'devtools.protocols', 'devtools.format', 'devtools.prefs', 'devtools.munging']);

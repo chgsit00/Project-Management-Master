@@ -12,7 +12,7 @@
     (let 
         [x 12]
         [:div 
-        [:h2 "Greetings from Java server"]
+        [:h2 "Get Greeting from Java REST Endpoint"]
         [:button.btn-primary {:on-click #(
             (go (let [response 
             (<! (http/get "http://localhost:8080/greeting"
@@ -20,7 +20,7 @@
             )]
             (reset! json-response (:body response))
             )))}
-            "call greeting REST"]
+            "Call Endpoint"]
         [:button.btn-danger {:on-click #(        
                 (swap! json-response (fn [_] "cleared")))
                 }
@@ -35,7 +35,7 @@
             ]
         [:tbody
             [:tr
-            [:td {:width "20%"} "ID"]
+            [:td {:width "20%"} "ID:"]
             [:td (:id @json-response)]
             ]
             
