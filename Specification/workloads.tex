@@ -1,0 +1,261 @@
+% Created 2017-12-09 Sat 17:17
+% Intended LaTeX compiler: pdflatex
+\documentclass
+[
+ 12pt, % Schriftgröße
+       DIV12,
+       a4paper, % Papierformat
+       oneside, % einseitiges Dokument
+       titlepage, % es wird eine Titelseite verwendet
+       parskip=half, % Abstand zwischen Abs�tzen (halbe Zeile)
+       headings=normal, % Gr��e der �berschriften verkleinern
+       listof=totoc, % Verzeichnisse im Inhaltsverzeichnis auff�hren
+       bibliography=totoc, % Literaturverzeichnis im Inhaltsverzeichnis auff�hren
+       index=totoc, % Index im Inhaltsverzeichnis auff�hren
+       captions=tableheading, % Beschriftung von Tabellen unterhalb ausgeben
+       ]{scrreprt}
+\input{/Users/dennismuller/dotfiles/latexConfig.tex}
+\author{Dennis Müller}
+\date{\today}
+\title{Workloads}
+\hypersetup{
+ pdfauthor={Dennis Müller},
+ pdftitle={Workloads},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.5.1 (Org mode 9.0.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+
+\chapter{Project Managment Report}
+\label{sec:orgd96ec13}
+\begin{center}
+\begin{tabular}{lr}
+ & Time in hours\\
+optimistic & 10\\
+most likely & 15\\
+pessimistic & 30\\
+\end{tabular}
+\end{center}
+\begin{itemize}
+\item create product requirement catalog (50 / 70 / 100)
+\item create GANTT diagram (5 /10 / 15)
+\item negoitate time and costs with customer (10 / 12 /15 )
+\end{itemize}
+
+\chapter{Hardware prerequisites [Hpre]}
+\label{sec:orgfb33f5b}
+
+\begin{center}
+\begin{tabular}{lr}
+ & Time in hours\\
+optimistic & 10\\
+most likely & 15\\
+pessimistic & 30\\
+\end{tabular}
+\end{center}
+
+
+\section{Video cameras [HpreCam]}
+\label{sec:org3a27049}
+\begin{enumerate}
+\item research for good product
+\begin{itemize}
+\item investigate environment / areas / building (8/10/12)
+\item estimate amounts and total costs (8/10/12)
+\end{itemize}
+\item negotiate with customer (8/10/12)
+\item buy those products (8/10/12)
+\end{enumerate}
+
+\section{Storage [HpreS]}
+\label{sec:orgeb93f9e}
+\begin{enumerate}
+\item research archive backup file system
+\begin{itemize}
+\item NAS with redundance (RAID 2) (4/6/8)
+\item Backup also with (RAID 2) (4/6/8)
+\end{itemize}
+\end{enumerate}
+
+\section{Panels [HpreP]}
+\label{sec:org4b41c6c}
+\begin{enumerate}
+\item research for good product
+\begin{itemize}
+\item investigate environment / areas / building (8/10/12)
+\item estimate amounts and total costs (4/8/12)
+\end{itemize}
+\item negotiate with customer (4/8/12)
+\item buy those products (4/8/12)
+\end{enumerate}
+
+\section{Control Unit (PLC) [HprePLC]}
+\label{sec:orgd40ef86}
+\begin{enumerate}
+\item research for good product
+\begin{itemize}
+\item investigate environment / areas / building (4/8/12)
+\item estimate amounts and total costs (4/8/12)
+\end{itemize}
+\item negotiate with customer (4/8/12)
+\item buy those products (4/8/12)
+\end{enumerate}
+
+\section{Server [HpreSer]}
+\label{sec:org7b31fb6}
+\begin{enumerate}
+\item research for good product
+\begin{itemize}
+\item investigate environment / areas / building (4/8/12)
+\item estimate amounts and total costs (4/8/12)
+\end{itemize}
+\item negotiate with customer (4/8/12)
+\item buy those products (4/8/12)
+\end{enumerate}
+\section{Sensors [HpreSens]}
+\label{sec:org6352bec}
+
+\begin{enumerate}
+\item research for good product
+\begin{itemize}
+\item investigate environment / areas / building (4/8/12)
+\item estimate amounts and total costs (4/8/12)
+\end{itemize}
+\item negotiate with customer (4/8/12)
+\item buy those products (4/8/12)
+\end{enumerate}
+
+
+
+\chapter{Hardware installation [Hin]}
+\label{sec:org2cae8f9}
+
+\begin{center}
+\begin{tabular}{lr}
+ & Time in hours\\
+optimistic & 10\\
+most likely & 15\\
+pessimistic & 30\\
+\end{tabular}
+\end{center}
+
+\section{installation and configuration}
+\label{sec:org7c12187}
+\begin{itemize}
+\item video cameras (8/10/12) [HinCam] 
+\begin{itemize}
+\item dependent on [HpreCam]
+\end{itemize}
+\item storage  (8/10/12)[HinS]
+\begin{itemize}
+\item dependent on [HpreS, HpreCam]
+\item connect video cameras to system
+\end{itemize}
+\item panels (8/10/12)[HinP]
+\begin{itemize}
+\item dependent on [HpreP]
+\item configuration
+\end{itemize}
+\item Control Unit (PLC) (8/10/12) [HinPLC]
+\begin{itemize}
+\item dependent on [HpreP]
+\end{itemize}
+\item Sensors (8/10/12) [HinSens]
+\begin{itemize}
+\item dependent on [HpreSens]
+\end{itemize}
+\end{itemize}
+
+\chapter{Software prerequisites [Spre]}
+\label{sec:org180caa5}
+
+\begin{center}
+\begin{tabular}{lr}
+ & Time in hours\\
+optimistic & 10\\
+most likely & 15\\
+pessimistic & 30\\
+\end{tabular}
+\end{center}
+
+\section{Matlab [SpreMat]}
+\label{sec:orgda25cf6}
+\begin{itemize}
+\item Buy licence / install software  (1/4/8)
+\end{itemize}
+
+\section{PLC IDEs - Automation Studio [SprePLC]}
+\label{sec:org003d4a8}
+\begin{itemize}
+\item Buy licence / install software (1/4/8)
+\end{itemize}
+
+\chapter{Software}
+\label{sec:orgdf36b5c}
+
+\begin{center}
+\begin{tabular}{lr}
+ & Time in hours\\
+optimistic & 10\\
+most likely & 15\\
+pessimistic & 30\\
+\end{tabular}
+\end{center}
+\section{create infrastructure}
+\label{sec:org06c00a2}
+\begin{itemize}
+\item setup wiki (1/4/8)
+\item setup slack (1/2/3)
+\item setup git respository (1/2/3)
+\item setup task managment (1/2/3)
+\end{itemize}
+\section{System analysis}
+\label{sec:org498acda}
+\begin{itemize}
+\item design architecture (24 / 30 / 48)
+\item define components / communication with external systems (interfaces) (24 / 30 / 48)
+\item invastigate time in finding out what technologies we want to use (24 / 30 / 48)
+\item create diagrams(24 / 30 / 48)
+\item describe behaviour of components and depedencies (24 / 30 / 48)
+\item find out problematic and time consuming tasks and challanges (24 / 30 / 48)
+\end{itemize}
+\section{System design}
+\label{sec:org1137d7c}
+\begin{itemize}
+\item design mutliple GUI and Usability concept (48 / 60 / 90 )
+\item gather feedback from customer and redesign concepts (48 / 60 / 90 )
+\item design prototyp with fake data (48 / 60 / 90 )
+\end{itemize}
+\section{System implementation}
+\label{sec:orgf2f809f}
+\begin{itemize}
+\item implement components (200 / 300 / 480)
+\item unit tests (24 / 30 / 48)
+\item integration test (24 / 30 / 48)
+\item E2E testing (24 / 30 / 48)
+\item documentation (40 / 50 / 60)
+\end{itemize}
+
+
+
+\chapter{Delivery}
+\label{sec:org1388080}
+\begin{center}
+\begin{tabular}{lr}
+ & Time in hours\\
+optimistic & 10\\
+most likely & 15\\
+pessimistic & 30\\
+\end{tabular}
+\end{center}
+\begin{itemize}
+\item present / demonstrate system and software (12 / 20 / 30)
+\item get customer approval (1 /10 / 20)
+\end{itemize}
+\end{document}

@@ -1,0 +1,134 @@
+#+title: Workloads
+
+
+* Project Managment Report
+|             | Time in hours |
+| optimistic  |            10 |
+| most likely |            15 |
+| pessimistic |            30 |
+- create product requirement catalog (50 / 70 / 100)
+- create GANTT diagram (5 /10 / 15)
+- negoitate time and costs with customer (10 / 12 /15 )
+
+* Hardware prerequisites [Hpre] 
+
+|             | Time in hours |
+| optimistic  |            10 |
+| most likely |            15 |
+| pessimistic |            30 |
+  
+
+** Video cameras [HpreCam] 
+1. research for good product
+   - investigate environment / areas / building (8/10/12)
+   - estimate amounts and total costs (8/10/12) 
+2. negotiate with customer (8/10/12)
+3. buy those products (8/10/12)
+
+** Storage [HpreS] 
+1. research archive backup file system
+   - NAS with redundance (RAID 2) (4/6/8)
+   - Backup also with (RAID 2) (4/6/8)
+
+** Panels [HpreP]
+1. research for good product
+   - investigate environment / areas / building (8/10/12)
+   - estimate amounts and total costs (4/8/12) 
+2. negotiate with customer (4/8/12)
+3. buy those products (4/8/12)
+
+** Control Unit (PLC) [HprePLC]
+1. research for good product
+   - investigate environment / areas / building (4/8/12)
+   - estimate amounts and total costs (4/8/12) 
+2. negotiate with customer (4/8/12)
+3. buy those products (4/8/12)
+
+** Server [HpreSer]
+1. research for good product
+   - investigate environment / areas / building (4/8/12)
+   - estimate amounts and total costs (4/8/12) 
+2. negotiate with customer (4/8/12)
+3. buy those products (4/8/12)
+** Sensors [HpreSens]
+
+1. research for good product
+   - investigate environment / areas / building (4/8/12)
+   - estimate amounts and total costs (4/8/12) 
+2. negotiate with customer (4/8/12)
+3. buy those products (4/8/12)
+
+
+
+* Hardware installation [Hin]
+
+|             | Time in hours |
+| optimistic  |            10 |
+| most likely |            15 |
+| pessimistic |            30 |
+
+** installation and configuration
+- video cameras (8/10/12) [HinCam] 
+  - dependent on [HpreCam]
+- storage  (8/10/12)[HinS]
+  - dependent on [HpreS, HpreCam]
+  - connect video cameras to system
+- panels (8/10/12)[HinP]
+  - dependent on [HpreP]
+  - configuration
+- Control Unit (PLC) (8/10/12) [HinPLC]
+  - dependent on [HpreP]
+- Sensors (8/10/12) [HinSens]
+  - dependent on [HpreSens]
+
+* Software prerequisites [Spre]
+
+|             | Time in hours |
+| optimistic  |           10 |
+| most likely |           15 |
+| pessimistic |           30 |
+
+** Matlab [SpreMat]
+- Buy licence / install software  (1/4/8)
+
+** PLC IDEs - Automation Studio [SprePLC]
+- Buy licence / install software (1/4/8)
+  
+* Software  
+
+|             | Time in hours |
+| optimistic  |           10 |
+| most likely |           15 |
+| pessimistic |           30 |
+** create infrastructure
+- setup wiki (1/4/8)
+- setup slack (1/2/3)
+- setup git respository (1/2/3)
+- setup task managment (1/2/3)
+** System analysis
+- design architecture (24 / 30 / 48)
+- define components / communication with external systems (interfaces) (24 / 30 / 48)
+- invastigate time in finding out what technologies we want to use (24 / 30 / 48)
+- create diagrams(24 / 30 / 48)
+- describe behaviour of components and depedencies (24 / 30 / 48)
+- find out problematic and time consuming tasks and challanges (24 / 30 / 48)
+** System design 
+- design mutliple GUI and Usability concept (48 / 60 / 90 )
+- gather feedback from customer and redesign concepts (48 / 60 / 90 )
+- design prototyp with fake data (48 / 60 / 90 )
+** System implementation 
+- implement components (200 / 300 / 480)
+- unit tests (24 / 30 / 48)
+- integration test (24 / 30 / 48)
+- E2E testing (24 / 30 / 48)
+- documentation (40 / 50 / 60)
+
+
+
+* Delivery 
+|             | Time in hours |
+| optimistic  |            10 |
+| most likely |            15 |
+| pessimistic |            30 |
+- present / demonstrate system and software (12 / 20 / 30)
+- get customer approval (1 /10 / 20)
