@@ -1,41 +1,4 @@
-% Created 2017-12-09 Sat 17:17
-% Intended LaTeX compiler: pdflatex
-\documentclass
-[
- 12pt, % Schriftgröße
-       DIV12,
-       a4paper, % Papierformat
-       oneside, % einseitiges Dokument
-       titlepage, % es wird eine Titelseite verwendet
-       parskip=half, % Abstand zwischen Abs�tzen (halbe Zeile)
-       headings=normal, % Gr��e der �berschriften verkleinern
-       listof=totoc, % Verzeichnisse im Inhaltsverzeichnis auff�hren
-       bibliography=totoc, % Literaturverzeichnis im Inhaltsverzeichnis auff�hren
-       index=totoc, % Index im Inhaltsverzeichnis auff�hren
-       captions=tableheading, % Beschriftung von Tabellen unterhalb ausgeben
-       ]{scrreprt}
-       \usepackage{graphicx}
-%\input{/Users/dennismuller/dotfiles/latexConfig.tex}
-%\author{Dennis Müller}
-\date{\today}
-\title{Work Breakdown Structure}
-\author{Group 1}
-\subject{Project Management}
-%\hypersetup{
- %pdfauthor={Dennis Müller},
- %pdftitle={Workloads},
- %pdfkeywords={},
- %pdfsubject={},
- %pdfcreator={Emacs 24.5.1 (Org mode 9.0.5)}, 
- %pdflang={English}}
-\begin{document}
-
-\maketitle
-\tableofcontents
-
-
-
-\chapter{Project Managment Report [Prmr]}
+\subsection{Project Managment Report [Prmr]}
 \label{sec:orgd96ec13}
 \begin{center}
 \begin{tabular}{|l|r|}
@@ -56,7 +19,7 @@
 \item negoitate time and costs with customer (10 / 12 /15 )
 \end{itemize}
 
-\chapter{Hardware prerequisites [Hpre]}
+\subsection{Hardware prerequisites [Hpre]}
 \label{sec:orgfb33f5b}
 
 \begin{center}
@@ -74,7 +37,7 @@
 \end{center}
 
 
-\section{Video cameras [HpreCam]}
+\subsubsection{Video cameras [HpreCam]}
 \label{sec:org3a27049}
 	\begin{enumerate}
 	\item research for good product
@@ -86,7 +49,7 @@
 	\item buy those products (8/10/12)
 	\end{enumerate}
 
-\section{Storage [HpreS]}
+\subsubsection{Storage [HpreS]}
 \label{sec:orgeb93f9e}
 \begin{enumerate}
 \item research archive backup file system
@@ -96,7 +59,7 @@
 \end{itemize}
 \end{enumerate}
 
-\section{Panels [HpreP]}
+\subsubsection{Panels [HpreP]}
 \label{sec:org4b41c6c}
 \begin{enumerate}
 \item research for good product
@@ -108,7 +71,7 @@
 \item buy those products (4/8/12)
 \end{enumerate}
 
-\section{Control Unit (PLC) [HprePLC]}
+\subsubsection{Control Unit (PLC) [HprePLC]}
 \label{sec:orgd40ef86}
 \begin{enumerate}
 \item research for good product
@@ -120,7 +83,7 @@
 \item buy those products (4/8/12)
 \end{enumerate}
 
-\section{Server [HpreSer]}
+\subsubsection{Server [HpreSer]}
 \label{sec:org7b31fb6}
 \begin{enumerate}
 \item research for good product
@@ -131,7 +94,7 @@
 \item negotiate with customer (4/8/12)
 \item buy those products (4/8/12)
 \end{enumerate}
-\section{Sensors [HpreSens]}
+\subsubsection{Sensors [HpreSens]}
 \label{sec:org6352bec}
 
 \begin{enumerate}
@@ -146,7 +109,7 @@
 
 
 
-\chapter{Hardware installation [Hin]}
+\subsection{Hardware installation [Hin]}
 \label{sec:org2cae8f9}
 
 \begin{center}
@@ -163,7 +126,7 @@
 \end{tabular}
 \end{center}
 
-\section{installation and configuration}
+\subsubsection{installation and configuration}
 \label{sec:org7c12187}
 \begin{itemize}
 \item video cameras (8/10/12) [HinCam] 
@@ -190,7 +153,7 @@
 	\end{itemize}
 \end{itemize}
 
-\chapter{Software prerequisites [Spre]}
+\subsection{Software prerequisites [Spre]}
 \label{sec:org180caa5}
 
 \begin{center}
@@ -207,19 +170,19 @@
 \end{tabular}
 \end{center}
 
-\section{Matlab [SpreMat]}
+\subsubsection{Matlab [SpreMat]}
 \label{sec:orgda25cf6}
 \begin{itemize}
 \item Buy licence / install software  (1/4/8)
 \end{itemize}
 
-\section{PLC IDEs - Automation Studio [SprePLC]}
+\subsubsection{PLC IDEs - Automation Studio [SprePLC]}
 \label{sec:org003d4a8}
 \begin{itemize}
 \item Buy licence / install software (1/4/8)
 \end{itemize}
 
-\chapter{Software [So]}
+\subsection{Software [So]}
 \label{sec:orgdf36b5c}
 
 \begin{center}
@@ -235,7 +198,7 @@
 	\hline
 \end{tabular}
 \end{center}
-\section{create infrastructure [SoInf]}
+\subsubsection{create infrastructure [SoInf]}
 \label{sec:org06c00a2}
 \begin{itemize}
 \item setup wiki (1/4/8)
@@ -243,7 +206,7 @@
 \item setup git respository (1/2/3)
 \item setup task managment (1/2/3)
 \end{itemize}
-\section{System analysis [SoAn]}
+\subsubsection{System analysis [SoAn]}
 \label{sec:org498acda}
 \begin{itemize}
 \item design architecture (24 / 30 / 48)
@@ -253,14 +216,14 @@
 \item describe behaviour of components and depedencies (24 / 30 / 48)
 \item find out problematic and time consuming tasks and challanges (24 / 30 / 48)
 \end{itemize}
-\section{System design [SoDes]}
+\subsubsection{System design [SoDes]}
 \label{sec:org1137d7c}
 \begin{itemize}
 \item design mutliple GUI and Usability concept (48 / 60 / 90 )
 \item gather feedback from customer and redesign concepts (48 / 60 / 90 )
 \item design prototyp with fake data (48 / 60 / 90 )
 \end{itemize}
-\section{System implementation [SoImpl]}
+\subsubsection{System implementation [SoImpl]}
 \label{sec:orgf2f809f}
 \begin{itemize}
 \item implement components (200 / 300 / 480)
@@ -272,7 +235,7 @@
 
 
 
-\chapter{Delivery [Dlvry]}
+\subsection{Delivery [Dlvry]}
 \label{sec:org1388080}
 \begin{center}
 \begin{tabular}{|l|r|}
@@ -292,10 +255,9 @@
 \item get customer approval (1 /10 / 20)
 \end{itemize}
 
-\chapter{Precedence Chart}
+\subsection{Precedence Chart}
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{images/precedenceChart}
 \end{figure}
 
-\end{document}

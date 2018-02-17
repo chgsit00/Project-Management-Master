@@ -49,3 +49,49 @@
 \contentsline {subsection}{\numberline {2.2.6}Residents satisfaction}{9}{subsection.2.2.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.7}Technical Specification}{9}{subsection.2.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Implementation}{10}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Basic Architecture}{10}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Project Plan}{10}{section.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}Project Managment Report [Prmr]}{10}{subsection.2.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.2}Hardware prerequisites [Hpre]}{10}{subsection.2.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Video cameras [HpreCam]}{10}{section*.32770}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Storage [HpreS]}{10}{section*.32771}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Panels [HpreP]}{11}{section*.32772}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Control Unit (PLC) [HprePLC]}{11}{section*.32773}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Server [HpreSer]}{11}{section*.32774}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Sensors [HpreSens]}{11}{section*.32775}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.3}Hardware installation [Hin]}{12}{subsection.2.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline installation and configuration}{12}{section*.32776}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.4}Software prerequisites [Spre]}{12}{subsection.2.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Matlab [SpreMat]}{12}{section*.32777}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline PLC IDEs - Automation Studio [SprePLC]}{12}{section*.32778}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.5}Software [So]}{13}{subsection.2.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline create infrastructure [SoInf]}{13}{section*.32779}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline System analysis [SoAn]}{13}{section*.32780}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline System design [SoDes]}{13}{section*.32781}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline System implementation [SoImpl]}{13}{section*.32782}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.6}Delivery [Dlvry]}{14}{subsection.2.5.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.7}Precedence Chart}{14}{subsection.2.5.7}
