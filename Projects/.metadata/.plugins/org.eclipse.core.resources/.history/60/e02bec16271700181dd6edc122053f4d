@@ -1,0 +1,5 @@
+package iCareData;
+
+public interface iCareDataInterface {
+
+}
