@@ -1,0 +1,33 @@
+
+
+
+    /event 
+        response object array 
+        - id, description, type (alarm, warning, info), datetime
+    /notification
+
+GET     /inhabitant -- get all 30 people , raum größe esszimmer : 10x10; zimmer: 5x4; corridot: 25x2
+        -   inhabitant_id, name, age, 
+            position (float: x, float: y), 
+            heartrate,
+            restrictions : ["entranceForidden"]
+            healthcheck = {
+                status : [red, yellow, green]
+                message: "didn't move much"
+            }
+                
+PUT /debug/inhabitant/{inhabitant_id} // change override given state of inhabitant like hea
+    // todo backend set debug flag (chris, timer for 10 seconds, after ellapse take simulated date)
+
+GET /house/consumption
+    - energy-heating, energy-light, water, 
+    /house/consumption/report (maybe)
+    
+
+PUT
+    /notification/readstatus
+        - 
+
+
+Nur frontend:
+- Überwachungskamera von client folder (gifs)
