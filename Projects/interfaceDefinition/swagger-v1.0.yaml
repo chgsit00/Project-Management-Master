@@ -1,0 +1,218 @@
+---
+swagger: "2.0"
+info:
+  description: "No description"
+  version: "1.0.0"
+  title: "iCare"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /inhabitant:
+    get:
+      summary: "Gets  all 9 inhabitants"
+      parameters: []
+      responses:
+        200:
+          description: "Status 200"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/inhabitant"
+  /debug/inhabitant:
+    put:
+      description: "Setting the state of an inhabitant manually"
+      consumes: []
+      parameters:
+      - name: "body"
+        in: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/debugInhabitant"
+      responses:
+        200:
+          description: "Status 200"
+        400:
+          description: "Id not found or payload was invalid"
+  /house:
+    get:
+      description: "Get enery and water consumption"
+      parameters: []
+      responses:
+        200:
+          description: "Status 200"
+  /notification:
+    get:
+      summary: "Get all notifications"
+      description: "Get all notifications NOT only the not yet pulled one."
+      parameters: []
+      responses:
+        200:
+          description: "Status 200"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Notification"
+  /debug/notification:
+    post:
+      consumes: []
+      parameters:
+      - name: "body"
+        in: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/debugNotification"
+      responses:
+        200:
+          description: "Status 200"
+  /notification/new:
+    get:
+      description: "Get all new notification since last called."
+      parameters: []
+      responses:
+        200:
+          description: "Status 200"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Notification"
+definitions:
+  healthCheck:
+    type: "object"
+    required:
+    - "message"
+    - "status"
+    properties:
+      message:
+        type: "string"
+        description: "if red or yellow - provides more detailed information what causes\
+          \ the warning"
+      status:
+        type: "string"
+        enum:
+        - "red"
+        - "yellow"
+        - "green"
+    description: "Provides a message and a traffic light status"
+  inhabitant:
+    type: "object"
+    required:
+    - "healthCheck"
+    - "id"
+    - "name"
+    - "position"
+    - "restrictions"
+    properties:
+      id:
+        type: "string"
+      name:
+        type: "string"
+      hearthRate:
+        type: "integer"
+        description: "if the person wears a wrist band"
+      position:
+        $ref: "#/definitions/position"
+      restrictions:
+        type: "array"
+        description: "restrictions the person has, will trigger alarm if person does\
+          \ what he shouldn't"
+        items:
+          type: "string"
+          enum:
+          - "entranceForbidden"
+      healthCheck:
+        $ref: "#/definitions/healthCheck"
+    description: "A person how lives in the care home"
+  position:
+    type: "object"
+    required:
+    - "x"
+    - "y"
+    properties:
+      x:
+        type: "number"
+      y:
+        type: "integer"
+  debugInhabitant:
+    type: "object"
+    properties:
+      hearthRate:
+        type: "integer"
+        description: "if the person wears a wrist band"
+      position:
+        $ref: "#/definitions/position"
+      restrictions:
+        type: "array"
+        description: "restrictions the person has, will trigger alarm if person does\
+          \ what he shouldn't"
+        items:
+          type: "string"
+          enum:
+          - "entranceForbidden"
+      healthCheck:
+        $ref: "#/definitions/healthCheck"
+    description: "The command for the debug interface."
+  HouseState:
+    type: "object"
+    required:
+    - "energyHeating"
+    - "energyLight"
+    - "water"
+    properties:
+      energyLight:
+        type: "array"
+        description: "history each element is one day. The first element is the consumption\
+          \ of yesterday"
+        items:
+          type: "number"
+      energyHeating:
+        type: "array"
+        description: "history each element is one day. The first element is the consumption\
+          \ of yesterday"
+        items:
+          type: "number"
+      water:
+        type: "array"
+        description: "history each element is one day. The first element is the consumption\
+          \ of yesterday"
+        items:
+          type: "number"
+    description: "History of water and energy consumption."
+  Notification:
+    type: "object"
+    required:
+    - "message"
+    - "severity"
+    properties:
+      message:
+        type: "string"
+      sender:
+        type: "string"
+        description: "If the notification was triggered by the health check system\
+          \ or by the position tracking system."
+      roomId:
+        type: "integer"
+        description: "if notification was triggered by a alarm button in a room"
+      severity:
+        type: "string"
+        enum:
+        - "red"
+        - "yellow"
+    description: "A push notification"
+  debugNotification:
+    type: "object"
+    required:
+    - "message"
+    - "roomId"
+    properties:
+      message:
+        type: "string"
+        description: "The message is based on which button the person has pressed"
+        enum:
+        - "contamination"
+        - "emergency"
+      roomId:
+        type: "integer"
+        description: "The room ID where the button was pressed"
+    description: "Debug command for triggering a alarm button pressed by an inhabitant."
