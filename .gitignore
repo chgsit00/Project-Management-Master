@@ -2,3 +2,4 @@
 /Projects/.metadata
 .DS_Store
 *.core.prefs
+*.classpath
