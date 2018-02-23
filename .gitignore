@@ -1,2 +1,4 @@
 /Projects/.recommenders
 /Projects/.metadata
+.DS_Store
+*.core.prefs
