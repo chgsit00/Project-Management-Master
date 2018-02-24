@@ -1,12 +1,10 @@
-package iCareData;
-
+package main.java.iCareData;
 import java.awt.Point;
 import java.util.List;
 import java.util.Random;
 
 public class WeirdTestClass implements iCareDataInterface{
 
-	@Override
 	public List<Point> getNewCoordinates(List<Point> oldCoordinates) {
 		Random randomGenerator = new Random();
 		int randomNumber;
@@ -29,5 +27,6 @@ public class WeirdTestClass implements iCareDataInterface{
 		}
 		return oldCoordinates;
 	}
+
 
 }
