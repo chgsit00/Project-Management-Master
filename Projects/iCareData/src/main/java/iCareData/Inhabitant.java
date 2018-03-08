@@ -1,6 +1,8 @@
 package iCareData;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Random;
 
 public class Inhabitant {
 	private String id;
@@ -61,6 +63,50 @@ public class Inhabitant {
 	}
 	
 	public void move() {
-		// Change Position
+		Random randomGenerator = new Random();
+		
+		double xPosition = position.getX();
+		double yPosition = position.getY();
+		
+		int randomInt = randomGenerator.nextInt(2);
+		if(randomInt == 1)
+			++xPosition;
+		else
+			--xPosition;
+		
+		randomInt = randomGenerator.nextInt(2);
+		if(randomInt == 1)
+			++yPosition;
+		else
+			--yPosition;
+		
+		if(!collisionDetection(xPosition, yPosition)) {
+			position.setX(xPosition);
+			position.setY(yPosition);
+		}
+	}
+
+	private boolean collisionDetection(double xPosition, double yPosition) {
+		Map<String, RoomInterface> roomInterface = Building.getRooms();
+		
+		/*-------- Check DiningHall --------*/
+		
+		if( (xPosition > roomInterface.get("DiningHall").GetBounds().getX() && xPosition < roomInterface.get("Room1").GetBounds().getX()) &&
+			(yPosition > roomInterface.get("DiningHall").GetBounds().getY() && yPosition < roomInterface.get("DiningHall").GetBounds().getHeight()) ) {
+			// Person befindet sich im Raum
+		}
+		else {
+			// Person befindet sich entweder in der Wand oder in der Tür
+			if(xPosition == roomInterface.get("DiningHall").GetDoors().GetBounds().getX() &&
+				(yPosition > roomInterface.get("DiningHall").GetDoors().GetBounds().getY() && yPosition < 
+				(roomInterface.get("DiningHall").GetDoors().GetBounds().getY() - roomInterface.get("DiningHall").GetDoors().GetBounds().getHeight()) )) {
+				// Person befindet sich in der Tür
+			}
+			else
+				// Person befindet sich in der Wand
+				return true;
+		}
+		
+		return false;
 	}
 }

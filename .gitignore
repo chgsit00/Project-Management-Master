@@ -4,3 +4,7 @@
 *.core.prefs
 *.classpath
 /Projects/iCareServer/.settings/.gitignore
+*.aux
+*.log
+*.pdf
+*.synctex.gz

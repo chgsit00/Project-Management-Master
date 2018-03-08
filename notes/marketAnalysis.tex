@@ -1,0 +1,74 @@
+\chapter{Cost analysis}
+The Care Home is a facility that attaches great importance to safety and energy efficiency. Therefore, it is essential to check different products for certain characteristics. The following attributes are particularly important.
+\begin{itemize}
+	\item power consumption (sustainability)
+	\item costs
+	\item integration with systems
+	\item compatibility
+	\item maintainability
+	\item lifespan
+	\item customer support 
+\end{itemize}
+
+\section{Surveillance camera}
+By taking the criteria into account, the closer decision was made on two models. The \textit{Bascom Pro Dom-Camera} and the \textit{Sony IP SNC-EB632R}. Dome cameras are semicircular and can be mounted on the ceiling or on a roof (as opposed to bullet cameras). Dome cameras also attract less attention. Bacom's Dome camera uses wireless data transmission and can be connected to the regular power supply. The Sony camera can be powered via Ethernet (power over ethernet) and also provides data via the same cable. Both have an IP66 standard. Thus they can be used inside as well as outside of the building. There is hardly any difference in price, which is why this does not contribute to the purchase decision. However, the wired version is more reliable as signal interference has less influence on the quality. Therefore, the first choice is the Sony camera.
+
+BILDER DER KAMERAS UND VOM RECORDER
+
+\section{NAS }
+The network hard disk is a device that must function reliably. Important data is stored there and must be quickly accessible. That's why sufficient RAM (at least 8 GB) and a modern processor is of great importance. Another important point is of course the scalability, as well as the integration into the system, and commissioning.
+
+BILD VON NAS
+\\
+At this point, the Synology FlashStation FS1018 was chosen. With 12 SSD disks, it has sufficient storage capacity to store the most important data over a long period of time. The specifications are also appealing. Synology advertises their product with low latency, which is important for the application because emergency data, for example, must be retrieved quickly.
+
+\section{Smoke detector}
+In the event of a fire, it is essential to have reliable smoke detectors in operation. Since this project aims to score points above all with customer satisfaction, inconspicuous and simple smoke detectors are preferable. There are several manufacturers that produce, for example, smart smoke detectors. Examples are Bosch, Nest or innogy. Smart devices have the advantage of being relatively easy to integrate into a system. The data can be retrieved via Wifi, Bluetooth or via web app. It is even possible to integrate the functions of the smoke detector into your own application via the REST API.
+\\
+Considering the above mentioned criteria, the choice was made for the second generation of the Nest Protect. It scores with its simple appearance and the variety of functionality.  The price and performance of this device match very well and outperform the competition.
+
+BILD VON SMOKE DETECTOR
+
+\section{Inductive sensors}
+In this application, inductive sensors are required to obtain the status of different furnishing objects. Examples of this are e. g. whether a door or a window is open or closed. Inductive sensors are available in different sizes, from different manufacturers. However, the choice fell on a certain sensor from Sick. The Sick IME08-1B5PSZT0S is an inconspicuous and reliable proximity sensor that fits well into our concept. 
+
+BILD VON SENSOR
+
+\section{Database Server}
+...
+
+\section{CPU for PLC System}
+PLC systems are used to process sensor data and send signals to devices. In this way, controllers can be written that receive, process sensor data and supply outputs that control actuators. This can be used to realize comfort functions. When a sensor receives a certain value, an actuator is activated which automatically opens doors or switches lights on or off, for example. Since we gained a lot of positive experience with B\&R through other projects, the choice was made for the X20CP1485 CPU. It is characterised by its compact size, low energy consumption and extensibility. It is also capable of supporting various protocols such as POWERLINK or CAN. Thus we are flexible in development and can react dynamically to hardware changes.
+
+\section{Motion detectors}
+Motion detectors are an important part of our application. Since mostly elderly people live in the care home, it is important that they come into contact with technical equipment as little as possible. This increases the comfort factor enormously. They do not have to deal with technical innovations, but can enjoy their stay. The motion detectors are required to control lights, for example, when a resident is in a certain area. Since we don't want the residents to feel observed, the motion detector must be very simple. It must not interfere with the environment or be technically impaired by the exterior. Since there are also many manufacturers with good equipment like Philips, Elgato or Lupusec, the choice is not easy. The price-performance ratio and simplicity are an important point. That's why we chose the Lupusec DUAL Way.
+
+BILD VON MOTION DETECTOR
+
+\section{Healthcare Wristband}
+A constant control of body values for patients can be very helpful to the caregivers. Classical methods such as pulse measurement or blood pressure measurement must be done manually by helpers and cost the patient time. During this time they are often not allowed to move, otherwise they can influence the values. Long-term measurements with old devices are complex and error-prone and do not give the patient a good and relaxing feeling. Our aim is to carry out long-term measurements, which the patient does not notice in the best case scenario. We use the Lenovo HW01 Smart Wristband, which comes with a variety of features. 
+\begin{itemize}
+	\item pedometer
+	\item sleep monitor
+	\item heart rate measurement
+	\item Date and time
+	\item wake-up function
+	\item stopwatch
+	\item notifications
+	\item Music playback control
+	\item movement memory
+	\item GPS run mode
+\end{itemize}
+Of course, this device does not replace special medical devices. However, it can be used for forecasting and unobtrusive monitoring, which can react quickly in an emergency.
+
+\section{Emergency button}
+????
+
+\section{Smart heating system}
+A very important point in our product development is the heating of rooms. A lot of energy is lost there if the heating is not efficient. One of the market leaders in smart heating is the manufacturer Elgato. The product of our choice is the second-generation Elgato Eve Thermo. 
+\\
+In addition to a simple installation, simple appearance and display, it comes with a variety of useful functions. Schedules can be set for heating schedules. It is also possible to view a consumption analysis. Both for the heating behaviour and for the energy. Another useful feature is the possibility to connect doors and window sensors with the smart heating system. As a result, the system knows when the windows and doors are opened and can regulate the heating process efficiently.
+
+BILD VOM THERMO DINGS
+
+\section{Water consumption}
