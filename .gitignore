@@ -1,2 +1,10 @@
 /Projects/.recommenders
 /Projects/.metadata
+.DS_Store
+*.core.prefs
+*.classpath
+/Projects/iCareServer/.settings/.gitignore
+*.aux
+*.log
+*.pdf
+*.synctex.gz
