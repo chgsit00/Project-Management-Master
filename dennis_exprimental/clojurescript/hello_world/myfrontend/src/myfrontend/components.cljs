@@ -40,7 +40,6 @@
                     [:span {:style {:font-size "1.3em"} :class "pull-right glyphicon glyphicon-circle-arrow-right"}]                
             ]]
         ]]
-       
     )
 
 
