@@ -2,10 +2,12 @@ package main.java.iCareData;
 
 public class Corridor implements RoomInterface{
 	private Bounds bounds;
-
-	public Corridor(Bounds bounds) {
+	private String id;
+	
+	public Corridor(String id, Bounds bounds) {
 		super();
 		this.bounds = bounds;
+		this.id = id;
 	}
 
 	@Override
@@ -16,6 +18,11 @@ public class Corridor implements RoomInterface{
 	@Override
 	public Door GetDoors() {
 		return null;
+	}
+
+	@Override
+	public String getID() {
+		return id;
 	}
 
 }
