@@ -15,6 +15,8 @@ public class InhabitantsController {
 	@RequestMapping("/inhabitant")
 	public List<Inhabitant> getInhabitants() {
 		MoveInhabitantsController inhabitantsController = new MoveInhabitantsController();	
-		return inhabitantsController.moveInhabitants();	
+		List<Inhabitant> inhabitants = inhabitantsController.moveInhabitants();	
+		AlertNotifier.notifyCauseForAlert(inhabitants);
+		return inhabitants;
 	}
 }
