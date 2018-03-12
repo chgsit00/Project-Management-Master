@@ -1,4 +1,4 @@
-package iCareData;
+package main.java.iCareData;
 
 import java.util.List;
 import java.util.Map;

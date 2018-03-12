@@ -1,4 +1,4 @@
-package iCareData;
+package main.java.iCareData;
 
 public class Entrance implements RoomInterface{
 	private Bounds bounds;

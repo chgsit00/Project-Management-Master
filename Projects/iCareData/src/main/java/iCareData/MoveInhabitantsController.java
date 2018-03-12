@@ -1,6 +1,5 @@
-package iCareData;
+package main.java.iCareData;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MoveInhabitantsController {
@@ -8,7 +7,7 @@ public class MoveInhabitantsController {
 	
 	public MoveInhabitantsController() {
 		super();
-		inhabitants = new ArrayList<Inhabitant>();
+		inhabitants = Building.getInhabitants();
 	}
 
 	public List<Inhabitant> moveInhabitants(){

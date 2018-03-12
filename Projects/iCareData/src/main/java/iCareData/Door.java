@@ -1,4 +1,4 @@
-package iCareData;
+package main.java.iCareData;
 
 public class Door implements BoundsInterface{
 	private Bounds bounds;

@@ -1,10 +1,16 @@
-package iCareData;
+package main.java.iCareData;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.UUID;
+
+import main.java.iCareData.HealthCheck.StatusFlag;
 
 public class Building {
 	public static Map<String, RoomInterface> roomInterfaces;
+	public static List<Inhabitant> inhabitants;
 	
 	// Initialize rooms
 	public static void generateRooms() {
@@ -27,11 +33,25 @@ public class Building {
 		roomInterfaces.put("Entrance", new Entrance(new Bounds(200, 0, 50, 45), new Door(new Bounds(220, 45, 10, 0))));
 	}
 	
+	public static void generateInhabitants() {
+		inhabitants = new ArrayList<Inhabitant>();
+		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 67, "Ms. Smith", new ArrayList<>(), new HealthCheck("", StatusFlag.GREEN), new Position(20, 20)));
+		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 86, "Mr. Bradburry", new ArrayList<>(), new HealthCheck("High Heartrate", StatusFlag.YELLOW), new Position(324, 60)));
+		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 75, "Ms. Doubtfire", new ArrayList<>(), new HealthCheck("", StatusFlag.GREEN), new Position(210, 64)));
+	}
+	
 	public static Map<String, RoomInterface> getRooms(){
 		if(roomInterfaces == null) {
 			generateRooms();
-		}
-		
+		}		
 		return roomInterfaces;
 	}
+	
+	public static List<Inhabitant> getInhabitants(){
+		if(inhabitants == null) {
+			generateInhabitants();
+		}		
+		return inhabitants;
+	}
+	
 }
