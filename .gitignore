@@ -8,3 +8,7 @@
 *.log
 *.pdf
 *.synctex.gz
+/notes/AssignmentPCM.lof
+/notes/AssignmentPCM.out
+/notes/AssignmentPCM.toc
+/notes/images/architecture_with_devices.xcf
