@@ -303,4 +303,28 @@ At the beginning of a project, it is important to set up a project plan for sche
 \end{landscape}
 % Ab jetzt wieder hochkant
 In order to get a better overview of which tasks have already been completed, which tasks are still in progress and which are still completely open, the large tasks have been split into many smaller parts. This also makes it easy to identify which periods were planned for which type of tasks. The start of the implementation on January 15th, for example, is very easy to find, as many tasks related to the implementation of the system start here. As can be seen by the progress bars, much of the implementation and documentation has already been completed. However, all activities that require an operational product such as the evaluation of user interfaces are still in progress.
+\subsection{Resource Plan}
+\textbf{// TODO: Tool für Resourcenplanung suchen !!!}
+\section{Tracking Work}
+Since the project plan is already fixed at the beginning of the project and is only used for planning, another tool is needed to keep track of the work in the course of the project. This allows the team to react to smaller, short-term changes in planning. For this purpose, the free website tool KanbanFlow\footnote{https://kanbanflow.com} was used. Kanban is a method of production process control that is often used in agile process models in software development. The various tasks from the project plan are further broken down into smaller subtasks, each of which represents a card on the virtual Kanban board. The board consists of four different sections:
+\begin{itemize}
+	\item To-do
+	\item In Progress
+	\item In Test
+	\item Done
+\end{itemize}
+Each task can be moved freely between the sections by each project team member. However, since the tasks are handled under the responsibility of the person who created them, it is advisable that only this person moves the task. Deadlines, cost estimates and subtasks can also be defined for each task. The colour of the cards can also be set. It is advised to establish a certain pattern. In this case, the colors are assigned to the individual persons who handle the tasks. Figure \ref{kanbanflow} shows a screenshot from the online tool from March 12th.
+% Ab hier im Querformat
+\begin{landscape}
+	% Header entfernt, damit das Bild mehr Platz hat
+	\thispagestyle{plain}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width =1.4\textwidth]{images/kanbanflow.PNG}
+		\caption{Maintaining task with KanbanFlow}
+		\label{kanbanflow}
+	\end{figure}
+	%\restoregeometry
+\end{landscape}
+% Ab jetzt wieder hochkant
 \input{"workloads"}

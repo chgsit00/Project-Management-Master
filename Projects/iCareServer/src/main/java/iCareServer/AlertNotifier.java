@@ -18,6 +18,6 @@ public class AlertNotifier {
 				NotificationContainer.addNotification(notification);
 			}
 		}
-		// TODO: Alarm wergen Restriction auslösen
+		// TODO: Alarm wegen Restriction auslösen
 	}
 }
