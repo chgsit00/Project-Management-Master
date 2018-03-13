@@ -39,6 +39,9 @@ public class Building {
 		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 67, "Ms. Smith", new ArrayList<>(), new HealthCheck("", StatusFlag.GREEN), new Position(20, 20)));
 		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 86, "Mr. Bradburry", new ArrayList<>(), new HealthCheck("High Heartrate", StatusFlag.YELLOW), new Position(324, 60)));
 		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 75, "Ms. Doubtfire", new ArrayList<>(), new HealthCheck("", StatusFlag.GREEN), new Position(210, 64)));
+		List<String> restrictions = new ArrayList<>();
+		restrictions.add("Entrance");
+		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 77, "Mr. Redguard", restrictions, new HealthCheck("", StatusFlag.GREEN), new Position(210, 20)));
 	}
 	
 	public static Map<String, RoomInterface> getRooms(){

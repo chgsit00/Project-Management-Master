@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 
 public class NotificationContainer {
 	private static Map<Date, Notification> currentNotifications;
-	private static Date lastCall; 
-	
+	private static Date lastCall;
+
 	public static void addNotification(Notification notification) {
 		if (null == currentNotifications) {
 			currentNotifications = new HashMap<>();
@@ -26,24 +26,20 @@ public class NotificationContainer {
 	}
 
 	public static Map<Date, Notification> getCurrentNotifications(Date callDate) {
+		if (null == currentNotifications) {
+			currentNotifications = new HashMap<>();
+		}
 		Map<Date, Notification> notificationsSinceLastCall = purgeOldNotifications();
 		lastCall = callDate;
-		if (null == currentNotifications) {
-			currentNotifications = new HashMap<>();
-		}
 		return notificationsSinceLastCall;
 	}
-	
+
 	public static Map<Date, Notification> purgeOldNotifications() {
-		if (null == currentNotifications) {
-			currentNotifications = new HashMap<>();
-			return currentNotifications;
-		} else {
-			Map<Date, Notification> notificationsSinceLastCall = currentNotifications;
-			List<Date> allOldNotifications = currentNotifications.keySet().stream()
-					.filter(key -> (null != lastCall && key.before(lastCall))).collect(Collectors.toList());
-			allOldNotifications.forEach(old -> notificationsSinceLastCall.remove(old));
-			return notificationsSinceLastCall;
-		}
+		Map<Date, Notification> notificationsSinceLastCall = currentNotifications;
+		List<Date> allOldNotifications = notificationsSinceLastCall.keySet().stream()
+				.filter(key -> (null != lastCall && key.before(lastCall))).collect(Collectors.toList());
+		allOldNotifications.forEach(old -> notificationsSinceLastCall.remove(old));
+		return notificationsSinceLastCall;
+
 	}
 }
