@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 
 public class NotificationContainer {
 	private static Map<Date, Notification> currentNotifications;
-	private static final long ONE_HOUR = 3600000;
 	private static Date lastCall; 
 	
 	public static void addNotification(Notification notification) {
@@ -20,7 +19,6 @@ public class NotificationContainer {
 	}
 
 	public static Map<Date, Notification> getCurrentNotifications() {
-		purgeOldNotifications();
 		if (null == currentNotifications) {
 			currentNotifications = new HashMap<>();
 		}
@@ -28,22 +26,24 @@ public class NotificationContainer {
 	}
 
 	public static Map<Date, Notification> getCurrentNotifications(Date callDate) {
-		purgeOldNotifications();
+		Map<Date, Notification> notificationsSinceLastCall = purgeOldNotifications();
 		lastCall = callDate;
 		if (null == currentNotifications) {
 			currentNotifications = new HashMap<>();
 		}
-		return currentNotifications;
+		return notificationsSinceLastCall;
 	}
 	
-	public static void purgeOldNotifications() {
+	public static Map<Date, Notification> purgeOldNotifications() {
 		if (null == currentNotifications) {
 			currentNotifications = new HashMap<>();
+			return currentNotifications;
 		} else {
-			Date now = new Date();
+			Map<Date, Notification> notificationsSinceLastCall = currentNotifications;
 			List<Date> allOldNotifications = currentNotifications.keySet().stream()
-					.filter(key -> now.getTime() - key.getTime() > ONE_HOUR || (null != lastCall && key.before(lastCall))).collect(Collectors.toList());
-			allOldNotifications.forEach(old -> currentNotifications.remove(old));
+					.filter(key -> (null != lastCall && key.before(lastCall))).collect(Collectors.toList());
+			allOldNotifications.forEach(old -> notificationsSinceLastCall.remove(old));
+			return notificationsSinceLastCall;
 		}
 	}
 }
