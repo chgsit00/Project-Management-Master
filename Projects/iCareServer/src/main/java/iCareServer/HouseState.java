@@ -31,6 +31,9 @@ public class HouseState {
 	}
 
 	public void addRandomNumberToLight() {
+		if(instance.energyLight.size() >= 30) {
+			instance.energyLight.remove(0);
+		}
 		// Gebäude dieser Größe haben ca. diesen Verbrauch pro Tag in kWh
 		double min = 9.0;
 		double max = 12.0;
@@ -44,6 +47,9 @@ public class HouseState {
 	}
 
 	public void addRandomNumberToHeating() {
+		if(instance.energyHeating.size() >= 30) {
+			instance.energyHeating.remove(0);
+		}
 		// Gebäude dieser Größe haben ca. diesen Verbrauch pro Tag in kWh
 		double min = 10.0;
 		double max = 16.0;
@@ -57,6 +63,9 @@ public class HouseState {
 	}
 
 	public void addRandomNumberToWater() {
+		if(instance.water.size() >= 30) {
+			instance.water.remove(0);
+		}
 		// Gebäude dieser Größe haben ca. diesen Verbrauch pro Tag in Liter
 		int min = 1400;
 		int max = 1600;
