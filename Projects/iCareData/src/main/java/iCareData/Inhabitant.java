@@ -3,6 +3,9 @@ package main.java.iCareData;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
+import main.java.iCareData.HealthCheck.StatusFlag;
 
 public class Inhabitant {
 	private String id;
@@ -108,5 +111,26 @@ public class Inhabitant {
 		}
 		
 		return false;
+	}
+	
+	public void updateHearthRate() {
+		int min = 60;
+		int max = 120;
+		int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
+		this.heartRate = randomNum;
+		updateHealthCheck(randomNum);
+	}
+
+	private void updateHealthCheck(int randomNum) {
+		// generiert eine entsprechende Warnung, wenn Herzrate zu hoch oder zu niedrig ist.
+		if(randomNum <= 65) {
+			this.healtCheck = new HealthCheck("Low heart rate", StatusFlag.YELLOW);
+		} else if (randomNum >= 100) {
+			this.healtCheck = new HealthCheck("High heart rate", StatusFlag.RED);
+		} else if (randomNum >= 90 && randomNum < 100 ) {
+			this.healtCheck = new HealthCheck("Increased heart rate", StatusFlag.YELLOW);
+		} else {
+			this.healtCheck = new HealthCheck("", StatusFlag.GREEN);
+		}
 	}
 }

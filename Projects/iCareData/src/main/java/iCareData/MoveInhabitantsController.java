@@ -13,6 +13,7 @@ public class MoveInhabitantsController {
 	public List<Inhabitant> moveInhabitants(){
 		for (Inhabitant inhabitant : inhabitants) {
 			inhabitant.move();
+			inhabitant.updateHearthRate();
 		}
 		
 		return inhabitants;
