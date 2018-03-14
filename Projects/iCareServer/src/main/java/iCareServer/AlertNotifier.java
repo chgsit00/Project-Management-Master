@@ -8,6 +8,8 @@ import main.java.iCareData.Building;
 import main.java.iCareData.Inhabitant;
 import main.java.iCareData.Position;
 import main.java.iCareData.RoomInterface;
+import objects.Notification;
+import objects.Severity;
 
 public class AlertNotifier {
 	private static final String RESTRICTIONALERT = "Patient entered restricted Area";

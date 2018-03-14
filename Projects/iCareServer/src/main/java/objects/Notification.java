@@ -1,4 +1,4 @@
-package iCareServer;
+package objects;
 
 public class Notification {
 	private String message;

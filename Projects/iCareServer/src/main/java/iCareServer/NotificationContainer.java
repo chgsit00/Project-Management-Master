@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import objects.Notification;
+
 public class NotificationContainer {
 	private static Map<Date, Notification> currentNotifications;
 	private static Date lastCall;

@@ -1,4 +1,4 @@
-package iCareServer;
+package controller;
 
 import java.util.List;
 
@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import iCareServer.AlertNotifier;
 import main.java.iCareData.Inhabitant;
 import main.java.iCareData.MoveInhabitantsController;
+import objects.DebugInhabitant;
 
 @CrossOrigin
 @RestController
