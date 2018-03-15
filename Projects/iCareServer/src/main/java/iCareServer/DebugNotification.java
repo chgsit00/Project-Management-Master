@@ -1,4 +1,4 @@
-package objects;
+package iCareServer;
 
 public class DebugNotification {
 	private String message;
