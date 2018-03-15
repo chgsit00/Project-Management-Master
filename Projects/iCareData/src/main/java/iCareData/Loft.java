@@ -1,11 +1,15 @@
-package iCareData;
+package main.java.iCareData;
+
+
 
 public class Loft implements RoomInterface{
 	private Bounds bounds;
 	private Door door;
+	private String id;
 	
-	public Loft(Bounds bounds, Door door) {
+	public Loft(String id, Bounds bounds, Door door) {
 		super();
+		this.id = id;
 		this.bounds = bounds;
 		this.door = door;
 	}
@@ -18,6 +22,11 @@ public class Loft implements RoomInterface{
 	@Override
 	public Door GetDoors() {
 		return door;
+	}
+
+	@Override
+	public String getID() {
+		return id;
 	}
 	
 	/*

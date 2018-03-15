@@ -1,4 +1,4 @@
-package iCareData;
+package main.java.iCareData;
 
 import java.awt.Point;
 import java.util.List;

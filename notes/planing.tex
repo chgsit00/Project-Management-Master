@@ -5,36 +5,47 @@
 \label{sec:org945b9f4}
 \subsection{Safety and Security}
 \label{sec:org34def69}
-•	Access control with different levels of security for different purposes e.g. medical cabinet, and 24/7 building access.
-•	Surveillance of the public spaces
-•	Smoke detection
-•	Window and door status listed in the central hub
-•	Safe deposit of monitoring feeds
+\begin{itemize}
+\item Access control with different levels of security for different purposes e.g. medical cabinet, and 24/7 building access.
+\item Surveillance of the public spaces
+\item Smoke detection
+\item Window and door status listed in the central hub
+\item Safe deposit of monitoring feeds
+\end{itemize}
 \subsection{24/7 real-time Health Monitoring facilities}
 \label{sec:orge43b7b8}
-•	Monitoring of inhabitants without breaking the laws of privacy
-•	Heart rate
-•	Location tracking
-•	Blood pressure
-•	Emergency button
+\begin{itemize}
+\item Monitoring of inhabitants without breaking the laws of privacy
+\item Heart rate
+\item Location tracking
+\item Blood pressure
+\item Emergency button
+\end{itemize}
 \subsection{Engineering services}
 \label{sec:org3b95898}
-•	Central hub that lists the status of the building infrastructure 
-•	A silent alarm to the personal if a critical device is failing
+\begin{itemize}
+\item Central hub that lists the status of the building infrastructure 
+\item A silent alarm to the personal if a critical device is failing
+\end{itemize}
 \subsection{Energy and water consumption}
 \label{sec:orgd85891f}
-•	Monitoring of water and energy consumption
-•	Central heating control
+\begin{itemize}
+\item Monitoring of water and energy consumption
+\item Central heating control
+\end{itemize}
 \subsection{Cleanliness and outbuilding services}
 \label{sec:orga2926ad}
-•	Tracking of cleaning services
-•	An easy way to report contaminations
+\begin{itemize}
+\item Tracking of cleaning services
+\item An easy way to report contaminations
+\end{itemize}
 \subsection{Residents satisfaction}
 \label{sec:orgd7a0521}
-•	A pleasant living temperature all year round that each individual can set in his own room
-•	Optional registration for health services like heart rate and location tracking
-•	Info board for events
-
+\begin{itemize}
+\item A pleasant living temperature all year round that each individual can set in his own room
+\item Optional registration for health services like heart rate and location tracking
+\item Info board for events
+\end{itemize}
 
 \section{Specifications}
 \label{sec:org1cd7898}
@@ -258,9 +269,61 @@ temperature, cleanliness of rooms, (maybe) staff kindness)
 \section{Implementation}
 \label{sec:orgaa7b811}
 
-\section{Basic Architecture}
-\label{sec:org0a88fdc}
+\input{architecture}
 \section{Project Plan}
 \label{sec:org8452a3e}
-TODO: Do Grant plan and insert picture here.
-\input{"workloads"}
+At the beginning of a project, it is important to set up a project plan for scheduling over the entire project period and determine when certain tasks need to be completed. This simplifies the allocation of resources and can reveal problems at an early stage in the project's development. Resources can also be allocated to the individual tasks within a project plan. The number of resources available can vary within a project. It depends on how many people are involved in the project and how much time they can invest in the project. Of course, the performance of the individual team members also plays a role. The expected effort for the individual tasks is measured in hours. These are recorded for each individual task in the project plan. In addition, there is a progress bar, which is moved by the person responsible for the task during processing according to their own judgement. This allows the project manager in charge to quickly gain an overview of the progress of the individual tasks and identify where problems may occur. Planhammer\footnote{https://planhammer.io/}'s online project management tool was used to create and edit the project plan. Figure \ref{project-plan1} and figure \ref{project-plan2} shows the status of the project plan at the beginning of march.
+% Ab hier im Querformat
+\begin{landscape}
+% Header entfernt, damit das Bild mehr Platz hat
+\thispagestyle{plain}
+%\newgeometry{
+%  	left=3cm,
+%	right=3cm,
+%	top=2cm,
+%	bottom=4cm,
+%	bindingoffset=5mm
+%}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width =1.4\textwidth]{images/Projectplan1.png}
+	\caption{Project plan part 1}
+	\label{project-plan1}
+\end{figure}
+\pagebreak
+% Header entfernt, damit das Bild mehr Platz hat
+\thispagestyle{plain}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width =1.4\textwidth]{images/Projectplan2.png}
+	\caption{Project plan part 2}
+	\label{project-plan2}
+\end{figure}
+%\restoregeometry
+\end{landscape}
+% Ab jetzt wieder hochkant
+In order to get a better overview of which tasks have already been completed, which tasks are still in progress and which are still completely open, the large tasks have been split into many smaller parts. This also makes it easy to identify which periods were planned for which type of tasks. The start of the implementation on January 15th, for example, is very easy to find, as many tasks related to the implementation of the system start here. As can be seen by the progress bars, much of the implementation and documentation has already been completed. However, all activities that require an operational product such as the evaluation of user interfaces are still in progress.
+\subsection{Resource Plan}
+\textbf{// TODO: Tool für Resourcenplanung suchen !!!}
+\section{Tracking Work}
+Since the project plan is already fixed at the beginning of the project and is only used for planning, another tool is needed to keep track of the work in the course of the project. This allows the team to react to smaller, short-term changes in planning. For this purpose, the free website tool KanbanFlow\footnote{https://kanbanflow.com} was used. Kanban is a method of production process control that is often used in agile process models in software development. The various tasks from the project plan are further broken down into smaller subtasks, each of which represents a card on the virtual Kanban board. The board consists of four different sections:
+\begin{itemize}
+	\item To-do
+	\item In Progress
+	\item In Test
+	\item Done
+\end{itemize}
+Each task can be moved freely between the sections by each project team member. However, since the tasks are handled under the responsibility of the person who created them, it is advisable that only this person moves the task. Deadlines, cost estimates and subtasks can also be defined for each task. The colour of the cards can also be set. It is advised to establish a certain pattern. In this case, the colors are assigned to the individual persons who handle the tasks. Figure \ref{kanbanflow} shows a screenshot from the online tool from March 12th.
+% Ab hier im Querformat
+\begin{landscape}
+	% Header entfernt, damit das Bild mehr Platz hat
+	\thispagestyle{plain}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width =1.4\textwidth]{images/kanbanflow.PNG}
+		\caption{Maintaining task with KanbanFlow}
+		\label{kanbanflow}
+	\end{figure}
+	%\restoregeometry
+\end{landscape}
+% Ab jetzt wieder hochkant

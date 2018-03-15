@@ -9,3 +9,7 @@
 *.pdf
 *.synctex.gz
 Projects/iCareFrontend/ES6/node_modules
+/notes/AssignmentPCM.lof
+/notes/AssignmentPCM.out
+/notes/AssignmentPCM.toc
+/notes/images/architecture_with_devices.xcf

@@ -1,11 +1,13 @@
-package iCareData;
+package main.java.iCareData;
 
 public class Entrance implements RoomInterface{
 	private Bounds bounds;
 	private Door door;
+	private String id;
 	
-	public Entrance(Bounds bounds, Door door) {
+	public Entrance(String id, Bounds bounds, Door door) {
 		super();
+		this.id = id;
 		this.bounds = bounds;
 		this.door = door;
 	}
@@ -18,5 +20,10 @@ public class Entrance implements RoomInterface{
 	@Override
 	public Door GetDoors() {
 		return door;
+	}
+
+	@Override
+	public String getID() {
+		return id;
 	}
 }
