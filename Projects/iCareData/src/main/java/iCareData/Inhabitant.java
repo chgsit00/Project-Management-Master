@@ -114,8 +114,8 @@ public class Inhabitant {
 	}
 	
 	public void updateHearthRate() {
-		int min = heartRate-15;
-		int max = heartRate+15;
+		int min = heartRate-5;
+		int max = heartRate+5;
 		int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
 		this.heartRate = randomNum;
 		updateHealthCheck(randomNum);
