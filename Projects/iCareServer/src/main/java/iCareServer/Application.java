@@ -20,6 +20,7 @@ public class Application {
 				while (true) {
 					try {
 						moveInhabitantsController.moveInhabitants();
+						AlertNotifier.notifyCauseForAlert(moveInhabitantsController.getInhabitants());
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
 						e.printStackTrace();

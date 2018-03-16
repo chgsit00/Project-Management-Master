@@ -24,7 +24,6 @@ public class InhabitantsController {
 		while (null == inhabitants) {
 			try {
 				inhabitants = Building.getInhabitants();
-				AlertNotifier.notifyCauseForAlert(inhabitants);
 			} catch (ConcurrentModificationException e) {
 				// Nothing
 			}
