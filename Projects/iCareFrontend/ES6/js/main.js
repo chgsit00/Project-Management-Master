@@ -87,7 +87,7 @@ function showNotificationPopup() {
     }
     let html = `
     <div class=" notification alert alert-danger" role="alert">
-                            <a href="/pages/alerts.html" class="alert-link">You have new unread notifications <span class="badge">${unreadCount}</span> </a>
+                            <a href="/pages/alerts.html" class="alert-link">Unread notifications <span class="badge">${unreadCount}</span> </a>
                           </div>
                  
                           `
