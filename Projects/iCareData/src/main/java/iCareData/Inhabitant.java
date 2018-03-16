@@ -9,7 +9,7 @@ import main.java.iCareData.HealthCheck.StatusFlag;
 
 public class Inhabitant {
 	private String id;
-	private int heartRate;
+	private int heartRate = 80;
 	private String name;
 	private List<String> restrictions;
 	private HealthCheck healthCheck;
@@ -114,8 +114,8 @@ public class Inhabitant {
 	}
 	
 	public void updateHearthRate() {
-		int min = 60;
-		int max = 120;
+		int min = heartRate-15;
+		int max = heartRate+15;
 		int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
 		this.heartRate = randomNum;
 		updateHealthCheck(randomNum);
@@ -123,9 +123,12 @@ public class Inhabitant {
 
 	private void updateHealthCheck(int randomNum) {
 		// generiert eine entsprechende Warnung, wenn Herzrate zu hoch oder zu niedrig ist.
-		if(randomNum <= 65) {
+		if(randomNum <= 40) {
+			this.healthCheck = new HealthCheck("imminent cardiac arrest", StatusFlag.RED);
+		} else if(randomNum > 40 && randomNum <= 65){
 			this.healthCheck = new HealthCheck("Low heart rate", StatusFlag.YELLOW);
-		} else if (randomNum >= 100) {
+		}
+		else if (randomNum >= 100) {
 			this.healthCheck = new HealthCheck("High heart rate", StatusFlag.RED);
 		} else if (randomNum >= 90 && randomNum < 100 ) {
 			this.healthCheck = new HealthCheck("Increased heart rate", StatusFlag.YELLOW);
