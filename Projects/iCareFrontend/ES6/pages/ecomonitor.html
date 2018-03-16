@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <script src="../node_modules/chart.js/dist/Chart.js"></script>
+    <script src="../js/main.js"></script>
+    <link href="../css/site.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row content">
+            <div style="width:200px" class="col-sm-2 sidenav">
+                    <div>
+                            <img id="iCareLogo" width="180" src="../assets/logo.jpeg" alt="">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li>
+                                    <a href="../index.html">
+                                        <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>
+        
+                                        Dashboard
+                                    </a>
+        
+                                </li>
+                                <li>
+                                    <a href="../pages/tracking.html" class="href">
+                                        <span class="glyphicon  glyphicon-map-marker" aria-hidden="true"></span>
+                                        Tracking
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../pages/reports.html" class="href">
+                                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+                                        Reports
+                                    </a>
+                                </li>
+                                <li class="active" >
+                                    <a href="../pages/ecomonitor.html" class="href">
+                                        <span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>
+                                        Eco-Monitor
+        
+                                    </a>
+        
+                                </li>
+                                <li>
+                                    <a href="../pages/cameras.html" class="href">
+                                        <span class="glyphicon  glyphicon-camera" aria-hidden="true"></span>
+                                        Security Cams
+        
+                                    </a>
+        
+                                </li>
+                                <li >
+                                    <a href="../pages/settings.html" class="href">
+                                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                                        Settings
+        
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../pages/debug.html" class="href">
+                                        <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+                                        Develop Tools
+        
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../pages/info.html" class="href">
+                                        <span class=" glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                                        Info
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+        
+        
+            </div>
+            <div class="col-sm-10">
+                <div>
+                    <br>
+                    <h4>
+                        <small>ECO MONITOR</small>
+                    </h4>
+
+                    <canvas id="myChart" height="80px"></canvas>
+                    <pre><code class="javascript" id="debug"></code></pre>
+                    <script>
+                        var json = GET("https://api.github.com/users/detachmode");
+                        
+                        var debug = document.getElementById("debug");
+                        debug.innerHTML = json
+                
+                        var ctx = document.getElementById("myChart");
+                        var myChart = new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: ["Januar", "February", "Yellow", "Green", "Purple", "Orange"],
+                                datasets: [{
+                                    label: ['Water'],
+                                    fill: false,
+                                    lineTension: 0.1,
+                                    data: [json.public_repos, 12, 13.1, 11.2, 11.4, 13],
+                                    borderColor: 'rgba(0, 0, 255, 1)',
+                                },
+                                {
+                                    label: ['Electricity'],
+                                    fill: false,
+                                    lineTension: 0.1,
+                                    data: [12, 12, 13, 15, 12, 13],
+                                    borderColor: 'rgba(255, 200, 120, 1)'
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+                    </script>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
