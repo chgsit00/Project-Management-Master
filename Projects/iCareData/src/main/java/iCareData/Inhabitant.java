@@ -49,12 +49,12 @@ public class Inhabitant {
 		this.restrictions = restrictions;
 	}
 
-	public HealthCheck getHealtCheck() {
+	public HealthCheck getHealthCheck() {
 		return healthCheck;
 	}
 
-	public void setHealtCheck(HealthCheck healtCheck) {
-		this.healthCheck = healtCheck;
+	public void setHealthCheck(HealthCheck healthCheck) {
+		this.healthCheck = healthCheck;
 	}
 
 	public Position getPosition() {

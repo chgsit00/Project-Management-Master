@@ -18,12 +18,12 @@ public class AlertNotifier {
 		for (Inhabitant inhabitant : inhabitants) {
 			RoomInterface room = getRoomByInhabitantPosition(inhabitant);
 			String roomId = room != null ? room.getID() : "UNKNOWN";
-			if (inhabitant.getHealtCheck().getStatus().equals(Severity.RED.toString())) {
-				Notification notification = new Notification(inhabitant.getHealtCheck().getMessage(), roomId ,
+			if (inhabitant.getHealthCheck().getStatus().equals(Severity.RED.toString())) {
+				Notification notification = new Notification(inhabitant.getHealthCheck().getMessage(), roomId ,
 						WRIST_BAND, Severity.RED);
 				NotificationContainer.addNotification(notification);
-			} else if (inhabitant.getHealtCheck().getStatus().equals(Severity.YELLOW.toString())) {
-				Notification notification = new Notification(inhabitant.getHealtCheck().getMessage(), roomId,
+			} else if (inhabitant.getHealthCheck().getStatus().equals(Severity.YELLOW.toString())) {
+				Notification notification = new Notification(inhabitant.getHealthCheck().getMessage(), roomId,
 						WRIST_BAND, Severity.YELLOW);
 				NotificationContainer.addNotification(notification);
 			}
