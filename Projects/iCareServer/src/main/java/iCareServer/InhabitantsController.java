@@ -1,5 +1,6 @@
 package iCareServer;
 
+import java.util.ConcurrentModificationException;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,8 +19,15 @@ import main.java.iCareData.MoveInhabitantsController;
 public class InhabitantsController {
 	@RequestMapping("/inhabitant")
 	public List<Inhabitant> getInhabitants() {
-		List<Inhabitant> inhabitants = Building.getInhabitants();
-		AlertNotifier.notifyCauseForAlert(inhabitants);
+
+		List<Inhabitant> inhabitants = null;
+		while (null == inhabitants) {
+			try {
+				inhabitants = Building.getInhabitants();
+			} catch (ConcurrentModificationException e) {
+				// Nothing
+			}
+		}
 		return inhabitants;
 	}
 

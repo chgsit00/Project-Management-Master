@@ -58,5 +58,4 @@ public class Building {
 		List<Inhabitant> inhabitantsCopy = inhabitants;
 		return inhabitantsCopy;
 	}
-	
 }
