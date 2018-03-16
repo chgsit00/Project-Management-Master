@@ -2,23 +2,30 @@ package iCareServer;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import main.java.iCareData.HealthCheck;
 import main.java.iCareData.Position;
 
 public class DebugInhabitant {
+	@JsonProperty("id")
 	private String id;
+	@JsonProperty("heartRate")
 	private int heartRate;
+	@JsonProperty("position")
 	private Position position;
+	@JsonProperty("restrictions")
 	private List<String> restrictions;
-	private HealthCheck healtCheck;
+	@JsonProperty("healthCheck")
+	private HealthCheck healthCheck;
 
-	public DebugInhabitant(String id, int heartRate, List<String> restrictions, HealthCheck healtCheck,
+	public DebugInhabitant(String id, int heartRate, List<String> restrictions, HealthCheck healthCheck,
 			Position position) {
 		super();
 		this.id = id;
 		this.heartRate = heartRate;
 		this.restrictions = restrictions;
-		this.healtCheck = healtCheck;
+		this.healthCheck = healthCheck;
 		this.position = position;
 	}
 
@@ -42,12 +49,12 @@ public class DebugInhabitant {
 		this.restrictions = restrictions;
 	}
 
-	public HealthCheck getHealtCheck() {
-		return healtCheck;
+	public HealthCheck getHealthCheck() {
+		return healthCheck;
 	}
 
-	public void setHealtCheck(HealthCheck healtCheck) {
-		this.healtCheck = healtCheck;
+	public void setHealtCheck(HealthCheck healthCheck) {
+		this.healthCheck = healthCheck;
 	}
 
 	public Position getPosition() {

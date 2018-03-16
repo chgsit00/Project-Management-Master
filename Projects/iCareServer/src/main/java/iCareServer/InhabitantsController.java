@@ -27,6 +27,6 @@ public class InhabitantsController {
 	public void updateInhabitant(@PathVariable("id") String id, @RequestBody DebugInhabitant debugInhabitant) {
 		MoveInhabitantsController inhabitantsController = new MoveInhabitantsController();
 		inhabitantsController.updateInhabitant(id, debugInhabitant.getHeartRate(), debugInhabitant.getPosition(),
-				debugInhabitant.getRestrictions(), debugInhabitant.getHealtCheck());
+				debugInhabitant.getRestrictions(), debugInhabitant.getHealthCheck());
 	}
 }
