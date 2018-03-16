@@ -10,6 +10,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <script src="/js/main.js"></script>
+    <script src="alerts.js" type="text/javascript"></script>
+
     <link href="/css/site.css" rel="stylesheet" type="text/css">
     <script>
         $(function () {
@@ -18,7 +20,11 @@
                 var file = $(this).data('include') + '.html';
                 $(this).load(file);
             });
+
+
         });
+        // $(document).ready(function () { updateTable() })
+        
     </script>
 </head>
 
@@ -30,7 +36,7 @@
                     <div>
                         <img id="iCareLogo" width="180" src="/assets/logo.jpeg" alt="">
                         <ul class="nav nav-pills nav-stacked">
-                            <li >
+                            <li class="active">
                                 <a href="/index.html">
                                     <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>
 
@@ -58,7 +64,7 @@
                                 </a>
 
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="/pages/cameras.html" class="href">
                                     <span class="glyphicon  glyphicon-camera" aria-hidden="true"></span>
                                     Security Cams
@@ -96,10 +102,11 @@
             </div>
             <div class="col-sm-10">
                 <div id="notification-container"></div>
-                <div data-include="/views/cameras"></div>
+                <div data-include="/views/notifications"></div>
             </div>
         </div>
     </div>
+
 
 </body>
 

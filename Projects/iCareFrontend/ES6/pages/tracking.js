@@ -1,52 +1,66 @@
 const FRAMERATE = 15
-const CANVAS_W = 1200
-const CANVAS_H = 350
-const corridorHeight = 50
-const roomWidth = 130
-const houseHeight = 300
-const inhabitantSize = 20
-const offset = 10;
-const eatingRoomWidth = 300;
+SCALE = 2.7
+UPDATE_AND_POLL_TIME = 100 // delay in ms between new GETTER
+corridorHeight = 10 * SCALE
+roomWidth = 50 * SCALE
+houseHeight = 100 * SCALE
+inhabitantSize = 20
+offset = 10;
+eatingRoomWidth = 100 * SCALE
+CANVAS_W = roomWidth * 5 + eatingRoomWidth + offset*2
+CANVAS_H = houseHeight + offset*2
 
 
 
+
+
+setInterval(updateVm, UPDATE_AND_POLL_TIME);
+setInterval(myTimer, 1000);
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+
+
+let mockData = [
+    {
+        id: "dm123",
+        name: "Dennis Müller",
+        hearthRate: 120,
+        position: {
+            x: 40,
+            y: 90
+        },
+        restrictions: [
+            "entranceForbidden"
+        ],
+        healthCheck: {
+            message: "string",
+            status: "yellow"
+        }
+    },
+    {
+        id: "neue",
+        name: "Fritz Müller",
+        hearthRate: 110,
+        position: {
+            x: 190,
+            y: 10
+        },
+        restrictions: [
+
+        ],
+        healthCheck: {
+            message: "dead",
+            status: "red"
+        }
+    }
+]
 
 let mainVM = {
     lastDrawnInfoOf: null,
-    inhabitants: [
-        {
-            id: "dm123",
-            name: "Dennis Müller",
-            hearthRate: 120,
-            position: {
-                x: 100,
-                y: 200
-            },
-            restrictions: [
-                "entranceForbidden"
-            ],
-            healthCheck: {
-                message: "string",
-                status: "yellow"
-            }
-        },
-        {
-            id: "neue",
-            name: "Fritz Müller",
-            hearthRate: 110,
-            position: {
-                x: 500,
-                y: 200
-            },
-            restrictions: [
-                
-            ],
-            healthCheck: {
-                message: "dead",
-                status: "red"
-            }
-        }
-    ]
+    inhabitants: []
 
 }
 
@@ -56,17 +70,17 @@ function drawInhabitant(i) {
     let x = i.position.x,
         y = i.position.y,
         isSel = null,
-        col = color(0,255,0)
+        col = color(0, 255, 0)
 
     switch (i.healthCheck.status) {
         case "red":
-            col = color(255,0,0)
+            col = color(255, 0, 0)
             break;
-    
+
         case "yellow":
-            col = color(255,200,0)
+            col = color(255, 200, 0)
             break;
-    
+
         default:
             break;
     }
@@ -120,9 +134,9 @@ function setup() {
 function GetClickedInhabitant(action) {
     // const boardSizeInPixel = SIZE_BOARD * TILE_SIZE;
     if (mouseX > CANVAS_W || mouseY > CANVAS_H)
-      return
+        return
     if (mouseX < 0 || mouseY < 0)
-      return
+        return
 
     // const x = int(mouseX / TILE_SIZE);
     // const y = int(mouseY / TILE_SIZE);
@@ -139,22 +153,47 @@ function GetClickedInhabitant(action) {
 
     action(found)
 
-    
+
 }
 
 
 function mouseClicked() {
     GetClickedInhabitant(i => {
-        mainVM.selected = i})
+        mainVM.selected = i
+    })
     return true;
 }
 
-function draw() {
+
+
+function updateVm() {
+    let inhabitantsVms = mockData.map(i => {
+        return {
+            id: i.id,
+            name: i.name,
+            hearthRate: 120,
+            position: {
+                x: offset + i.position.x * SCALE,
+                y: offset + i.position.y * SCALE
+            },
+            restrictions: i.restrictions,
+            healthCheck: {
+                message: i.healthCheck.message,
+                status: i.healthCheck.status
+            }
+        }
+    })
+
+    mainVM.inhabitants = inhabitantsVms
 
     mainVM.inhabitants.forEach(i => {
-        i.position.x += (Math.random(1)-0.5)
-        i.position.y += (Math.random(1)-0.5)
+        i.position.x += (Math.random(1) - 0.5)
+        i.position.y += (Math.random(1) - 0.5)
     })
+}
+
+function draw() {
+    background(220)
 
     drawHouse();
 
@@ -163,7 +202,7 @@ function draw() {
     });
 
     updateSelectionInfoBox();
-    
+
 
 
 
@@ -187,7 +226,7 @@ function draw() {
 function updateSelectionInfoBox() {
     if (mainVM.lastDrawnInfoOf !== mainVM.selected) {
         mainVM.lastDrawnInfoOf = mainVM.selected;
-        
+
         if (mainVM.selected) {
             let i = mainVM.selected
             document.getElementById("sel-name").innerHTML = i.name
@@ -195,26 +234,26 @@ function updateSelectionInfoBox() {
             document.getElementById("sel-hearth").innerHTML = i.hearthRate
             let labelclass = "label label-Success"
             switch (i.healthCheck.status) {
-                case "red":   
-                    labelclass = "label label-danger"                
+                case "red":
+                    labelclass = "label label-danger"
                     break;
-                case "yellow":   
-                    labelclass = "label label-warning"                
+                case "yellow":
+                    labelclass = "label label-warning"
                     break;
-            
+
                 default:
                     break;
             }
 
-            document.getElementById("sel-health").innerHTML = 
-            `<span class="${labelclass}">${i.healthCheck.message}</span>`
+            document.getElementById("sel-health").innerHTML =
+                `<span class="${labelclass}">${i.healthCheck.message}</span>`
             document.getElementById("sel-restrictions").innerHTML = i.restrictions[0]
-      
+
         }
         else {
             document.getElementById("sel-name").innerHTML = ""
-            document.getElementById("sel-id").innerHTML =""
-            document.getElementById("sel-hearth").innerHTML =""
+            document.getElementById("sel-id").innerHTML = ""
+            document.getElementById("sel-hearth").innerHTML = ""
             document.getElementById("sel-health").innerHTML = ""
             document.getElementById("sel-restrictions").innerHTML = ""
         }

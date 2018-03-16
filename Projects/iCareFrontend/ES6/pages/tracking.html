@@ -13,6 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="../library/p5.min.js"></script>
+    <script src="../js/main.js"></script>
     <script src="tracking.js"></script>
 
 </head>
@@ -85,13 +86,15 @@
 
             </div>
             <div class="col-sm-10">
+                    <div id="notification-container"></div>
                 <div>
                     <br>
                     <h4>
                         <small>TRACKING</small>
                     </h4>
                     <hr>
-                    <h4>Live Monitor</h4>
+                    <h4> <span class="glyphicon glyphicon-record"></span> Live Monitor</h4>
+                    <h6 id="demo"></h6>
                     <div id="sketch-holder">
                         <!-- Our sketch will go here! -->
                     </div>
