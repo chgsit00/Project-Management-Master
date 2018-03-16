@@ -1,15 +1,14 @@
 const FRAMERATE = 15
 SCALE = 2.7
-UPDATE_AND_POLL_TIME = 100 // delay in ms between new GETTER
+UPDATE_AND_POLL_TIME = 2000 // delay in ms between new GETTER
 corridorHeight = 10 * SCALE
 roomWidth = 50 * SCALE
 houseHeight = 100 * SCALE
 inhabitantSize = 20
 offset = 10;
 eatingRoomWidth = 100 * SCALE
-CANVAS_W = roomWidth * 5 + eatingRoomWidth + offset*2
-CANVAS_H = houseHeight + offset*2
-
+CANVAS_W = roomWidth * 5 + eatingRoomWidth + offset * 2
+CANVAS_H = houseHeight + offset * 2
 
 
 
@@ -64,6 +63,8 @@ let mainVM = {
 
 }
 
+updateVm()
+
 
 
 function drawInhabitant(i) {
@@ -73,11 +74,11 @@ function drawInhabitant(i) {
         col = color(0, 255, 0)
 
     switch (i.healthCheck.status) {
-        case "red":
+        case "RED":
             col = color(255, 0, 0)
             break;
 
-        case "yellow":
+        case "YELLOW":
             col = color(255, 200, 0)
             break;
 
@@ -161,17 +162,21 @@ function mouseClicked() {
     GetClickedInhabitant(i => {
         mainVM.selected = i
     })
+    updateSelectionInfoBox();
     return true;
 }
 
 
 
 function updateVm() {
-    let inhabitantsVms = mockData.map(i => {
+    var json = GET("http://localhost:8080/inhabitant");
+    json = JSON.parse(json)
+    
+    let inhabitantsVms = json.map(i => {
         return {
             id: i.id,
             name: i.name,
-            hearthRate: 120,
+            hearthRate: i.heartRate,
             position: {
                 x: offset + i.position.x * SCALE,
                 y: offset + i.position.y * SCALE
@@ -183,13 +188,14 @@ function updateVm() {
             }
         }
     })
+    if(mainVM.selected)
+        mainVM.selected = inhabitantsVms.find(i => i.id == mainVM.selected.id)
+
 
     mainVM.inhabitants = inhabitantsVms
+    updateSelectionInfoBox();
+    
 
-    mainVM.inhabitants.forEach(i => {
-        i.position.x += (Math.random(1) - 0.5)
-        i.position.y += (Math.random(1) - 0.5)
-    })
 }
 
 function draw() {
@@ -201,7 +207,6 @@ function draw() {
         drawInhabitant(i)
     });
 
-    updateSelectionInfoBox();
 
 
 
@@ -223,41 +228,49 @@ function draw() {
     // ellipse(mouseX, mouseY, 40, 40);
 }
 
+
+function smartUpdate(id, value) {
+    let element = document.getElementById(id)
+    if (element.innerHTML !== value)
+        element.innerHTML = value
+}
+
 function updateSelectionInfoBox() {
-    if (mainVM.lastDrawnInfoOf !== mainVM.selected) {
-        mainVM.lastDrawnInfoOf = mainVM.selected;
+    // if (mainVM.lastDrawnInfoOf !== mainVM.selected) {
+    //     mainVM.lastDrawnInfoOf = mainVM.selected;
 
-        if (mainVM.selected) {
-            let i = mainVM.selected
-            document.getElementById("sel-name").innerHTML = i.name
-            document.getElementById("sel-id").innerHTML = i.id
-            document.getElementById("sel-hearth").innerHTML = i.hearthRate
-            let labelclass = "label label-Success"
-            switch (i.healthCheck.status) {
-                case "red":
-                    labelclass = "label label-danger"
-                    break;
-                case "yellow":
-                    labelclass = "label label-warning"
-                    break;
+    if (mainVM.selected) {
+        let i = mainVM.selected
+        smartUpdate("sel-name", i.name)
+        smartUpdate("sel-id", i.id)
+        smartUpdate("sel-hearth", i.hearthRate)
+        console.log(i.hearthRate);
+        
 
-                default:
-                    break;
-            }
-
-            document.getElementById("sel-health").innerHTML =
-                `<span class="${labelclass}">${i.healthCheck.message}</span>`
-            document.getElementById("sel-restrictions").innerHTML = i.restrictions[0]
-
+        let labelclass = "label label-success"
+        switch (i.healthCheck.status) {
+            case "RED":
+                labelclass = "label label-danger"
+                break;
+            case "YELLOW":
+                labelclass = "label label-warning"
+                break;
+            default:
+                break;
         }
-        else {
-            document.getElementById("sel-name").innerHTML = ""
-            document.getElementById("sel-id").innerHTML = ""
-            document.getElementById("sel-hearth").innerHTML = ""
-            document.getElementById("sel-health").innerHTML = ""
-            document.getElementById("sel-restrictions").innerHTML = ""
-        }
+
+        smartUpdate("sel-health", `<span class="${labelclass}">${i.healthCheck.message}</span>`)
+        smartUpdate("sel-restrictions", i.restrictions[0])
+
     }
+    else {
+        document.getElementById("sel-name").innerHTML = ""
+        document.getElementById("sel-id").innerHTML = ""
+        document.getElementById("sel-hearth").innerHTML = ""
+        document.getElementById("sel-health").innerHTML = ""
+        document.getElementById("sel-restrictions").innerHTML = ""
+    }
+    // }
 }
 
 function drawHouse() {
