@@ -133,7 +133,7 @@ public class Inhabitant {
 		} else if (randomNum >= 90 && randomNum < 100 ) {
 			this.healthCheck = new HealthCheck("Increased heart rate", StatusFlag.YELLOW);
 		} else {
-			this.healthCheck = new HealthCheck("", StatusFlag.GREEN);
+			this.healthCheck = new HealthCheck("OK", StatusFlag.GREEN);
 		}
 	}
 }
