@@ -12,7 +12,7 @@ public class Inhabitant {
 	private int heartRate;
 	private String name;
 	private List<String> restrictions;
-	private HealthCheck healtCheck;
+	private HealthCheck healthCheck;
 	private Position position;
 	
 	public Inhabitant(String id, int heartRate, String name, List<String> restrictions, HealthCheck healtCheck, Position position) {
@@ -21,7 +21,7 @@ public class Inhabitant {
 		this.heartRate = heartRate;
 		this.name = name;
 		this.restrictions = restrictions;
-		this.healtCheck = healtCheck;
+		this.healthCheck = healtCheck;
 		this.position = position;
 	}
 	
@@ -50,11 +50,11 @@ public class Inhabitant {
 	}
 
 	public HealthCheck getHealtCheck() {
-		return healtCheck;
+		return healthCheck;
 	}
 
 	public void setHealtCheck(HealthCheck healtCheck) {
-		this.healtCheck = healtCheck;
+		this.healthCheck = healtCheck;
 	}
 
 	public Position getPosition() {
@@ -124,13 +124,13 @@ public class Inhabitant {
 	private void updateHealthCheck(int randomNum) {
 		// generiert eine entsprechende Warnung, wenn Herzrate zu hoch oder zu niedrig ist.
 		if(randomNum <= 65) {
-			this.healtCheck = new HealthCheck("Low heart rate", StatusFlag.YELLOW);
+			this.healthCheck = new HealthCheck("Low heart rate", StatusFlag.YELLOW);
 		} else if (randomNum >= 100) {
-			this.healtCheck = new HealthCheck("High heart rate", StatusFlag.RED);
+			this.healthCheck = new HealthCheck("High heart rate", StatusFlag.RED);
 		} else if (randomNum >= 90 && randomNum < 100 ) {
-			this.healtCheck = new HealthCheck("Increased heart rate", StatusFlag.YELLOW);
+			this.healthCheck = new HealthCheck("Increased heart rate", StatusFlag.YELLOW);
 		} else {
-			this.healtCheck = new HealthCheck("", StatusFlag.GREEN);
+			this.healthCheck = new HealthCheck("", StatusFlag.GREEN);
 		}
 	}
 }
