@@ -30,6 +30,18 @@ public class HouseState {
 		addRandomNumberToLight();
 	}
 
+	public void init() {
+		while (instance.energyHeating.size() < 30) {
+			addRandomNumberToHeating();
+		}
+		while (instance.energyLight.size() < 30) {
+			addRandomNumberToLight();
+		}
+		while (instance.water.size() < 30) {
+			addRandomNumberToWater();
+		}
+	}
+	
 	public void addRandomNumberToLight() {
 		if(instance.energyLight.size() >= 30) {
 			instance.energyLight.remove(0);

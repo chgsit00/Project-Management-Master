@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import main.java.iCareData.Building;
 import main.java.iCareData.Inhabitant;
 import main.java.iCareData.MoveInhabitantsController;
 
@@ -17,8 +18,7 @@ import main.java.iCareData.MoveInhabitantsController;
 public class InhabitantsController {
 	@RequestMapping("/inhabitant")
 	public List<Inhabitant> getInhabitants() {
-		MoveInhabitantsController inhabitantsController = new MoveInhabitantsController();
-		List<Inhabitant> inhabitants = inhabitantsController.moveInhabitants();
+		List<Inhabitant> inhabitants = Building.getInhabitants();
 		AlertNotifier.notifyCauseForAlert(inhabitants);
 		return inhabitants;
 	}

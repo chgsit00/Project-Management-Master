@@ -14,6 +14,9 @@ public class DebugNotification {
 	 * The message is based on which button the person has pressed
 	 */
 
+	@JsonProperty("inhabitantId")
+	private String inhabitantId;
+	
 	@JsonProperty("message")
 	private String message;
 
@@ -83,6 +86,15 @@ public class DebugNotification {
 		this.roomId = roomId;
 	}
 
+	@NotNull
+
+	public String getInhabitantId() {
+		return inhabitantId;
+	}
+
+	public void setInhabitantId(String inhabitantId) {
+		this.inhabitantId = inhabitantId;
+	}
 	@Override
 	public boolean equals(java.lang.Object o) {
 		if (this == o) {

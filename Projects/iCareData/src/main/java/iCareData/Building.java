@@ -54,8 +54,9 @@ public class Building {
 	public static List<Inhabitant> getInhabitants(){
 		if(inhabitants == null) {
 			generateInhabitants();
-		}		
-		return inhabitants;
+		}
+		List<Inhabitant> inhabitantsCopy = inhabitants;
+		return inhabitantsCopy;
 	}
 	
 }

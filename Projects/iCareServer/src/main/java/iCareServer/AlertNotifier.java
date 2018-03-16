@@ -1,5 +1,6 @@
 package iCareServer;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -10,27 +11,27 @@ import main.java.iCareData.Position;
 import main.java.iCareData.RoomInterface;
 
 public class AlertNotifier {
-	private static final String RESTRICTIONALERT = "Patient entered restricted Area";
-	private static final String MOTION_DETECTOR = "Motion Detector";
-	private static final String WRIST_BAND = "Wrist Band";
-	
+	public static final String RESTRICTIONALERT = "Patient entered restricted Area";
+	public static final String MOTION_DETECTOR = "Motion Detector";
+	public static final String WRIST_BAND = "Wrist Band";
+
 	public static void notifyCauseForAlert(List<Inhabitant> inhabitants) {
 		for (Inhabitant inhabitant : inhabitants) {
 			RoomInterface room = getRoomByInhabitantPosition(inhabitant);
 			String roomId = room != null ? room.getID() : "UNKNOWN";
 			if (inhabitant.getHealthCheck().getStatus().equals(Severity.RED.toString())) {
-				Notification notification = new Notification(inhabitant.getHealthCheck().getMessage(), roomId ,
-						WRIST_BAND, Severity.RED);
+				Notification notification = new Notification(inhabitant.getId(),
+						inhabitant.getHealthCheck().getMessage(), roomId, WRIST_BAND, Severity.RED, new Date());
 				NotificationContainer.addNotification(notification);
 			} else if (inhabitant.getHealthCheck().getStatus().equals(Severity.YELLOW.toString())) {
-				Notification notification = new Notification(inhabitant.getHealthCheck().getMessage(), roomId,
-						WRIST_BAND, Severity.YELLOW);
+				Notification notification = new Notification(inhabitant.getId(),
+						inhabitant.getHealthCheck().getMessage(), roomId, WRIST_BAND, Severity.YELLOW, new Date());
 				NotificationContainer.addNotification(notification);
 			}
 			for (String restriction : inhabitant.getRestrictions()) {
-				if(roomId.equals(restriction)) {
-					Notification notification = new Notification(RESTRICTIONALERT, roomId,
-							MOTION_DETECTOR, Severity.RED);
+				if (roomId.equals(restriction)) {
+					Notification notification = new Notification(inhabitant.getId(), RESTRICTIONALERT, roomId,
+							MOTION_DETECTOR, Severity.RED, new Date());
 					NotificationContainer.addNotification(notification);
 				}
 			}
@@ -43,7 +44,7 @@ public class AlertNotifier {
 		for (RoomInterface room : rooms.values()) {
 			Position pos = inhabitant.getPosition();
 			Bounds roomBounds = room.GetBounds();
-			if(IsPositionInRoomBounds(roomBounds, pos)) {
+			if (IsPositionInRoomBounds(roomBounds, pos)) {
 				roomWhereInhabitantIs = room;
 				break;
 			}

@@ -14,6 +14,13 @@ public class NotificationContainer {
 		if (null == currentNotifications) {
 			currentNotifications = new HashMap<>();
 		}
+		for (Date date : currentNotifications.keySet()) {
+			Notification currentNotification = currentNotifications.get(date);
+			if (currentNotification.getInhabitantId().equals(notification.getInhabitantId())
+					&& currentNotification.getSender().equals(notification.getSender())) {
+				currentNotifications.remove(date);
+			}
+		}
 		Date now = new Date();
 		currentNotifications.put(now, notification);
 	}
