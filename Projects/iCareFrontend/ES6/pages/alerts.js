@@ -1,6 +1,6 @@
-updateTable();
 
 function updateTable() {
+    // alert("hi")
     let tableContent = GetSideWideVm().unreadNotifications.map(n => {
         let type = "success";
         switch (n.severity) {
@@ -23,6 +23,9 @@ function updateTable() {
     });
     document.getElementById('alertsTableBody').innerHTML = tableContent.join("");
 }
+
+
+// setInterval(updateTable, 100)
 
 function setToRead(events) {
     let newVM = GetSideWideVm()

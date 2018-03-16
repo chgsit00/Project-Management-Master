@@ -1,4 +1,4 @@
-package main.java.iCareData;
+package iCareData;
 
 public interface BoundsInterface {
 	public Bounds GetBounds();

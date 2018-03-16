@@ -9,8 +9,10 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <script src="../js/main.js"></script>
-    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <script src="/js/main.js"></script>
+    <script src="alerts.js" type="text/javascript"></script>
+
+    <link href="/css/site.css" rel="stylesheet" type="text/css">
     <script>
         $(function () {
             var includes = $('[data-include]');
@@ -18,22 +20,24 @@
                 var file = $(this).data('include') + '.html';
                 $(this).load(file);
             });
+
+
         });
+        // $(document).ready(function () { updateTable() })
+        
     </script>
 </head>
 
 <body>
-    <!-- <div data-include="/pages/cameras"></div> -->
-
     <div class="container-fluid">
         <div class="row content">
             <div style="width:200px" class="col-sm-2 sidenav">
                 <div>
                     <div>
-                        <img id="iCareLogo" width="180" src="../assets/logo.jpeg" alt="">
+                        <img id="iCareLogo" width="180" src="/assets/logo.jpeg" alt="">
                         <ul class="nav nav-pills nav-stacked">
-                            <li>
-                                <a href="../index.html">
+                            <li class="active">
+                                <a href="/index.html">
                                     <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>
 
                                     Dashboard
@@ -41,19 +45,19 @@
 
                             </li>
                             <li>
-                                <a href="tracking.html" class="href">
+                                <a href="/pages/tracking.html" class="href">
                                     <span class="glyphicon  glyphicon-map-marker" aria-hidden="true"></span>
                                     Tracking
                                 </a>
                             </li>
                             <li>
-                                <a href="reports.html" class="href">
+                                <a href="/pages/reports.html" class="href">
                                     <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
                                     Reports
                                 </a>
                             </li>
                             <li>
-                                <a href="ecomonitor.html" class="href">
+                                <a href="/pages/ecomonitor.html" class="href">
                                     <span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>
                                     Eco-Monitor
 
@@ -61,7 +65,7 @@
 
                             </li>
                             <li>
-                                <a href="cameras.html" class="href">
+                                <a href="/pages/cameras.html" class="href">
                                     <span class="glyphicon  glyphicon-camera" aria-hidden="true"></span>
                                     Security Cams
 
@@ -69,21 +73,21 @@
 
                             </li>
                             <li>
-                                <a href="settings.html" class="href">
+                                <a href="/pages/settings.html" class="href">
                                     <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                                     Settings
 
                                 </a>
                             </li>
                             <li>
-                                <a href="debug.html" class="href">
+                                <a href="/pages/debug.html" class="href">
                                     <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
                                     Develop Tools
 
                                 </a>
                             </li>
                             <li>
-                                <a href="info.html" class="href">
+                                <a href="/pages/info.html" class="href">
                                     <span class=" glyphicon glyphicon-info-sign" aria-hidden="true"></span>
                                     Info
                                 </a>
@@ -97,35 +101,13 @@
 
             </div>
             <div class="col-sm-10">
-                <br>
-                <h4>
-                    <small>NOTIFICATIONS</small>
-                </h4>
-                <hr>
-                <div class="row">
-                    <h2>Unread Notifications</h2>
-                    <p>Your unread notifictions. After you cleared them, you can still see them on the dashboard in the recent
-                        table
-                    </p>
-                    <hr>
-
-                    <button onclick="setToRead()" type="button" class="btn btn-primary">Set all to read</button>
-
-
-                    <table class="table .table-striped">
-                        <thead>
-                            <tr>
-                                <th width="200px">Sender</th>
-                                <th width="20px">Room</th>
-                                <th>Message</th>
-                            </tr>
-                        </thead>
-                        <tbody id="alertsTableBody">
-                        </tbody>
-                    </table>
-                </div>
+                <div id="notification-container"></div>
+                <div data-include="/views/notifications"></div>
             </div>
-            <script src="alerts.js" type="text/javascript"></script>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

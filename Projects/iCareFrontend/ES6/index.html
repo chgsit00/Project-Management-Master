@@ -11,6 +11,15 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <script src="/js/main.js"></script>
     <link href="/css/site.css" rel="stylesheet" type="text/css">
+    <script>
+        $(function () {
+            var includes = $('[data-include]');
+            jQuery.each(includes, function () {
+                var file = $(this).data('include') + '.html';
+                $(this).load(file);
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -87,140 +96,9 @@
             </div>
             <div class="col-sm-10">
                 <div id="notification-container"></div>
-
-                <div>
-
-                    <br>
-                    <h4>
-                        <small>DASHBOARD</small>
-                    </h4>
-                    <hr>
-                    <div class="row">
-
-
-                        <!-- Messages -->
-                        <div class="col-sm-3">
-                            <div class="panel-group">
-                                <div class="panel panel-primary">
-                                    <div class="panel-heading">
-                                        <div class="row">
-                                            <div class="col-sm-8">
-                                                <h4>Messages</h4>
-                                            </div>
-                                            <div class="col-sm-3 glyphicon glyphicon-envelope" style="font-size:3em">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="panel-body">
-                                        View Details
-                                        <span style="font-size:1.3em" class="pull-right glyphicon glyphicon-circle-arrow-right"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Alarms -->
-                        <div class="col-sm-3">
-                            <div class="panel-group">
-                                <div class="panel panel-danger">
-                                    <div class="panel-heading">
-                                        <div class="row">
-                                            <div class="col-sm-8">
-                                                <h4>Alarms</h4>
-                                            </div>
-                                            <div class="col-sm-3 glyphicon glyphicon-warning-sign" style="font-size:3em">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div onclick="location.href='/pages/alerts.html';" style="cursor:pointer;" class="panel-body">
-                                        <span id="alarmsPanelBody"></span>
-                                        <span style="font-size:1.3em" class="pull-right glyphicon glyphicon-circle-arrow-right"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Tickets -->
-                        <div class="col-sm-3">
-                            <div class="panel-group">
-                                <div class="panel panel-success">
-                                    <div class="panel-heading">
-                                        <div class="row">
-                                            <div class="col-sm-8">
-                                                <h4>Tickets</h4>
-                                            </div>
-                                            <div class="col-sm-3 glyphicon glyphicon-wrench" style="font-size:3em">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="panel-body">
-                                        0 open tickets
-                                        <span style="font-size:1.3em" class="pull-right glyphicon glyphicon-circle-arrow-right"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Tasks -->
-                        <div class="col-sm-3">
-                            <div class="panel-group">
-                                <div class="panel panel-warning">
-                                    <div class="panel-heading">
-                                        <div class="row">
-                                            <div class="col-sm-8">
-                                                <h4>Tasks</h4>
-                                            </div>
-                                            <div class="col-sm-3 glyphicon glyphicon-list-alt" style="font-size:3em">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="panel-body">
-                                        2 todo's
-                                        <span style="font-size:1.3em" class="pull-right glyphicon glyphicon-circle-arrow-right"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <h2>Recent</h2>
-                <h6 id="demo"></h6>
-                <hr>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Type</th>
-                            <th>Info</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-
-                    </tbody>
-
-                </table>
-
-
-
-                <!-- [content-component]
-                [github-user-component]      -->
-
+                <div data-include="/views/dashboard"></div>
             </div>
-
-
-
         </div>
-
-
     </div>
 
     <script src="/index.js" type="text/javascript"></script>
