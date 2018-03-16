@@ -13,12 +13,12 @@ public class Application {
 		Building.generateRooms();
 		Building.generateInhabitants();
 		HouseState.getInstance().init();
+		MoveInhabitantsController moveInhabitantsController = new MoveInhabitantsController();
 		Thread thread = new Thread(new Runnable() {
 			@Override
 			public void run() {
 				while (true) {
 					try {
-						MoveInhabitantsController moveInhabitantsController = new MoveInhabitantsController();
 						moveInhabitantsController.moveInhabitants();
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
