@@ -1,3 +1,5 @@
+// import moment from "../node_modules/moment/min/moment-with-locales"
+
 
 function GET(url) {
     var xhr = new XMLHttpRequest();
@@ -19,6 +21,16 @@ function POST(url, body) {
 }
 
 
+
+let Inhabitants = GET("http://localhost:8080/inhabitant")
+Inhabitants = JSON.parse(Inhabitants)
+
+let InhabitantNames = Inhabitants.map(i => {
+    return {
+        name: i.name,
+        id: i.id
+    }
+})
 
 
 
