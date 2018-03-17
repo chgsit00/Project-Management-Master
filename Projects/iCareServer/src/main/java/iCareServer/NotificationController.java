@@ -24,7 +24,7 @@ public class NotificationController {
 	}	
 	
 	@RequestMapping(value = "/debug/notification", method = RequestMethod.POST)
-	public ResponseEntity<?> updateInhabitant(@RequestBody DebugNotification debugNotification) {
+	public ResponseEntity<?> addNotification(@RequestBody DebugNotification debugNotification) {
 		Notification notification = new Notification(debugNotification.getInhabitantId(),debugNotification.getMessage().toString(), debugNotification.getRoomId(), "", Severity.RED, new Date());
 		NotificationContainer.addNotification(notification);
 		return ResponseEntity.noContent().build();
