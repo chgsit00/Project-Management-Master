@@ -13,7 +13,9 @@ public class NotificationContainer {
 		if (null == currentNotifications) {
 			currentNotifications = new CopyOnWriteArrayList<Notification>();
 		}
-		
+		if(currentNotifications.size() >= 100) {
+			currentNotifications.remove(0);
+		}
 		if (!currentNotifications.stream().filter(not -> not.getInhabitantId().equals(notification.getInhabitantId())
 				&& not.getSender().equals(notification.getSender())).findAny().isPresent()) {
 			currentNotifications.add(notification);
