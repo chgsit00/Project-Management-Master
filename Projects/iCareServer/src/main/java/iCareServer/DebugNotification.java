@@ -7,8 +7,6 @@ import javax.validation.constraints.*;
 /**
  * Debug command for triggering a alarm button pressed by an inhabitant.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-03-12T08:04:55.276Z")
-
 public class DebugNotification {
 	/**
 	 * The message is based on which button the person has pressed
