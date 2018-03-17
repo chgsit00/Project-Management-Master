@@ -16,12 +16,13 @@ public class NotificationContainer {
 
 		for (Notification not : currentNotifications) {
 			Notification currentNotification = not;
-			if (currentNotification.getInhabitantId().equals(notification.getInhabitantId())
-					&& currentNotification.getSender().equals(notification.getSender())) {
-				currentNotifications.remove(currentNotification);
+			if (!(currentNotification.getInhabitantId().equals(notification.getInhabitantId())
+					&& currentNotification.getSender().equals(notification.getSender()))) {
+				//currentNotifications.remove(currentNotification);
+				currentNotifications.add(notification);
 			}
 		}
-		currentNotifications.add(notification);
+
 	}
 
 	public synchronized static CopyOnWriteArrayList<Notification> getCurrentNotifications() {
@@ -46,6 +47,5 @@ public class NotificationContainer {
 				.filter(key -> (null != lastCall && key.getTimeStamp().before(lastCall))).collect(Collectors.toList());
 		allOldNotifications.forEach(old -> notificationsSinceLastCall.remove(old));
 		return notificationsSinceLastCall;
-
 	}
 }
