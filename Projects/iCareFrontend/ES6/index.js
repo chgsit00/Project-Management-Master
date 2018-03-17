@@ -45,7 +45,7 @@ var myVar = setInterval(myTimer, 1000);
 
 function updateView() {
     let vm = GetSideWideVm();
-    let alarms = vm.unreadNotifications.filter(n => n.severity === "red");
+    let alarms = vm.unreadNotifications.filter(n => n.severity === "RED");
     document.getElementById("alarmsPanelBody").innerHTML = `Alarms ${alarms.length} `;
 }
 
