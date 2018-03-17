@@ -1,5 +1,5 @@
 package iCareServer;
 
 public enum Severity {
-	YELLOW, RED
+	YELLOW, RED, GREEN
 }

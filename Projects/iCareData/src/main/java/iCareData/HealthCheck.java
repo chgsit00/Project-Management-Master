@@ -1,11 +1,6 @@
 package main.java.iCareData;
 
 public class HealthCheck {
-	public HealthCheck(String message, StatusFlag status) {
-		super();
-		this.message = message;
-		this.status = status.name();
-	}
 
 	private String message;
 	private String status;
@@ -14,6 +9,16 @@ public class HealthCheck {
 		GREEN, YELLOW, RED
 	}
 
+	public HealthCheck() {
+		// For JSON
+	}
+	
+	public HealthCheck(String message, StatusFlag status) {
+		super();
+		this.message = message;
+		this.status = status.name();
+	}
+	
 	public String getMessage() {
 		return message;
 	}

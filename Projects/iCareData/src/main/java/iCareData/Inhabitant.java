@@ -84,10 +84,10 @@ public class Inhabitant {
 		else
 			--yPosition;
 
-		if (!collisionDetection(xPosition, yPosition)) {
+		//if (!collisionDetection(xPosition, yPosition)) {
 			position.setX(xPosition);
 			position.setY(yPosition);
-		}
+		//}
 	}
 
 	private boolean collisionDetection(double xPosition, double yPosition) {

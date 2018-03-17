@@ -8,18 +8,18 @@ public class MoveInhabitantsController {
 		super();
 	}
 
-	public void moveInhabitants(){
+	public synchronized void moveInhabitants(){
 		for (Inhabitant inhabitant : Building.inhabitants) {
 			inhabitant.move();
 			inhabitant.updateHearthRate();
 		}
 	}
 
-	public List<Inhabitant> getInhabitants() {
+	public synchronized List<Inhabitant> getInhabitants() {
 		return Building.getInhabitants();
 	}
 
-	public void updateInhabitant(String id, int hearthRate, Position position, List<String> restrictions,
+	public synchronized void updateInhabitant(String id, int hearthRate, Position position, List<String> restrictions,
 			HealthCheck healthCheck) {
 		Inhabitant inhabitant = Building.inhabitants.stream().filter(inh -> inh.getId().equals(id)).findFirst()
 				.orElse(null);

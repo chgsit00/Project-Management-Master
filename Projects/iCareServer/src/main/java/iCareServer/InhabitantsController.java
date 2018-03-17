@@ -23,7 +23,7 @@ public class InhabitantsController {
 		List<Inhabitant> inhabitants = null;
 		while (null == inhabitants) {
 			try {
-				inhabitants = Building.getInhabitants();
+				inhabitants = Building.inhabitants;
 			} catch (ConcurrentModificationException e) {
 				// Nothing
 			}
@@ -34,7 +34,8 @@ public class InhabitantsController {
 	@RequestMapping(value = "/debug/inhabitant/{id}", method = RequestMethod.PUT)
 	public void updateInhabitant(@PathVariable("id") String id, @RequestBody DebugInhabitant debugInhabitant) {
 		MoveInhabitantsController inhabitantsController = new MoveInhabitantsController();
-		inhabitantsController.updateInhabitant(id, debugInhabitant.getHeartRate(), debugInhabitant.getPosition(),
+		inhabitantsController.updateInhabitant(id, debugInhabitant.getHeartRate(),
+				debugInhabitant.getPosition(),
 				debugInhabitant.getRestrictions(), debugInhabitant.getHealthCheck());
 	}
 }
