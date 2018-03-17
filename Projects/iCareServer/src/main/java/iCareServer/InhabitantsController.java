@@ -20,21 +20,15 @@ public class InhabitantsController {
 	@RequestMapping("/inhabitant")
 	public List<Inhabitant> getInhabitants() {
 
-		List<Inhabitant> inhabitants = null;
-		while (null == inhabitants) {
-			try {
-				inhabitants = Building.getInhabitants();
-			} catch (ConcurrentModificationException e) {
-				// Nothing
-			}
-		}
+		List<Inhabitant> inhabitants = Building.getInhabitants();
 		return inhabitants;
 	}
 
 	@RequestMapping(value = "/debug/inhabitant/{id}", method = RequestMethod.PUT)
 	public void updateInhabitant(@PathVariable("id") String id, @RequestBody DebugInhabitant debugInhabitant) {
 		MoveInhabitantsController inhabitantsController = new MoveInhabitantsController();
-		inhabitantsController.updateInhabitant(id, debugInhabitant.getHeartRate(), debugInhabitant.getPosition(),
+		inhabitantsController.updateInhabitant(id, debugInhabitant.getHeartRate(),
+				debugInhabitant.getPosition(),
 				debugInhabitant.getRestrictions(), debugInhabitant.getHealthCheck());
 	}
 }

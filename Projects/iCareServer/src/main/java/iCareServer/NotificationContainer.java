@@ -1,52 +1,48 @@
 package iCareServer;
 
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
 
 public class NotificationContainer {
-	private static Map<Date, Notification> currentNotifications;
+	private static CopyOnWriteArrayList<Notification> currentNotifications;
 	private static Date lastCall;
 
-	public static void addNotification(Notification notification) {
+	public static synchronized void addNotification(Notification notification) {
 		if (null == currentNotifications) {
-			currentNotifications = new HashMap<>();
+			currentNotifications = new CopyOnWriteArrayList<Notification>();
 		}
-		for (Date date : currentNotifications.keySet()) {
-			Notification currentNotification = currentNotifications.get(date);
-			if (currentNotification.getInhabitantId().equals(notification.getInhabitantId())
-					&& currentNotification.getSender().equals(notification.getSender())) {
-				currentNotifications.remove(date);
-			}
+		if(currentNotifications.size() >= 100) {
+			currentNotifications.remove(0);
 		}
-		Date now = new Date();
-		currentNotifications.put(now, notification);
+		if (!currentNotifications.stream().filter(not -> not.getInhabitantId().equals(notification.getInhabitantId())
+				&& not.getSender().equals(notification.getSender())).findAny().isPresent()) {
+			currentNotifications.add(notification);
+		}
 	}
 
-	public static Map<Date, Notification> getCurrentNotifications() {
+	public synchronized static CopyOnWriteArrayList<Notification> getCurrentNotifications() {
 		if (null == currentNotifications) {
-			currentNotifications = new HashMap<>();
+			currentNotifications = new CopyOnWriteArrayList<Notification>();
 		}
 		return currentNotifications;
 	}
 
-	public static Map<Date, Notification> getCurrentNotifications(Date callDate) {
+	public synchronized static CopyOnWriteArrayList<Notification> getCurrentNotifications(Date callDate) {
 		if (null == currentNotifications) {
-			currentNotifications = new HashMap<>();
+			currentNotifications = new CopyOnWriteArrayList<Notification>();
 		}
-		Map<Date, Notification> notificationsSinceLastCall = purgeOldNotifications();
+		CopyOnWriteArrayList<Notification> notificationsSinceLastCall = purgeOldNotifications();
 		lastCall = callDate;
 		return notificationsSinceLastCall;
 	}
 
-	public static Map<Date, Notification> purgeOldNotifications() {
-		Map<Date, Notification> notificationsSinceLastCall = currentNotifications;
-		List<Date> allOldNotifications = notificationsSinceLastCall.keySet().stream()
-				.filter(key -> (null != lastCall && key.before(lastCall))).collect(Collectors.toList());
+	public synchronized static CopyOnWriteArrayList<Notification> purgeOldNotifications() {
+		CopyOnWriteArrayList<Notification> notificationsSinceLastCall = currentNotifications;
+		List<Notification> allOldNotifications = notificationsSinceLastCall.stream()
+				.filter(key -> (null != lastCall && key.getTimeStamp().before(lastCall))).collect(Collectors.toList());
 		allOldNotifications.forEach(old -> notificationsSinceLastCall.remove(old));
 		return notificationsSinceLastCall;
-
 	}
 }
