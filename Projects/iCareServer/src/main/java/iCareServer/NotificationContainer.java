@@ -13,16 +13,11 @@ public class NotificationContainer {
 		if (null == currentNotifications) {
 			currentNotifications = new CopyOnWriteArrayList<Notification>();
 		}
-
-		for (Notification not : currentNotifications) {
-			Notification currentNotification = not;
-			if (!(currentNotification.getInhabitantId().equals(notification.getInhabitantId())
-					&& currentNotification.getSender().equals(notification.getSender()))) {
-				//currentNotifications.remove(currentNotification);
-				currentNotifications.add(notification);
-			}
+		
+		if (!currentNotifications.stream().filter(not -> not.getInhabitantId().equals(notification.getInhabitantId())
+				&& not.getSender().equals(notification.getSender())).findAny().isPresent()) {
+			currentNotifications.add(notification);
 		}
-
 	}
 
 	public synchronized static CopyOnWriteArrayList<Notification> getCurrentNotifications() {

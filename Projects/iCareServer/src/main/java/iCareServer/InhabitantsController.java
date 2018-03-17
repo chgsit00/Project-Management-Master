@@ -20,14 +20,7 @@ public class InhabitantsController {
 	@RequestMapping("/inhabitant")
 	public List<Inhabitant> getInhabitants() {
 
-		List<Inhabitant> inhabitants = null;
-		while (null == inhabitants) {
-			try {
-				inhabitants = Building.inhabitants;
-			} catch (ConcurrentModificationException e) {
-				// Nothing
-			}
-		}
+		List<Inhabitant> inhabitants = Building.getInhabitants();
 		return inhabitants;
 	}
 
