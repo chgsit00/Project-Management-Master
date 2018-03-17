@@ -8,6 +8,16 @@ function GET(url) {
     return JSON.parse((xhr.responseText));
 }
 
+function POST(url, body) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/json-handler");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(JSON.stringify(body));
+
+    return xhr.responseText;
+    return JSON.parse((xhr.responseText));
+}
+
 
 
 
@@ -53,11 +63,22 @@ if (!localStorage.getItem('sideWideVm')) {
 setInterval(notificationPoller, 1000);
 
 function notificationPoller() {
-
+    updateUnreadNotifications();
     showNotificationPopup();
 }
 
+function updateUnreadNotifications() {
+    let json = GET("http://localhost:8080/notification/new");
+    json = JSON.parse(json);
+    let vm = GetSideWideVm();
+    json.map(newN => {
+        vm.unreadNotifications.push(newN);
+    });
+    SetSideWideVm(vm);
+}
+
 function showNotificationPopup() {
+    
     let unreadCount = GetSideWideVm().unreadNotifications.length
     if (unreadCount == 0) {
         let element = document.getElementById('notification-container')
@@ -66,7 +87,7 @@ function showNotificationPopup() {
     }
     let html = `
     <div class=" notification alert alert-danger" role="alert">
-                            <a href="/pages/alerts.html" class="alert-link">You have new unread notifications <span class="badge">${unreadCount}</span> </a>
+                            <a href="/pages/alerts.html" class="alert-link">Unread notifications <span class="badge">${unreadCount}</span> </a>
                           </div>
                  
                           `

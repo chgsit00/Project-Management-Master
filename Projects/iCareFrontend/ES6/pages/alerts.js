@@ -4,10 +4,10 @@ function updateTable() {
     let tableContent = GetSideWideVm().unreadNotifications.map(n => {
         let type = "success";
         switch (n.severity) {
-            case "red":
+            case "RED":
                 type = "danger";
                 break;
-            case "yellow":
+            case "YELLOW":
                 type = "warning";
                 break;
             default:
@@ -24,7 +24,7 @@ function updateTable() {
     document.getElementById('alertsTableBody').innerHTML = tableContent.join("");
 }
 
-
+setTimeout(updateTable, 1000)
 // setInterval(updateTable, 100)
 
 function setToRead(events) {
