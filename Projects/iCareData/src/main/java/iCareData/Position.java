@@ -7,7 +7,7 @@ public class Position {
 	private double y;
 	
 	public Position() {
-		// Für JSON
+		// For JSON
 	}
 	
 	public Position(double x, double y) {

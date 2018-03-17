@@ -36,13 +36,18 @@ public class Building {
 	}
 	
 	public static synchronized void generateInhabitants() {
+		List<String> restrictions = new ArrayList<>();
+		restrictions.add("Entrance");
 		inhabitants = new CopyOnWriteArrayList<Inhabitant>();
 		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 67, "Ms. Smith", new ArrayList<>(), new HealthCheck("", StatusFlag.GREEN), new Position(20, 20)));
 		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 86, "Mr. Bradburry", new ArrayList<>(), new HealthCheck("High Heartrate", StatusFlag.YELLOW), new Position(324, 60)));
 		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 75, "Ms. Doubtfire", new ArrayList<>(), new HealthCheck("", StatusFlag.GREEN), new Position(210, 64)));
-		List<String> restrictions = new ArrayList<>();
-		restrictions.add("Entrance");
 		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 77, "Mr. Redguard", restrictions, new HealthCheck("", StatusFlag.GREEN), new Position(210, 20)));
+		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 80, "Mr. Green", restrictions, new HealthCheck("", StatusFlag.GREEN), new Position(257, 60)));
+		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 80, "Ms. Blue", new ArrayList<>(), new HealthCheck("", StatusFlag.GREEN), new Position(330, 10)));
+		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 80, "Mr. Hughes", new ArrayList<>(), new HealthCheck("", StatusFlag.GREEN), new Position(154, 80)));
+		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 80, "Mr. Baggins", new ArrayList<>(), new HealthCheck("", StatusFlag.GREEN), new Position(40, 80)));
+		inhabitants.add(new Inhabitant(UUID.randomUUID().toString(), 80, "Mr. X", new ArrayList<>(), new HealthCheck("", StatusFlag.GREEN), new Position(120, 60)));
 	}
 	
 	public static synchronized Map<String, RoomInterface> getRooms(){
