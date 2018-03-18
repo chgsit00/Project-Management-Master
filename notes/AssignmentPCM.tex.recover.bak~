@@ -54,7 +54,7 @@
 	
 %	\input{abk-verzeichnis/abk}
 	\clearpage
-	%\lstlistoflistings % Verzeichnis für Code-Listing
+	%\lstlistoflistings % Verzeichnis fÃ¼r Code-Listing
 \end{spacing}
 % % %%%%%% Textteil (Eigentliche Arbeit)
 \mainmatter
@@ -69,11 +69,7 @@
 \input{marketAnalysis}
 
 \input{productdevelopment}
-
-\input{serverBackendImpl}
 \input{customerfeedback}
-
-
 % % %%%%%% Literaturverzeichnis (darf im deutschen nicht in den Anhang!)
 % Einfaches Literaturverzeichnis
 %\input{chapters/ch-zz-bibEinfach}
