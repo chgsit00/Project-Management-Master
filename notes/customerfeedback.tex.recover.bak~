@@ -1,0 +1,443 @@
+\chapter{Customer Feedback}
+\label{sec:org4718a3c}
+
+High customer satisfaction is very important to our team. Professor Mousavi also
+made it very clear in his lectures that in a good project management the
+feedback of the customer is very important. For this reason, the project manager
+should regularly request feedback from the customer. We have therefore sent a
+survey to our customer three times.
+
+\subsection{Understanding the customer}
+\label{sec:org62e7666}
+The first survey was mainly about clarifying general questions, so that these can be taken into account in the project
+management. Financial topics were addressed specifically and an attempt was made
+to bring the features resulting from the specifications into a prioritized
+order. This has helped us a lot to focus on
+the features that are most important to our customers. The results of the
+questions regarding design and performance also gave us conclusions as to which
+technologies we should use and how much time we should invest in UI design.
+\subsection{Concrete questions relevant for project management}
+\label{sec:orgd256524}
+\subsubsection{How important for you is to stay below the financial frame given?}
+\label{sec:orga929d3d}
+Type: Exclusive choice 
+
+CORE: no
+
+Mandatory: yes 
+
+\begin{itemize}
+	\item Very important (10)
+	\item Important (with possible negotiation if needed) (7)
+	\item Important (if it can be reasonably argued) (6)
+	\item Not so important (2)
+	
+	\begin{itemize}
+		\item Answer
+		\begin{itemize}
+			\item Important (with possible negotiation if needed) (7)
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Which features are most important to you for the first release? Please prioritize the given features in descending order.}
+\label{sec:org7a4b4f5}
+
+Type: Prioritizing 
+
+CORE: no
+
+Mandatory: yes 
+
+\begin{itemize}
+	\item Notifications / Alarms
+	\item Survailance Cameras
+	\item Ticket system
+	\item Position Tracking
+	\item Health Monitoring
+	\item Report generation
+	\item Settings to customize UI
+	\item Eco Monitoring
+	
+	\begin{itemize}
+		\item Answer
+		\begin{itemize}
+			\item Notifications / Alarms
+			\item Position Tracking
+			\item Health Monitoring
+			\item Eco Monitoring
+			\item Survailance Cameras
+			\item Ticket system
+			\item Report generation
+			\item Settings to customize UI
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{How important is it to you that the deadline is met?}
+\label{sec:orgfcc43e2}
+Type: Exclusive choice 
+
+CORE: no
+
+Mandatory: yes 
+
+\begin{itemize}
+	\item Very Important (10)
+	\item Important (7)
+	\item Not so important than creating a good product (5)
+	\item Not important (2)
+	
+	\begin{itemize}
+		\item Answer
+		\begin{itemize}
+			\item Not so important than creating a good product (5)
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{How important is good usability to you?}
+\label{sec:org78edac0}
+Type: Exclusive choice 
+
+CORE: no
+
+Mandatory: yes 
+
+\begin{itemize}
+	\item Very Important (10)
+	\item Important (7)
+	\item Less important (5)
+	\item Not important (2)
+	
+	\begin{itemize}
+		\item Answer
+		\begin{itemize}
+			\item Very Important (10)
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{How important is an aesthetically designed product to you.}
+\label{sec:org1dadec1}
+Type: Exclusive choice 
+
+CORE: no
+
+Mandatory: yes 
+
+\begin{itemize}
+	\item Very Important (10)
+	\item Important (7)
+	\item Less important (5)
+	\item Not important (2)
+	
+	\begin{itemize}
+		\item Answer
+		\begin{itemize}
+			\item Important (7)
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\subsubsection{How important is performance to you?}
+\label{sec:orgf91a813}
+
+Type: Exclusive choice 
+
+CORE: no
+
+Mandatory: yes 
+
+\begin{itemize}
+	\item Very Important (10)
+	\item Important (7)
+	\item Less important (5)
+	\item Not important (2)
+	
+	\begin{itemize}
+		\item Answer
+		\begin{itemize}
+			\item Important (7)
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+
+\subsection{Gathering Feedback for the UI Mockups}
+\label{sec:orgab0c9bc}
+The following Email we send to our customers.
+\begin{verse}
+	\vspace*{1em}
+   Dear Ladies and Gentlemen,\\
+	\vspace*{1em}
+	\vspace*{1em}
+	I will send you a selection of logo designs for the iCare software.\\
+	Once you have made a selection, we will continue to work out this logo as quickly as possible and send you the new version.\\
+	\vspace*{1em}
+	We also send you the UI mockups and a survey about them.\\
+	\vspace*{1em}
+	We look forward to receiving prompt feedback so that we can respond to your wishes as quickly as possible.\\
+	\vspace*{1em}
+	With kind regards,\\
+	Your DAC Team\\
+	--\\
+	Dennis Mueller\\
+	\vspace*{1em}
+	DAC Company\\
+	Robert-Bosch-Strasse 7-9\\
+	Plochingen\\
+\end{verse}
+
+
+\subsection{Feedback on the designs}
+\label{sec:org2a4d070}
+\subsubsection{How do you like the iCare software logo?}
+\label{sec:orge4d1019}
+Type: Exclusive choice 
+
+CORE: yes
+
+CORE mode: Lower limit (7) 
+
+Mandatory: yes 
+
+\begin{itemize}
+	\item We are completely happy with the design. (10) 
+	\item We are happy with your design but have small recommendations. (7.5) 
+	\item We are quite happy but have recommendations for you. (5) 
+	\item We are not happy with the result. We need to do a complete redesign. (1)
+	
+	\begin{itemize}
+		\item Answer
+		\begin{itemize}
+			\item We are completely happy with the design. (10) 
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{How do you like the mockups for the frontend?}
+\label{sec:org98a956e}
+
+Type: Exclusive choice
+
+CORE: yes
+
+CORE mode: Lower limit (5)
+
+Mandatory: yes
+
+\begin{itemize}
+	\item We are completely happy with the design. (10)
+	\item We are happy with your design but have small recommendations. (7.5)
+	\item We are quite happy, but we have recommendations for you. (5)
+	\item We are not happy with the result. We need to do a complete redesign. (1)
+	
+	\begin{itemize}
+		\item Answer
+		\begin{itemize}
+			\item We are completely happy with the design. (10)
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\subsection{Feedback to the prototype:}
+\label{sec:orgd208454}
+
+The email we send to our customers.
+
+\begin{verse}
+	  Dear Ladies and Gentlemen,\\
+	\vspace*{1em}
+	this is our first prototype. We have focused on their high-priority features -\\
+	Tracking, Notifications and Eco Monitor. The prototype shows you the current\\
+	implementation state. Using the Develop Tools page, you can trigger certain\\
+	events and test the behavior of the frontend. We look forward to receiving\\
+	prompt feedback so that we can respond to your wishes as quickly as possible.\\
+	\vspace*{1em}
+	We are also sending you a survey. \\
+	We are looking forward to the  answers of the given quesitions.\\
+	\vspace*{1em}
+	With kind regards,\\
+	DAC-Team\\
+	--\\
+	Dennis Mueller\\
+	\vspace*{1em}
+	DAC Company\\
+	Robert-Bosch-Strasse 7-9\\
+	Plochingen\\
+\end{verse}
+
+
+The respond from our customers.
+\begin{verse}
+	Hello Mr. Mueller,\\
+	\vspace*{1em}
+	thank you for your prototype. My colleagues and I had a look at this yesterday.\\
+	We are very enthusiastic about the design and usability.\\
+	However, we would like to change the following.\\
+	We would like the incoming alarm notifications to be visible on every page,\\
+	not just on the dashboard.\\
+	We would also like the user to manually mark them as read.\\
+	
+	But with the rest we are very pleased.
+	
+	\vspace*{1em}
+	With kind regards\\
+	Stephan Dittmann\\
+\end{verse}
+
+\subsubsection{How do you like the prototype?}
+\label{sec:org9e85fe0}
+Type: Exclusive choice 
+
+CORE: yes
+
+CORE mode: Lower limit (7) 
+
+Mandatory: yes 
+
+\begin{itemize}
+	\item We are completely happy with the current state of the prototype . (10)
+	\item We are happy with your prototype but have small recommendations. (7.5)
+	\item We are quite happy, but we have recommendations for you. (5)
+	\item We are not happy with the result, you missed the requirements completely. (1)
+	
+	\begin{itemize}
+		\item Answer
+			\begin{itemize}
+				\item	We are happy with your prototype but have small recommendations. (7.5)
+			\end{itemize}
+	\end{itemize}
+
+\end{itemize}
+
+
+\subsubsection{How do you rate the implementation of the features in the tracking page?}
+\label{sec:org6df4067}
+
+Type: Exclusive choice 
+
+CORE: yes
+
+CORE mode: Lower limit (7) 
+
+Mandatory: yes 
+
+\begin{itemize}
+	\item We are completely happy with implementation. (10) 
+	\item We are happy with your implementation but have small recommendations. (7.5) 
+	\item We are quite happy, but we have recommendations for you. (5) 
+	\item We are not happy with the implementation, you missed the requirements completely. (1) 
+	
+	\begin{itemize}
+		\item Answer
+		\begin{itemize}
+			\item We are completely happy with implementation. (10) 
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+
+\subsubsection{How do you rate the implementation of the Notification features?}
+\label{sec:orgef07d7b}
+
+Type: Exclusive choice 
+
+CORE: yes
+
+CORE mode: Lower limit (7) 
+
+Mandatory: yes 
+
+\begin{itemize}
+	\item We are completely happy with implementation. (10) 
+	\item We are happy with your implementation but have small recommendations. (7.5) 
+	\item We are quite happy, but we have recommendations for you. (5) 
+	\item We are not happy with the implementation, you missed the requirements completely. (1) 
+	
+	\begin{itemize}
+		\item Answer
+				\begin{itemize}
+					\item 	We are happy with your implementation but have small recommendations. (7.5) 
+				\end{itemize}
+	\end{itemize}
+
+\end{itemize}
+
+\subsubsection{How do you rate the implementation of the features in the eco monitor page?}
+\label{sec:orge846696}
+
+Type: Exclusive choice 
+
+CORE: yes
+
+CORE mode: Lower limit (7) 
+
+Mandatory: yes 
+
+\begin{itemize}
+	\item We are completely happy with implementation. (10) 
+	\item We are happy with your implementation but have small recommendations. (7.5) 
+	\item We are quite happy, but we have recommendations for you. (5) 
+	\item We are not happy with the implementation, you missed the requirements completely. (1)
+\end{itemize}
+
+
+\begin{itemize}
+	
+	\item Answer
+					\begin{itemize}
+						\item 	 We are completely happy with implementation. (10) 
+					\end{itemize}
+\end{itemize}
+
+\subsubsection{How do you rate the comprehensibility and amount of information on the Dashboard Page?}
+\label{sec:org16ece02}
+
+Type: Exclusive choice 
+
+CORE: yes
+
+CORE mode: Lower limit (7) 
+
+Mandatory: yes 
+
+\begin{itemize}
+	\item We are completely happy with implementation. (10) 
+	\item We are happy with your implementation but have small recommendations. (7.5) 
+	\item We are quite happy, but we have recommendations for you. (5) 
+	\item We are not happy with the implementation, you missed the requirements completely. (1)
+	
+	\begin{itemize}
+		\item Answer
+			\begin{itemize}
+				\item 	 	We are completely happy with implementation. (10) 
+			\end{itemize}
+	\end{itemize}
+
+\end{itemize}
+\subsubsection{How satisfied are you with the refresh rate of the data. Is the information up-to-date enough for you?}
+\label{sec:orga8e28cf}
+
+Type: Exclusive choice 
+
+CORE: yes
+
+CORE mode: Lower limit (5) 
+
+Mandatory: yes 
+
+\begin{itemize}
+	\item We are completely happy with performance. (10) 
+	\item We are happy with your performance. (7.5) 
+	\item We are quite happy, but sometimes we would want a better performance. (5) 
+	\item We are not happy with the performance (1)
+	
+	\begin{itemize}
+		\item Answer
+					\begin{itemize}
+						\item 	 		We are completely happy with performance. (10) 
+					\end{itemize}
+	\end{itemize}
+
+\end{itemize}

@@ -1,0 +1,332 @@
+
+#+LATEX_CLASS: article
+
+** Customer Feedback
+
+High customer satisfaction is very important to our team. Professor Mousavi also
+made it very clear in his lectures that in a good project management the
+feedback of the customer is very important. For this reason, the project manager
+should regularly request feedback from the customer. We have therefore sent a
+survey to our customer three times.
+
+*** Understanding the customer 
+ The first survey was mainly about clarifying general questions, so that these can be taken into account in the project
+management. Financial topics were addressed specifically and an attempt was made
+to bring the features resulting from the specifications into a prioritized
+order. This has helped us a lot to focus on
+the features that are most important to our customers. The results of the
+questions regarding design and performance also gave us conclusions as to which
+technologies we should use and how much time we should invest in UI design.
+*** Concrete questions relevant for project management
+**** How important for you is to stay below the financial frame given? 
+     Type: Exclusive choice 
+
+     CORE: yes 
+
+     CORE mode: Ideal value (10)
+
+     Mandatory: yes 
+
+     - Very important (10)
+     - Important (with possible negotiation if needed) (8) 
+     - Important (if it can be reasonably argued) (6) 
+     - Not so important (2)
+      
+       - Answer
+         - Important (with possible negotiation if needed) (8) 
+
+****  Which features are most important to you for the first release? Please prioritize the given features in descending order.
+
+     Type: Prioritizing 
+
+     CORE: no
+
+     Mandatory: yes 
+
+     - Notifications / Alarms
+     - Survailance Cameras
+     - Ticket system
+     - Position Tracking
+     - Health Monitoring
+     - Report generation
+     - Settings to customize UI
+     - Eco Monitoring
+
+       - Answer
+         - Notifications / Alarms
+         - Position Tracking
+         - Health Monitoring
+         - Eco Monitoring
+         - Survailance Cameras
+         - Ticket system
+         - Report generation
+         - Settings to customize UI
+
+**** How important is it to you that the deadline is met?
+     Type: Exclusive choice 
+
+     CORE: no
+
+     Mandatory: yes 
+
+     - Very Important (10)
+     - Important (7)
+     - Not so important than creating a good product (5)
+     - Not important (2)
+     
+       - Answer
+         - Not so important than creating a good product (5)
+
+**** How important is good usability to you. 
+     Type: Exclusive choice 
+
+     CORE: no
+
+     Mandatory: yes 
+
+     - Very Important (10)
+     - Important (7)
+     - Less important (5)
+     - Not important (2)
+     
+       - Answer
+        - Very Important (10) 
+
+**** How important is an aesthetically designed product to you.
+     Type: Exclusive choice 
+
+     CORE: no
+
+     Mandatory: yes 
+
+     - Very Important (10)
+     - Important (7)
+     - Less important (5)
+     - Not important (2)
+
+       - Answer
+        - Important (7) 
+**** How important is performance to you?
+
+     Type: Exclusive choice 
+     CORE: no
+     Mandatory: yes 
+
+     - Very Important (10)
+     - Important (7)
+     - Less important (5)
+     - Not important (2)
+
+       - Answer
+         - Important (7)
+
+         
+***  Gathering Feedback for the UI Mockups 
+The Email we send to our customers.
+#+BEGIN_VERSE
+
+Hello Mr. Dittmann, Hello Mr. Schwarz,
+
+
+I will send you a selection of logo designs for the iCare software.
+Once you have made a selection, we will continue to work out this logo as quickly as possible and send you the
+Re-send the finished version.
+
+We also send you the UI mockups and a survey about them.
+
+We look forward to receiving prompt feedback so that we can respond to your wishes as quickly as possible.
+
+With kind regards,
+Your DAC Team
+——
+Dennis Müller
+
+DAC Company
+Robert-Bosch-Straße 7-9
+Plochingen
+#+END_VERSE
+
+
+*** Feedback on the designs:
+**** How do you like the iCare software logo?
+     Type: Exclusive choice 
+
+     CORE: yes
+     
+     CORE mode: Lower limit (5) 
+
+     Mandatory: yes 
+
+     - We are completely happy with the design. (10)  
+     - We are happy with your design but have small recommendations. (7.5)  
+     - We are quite happy but have recommendations for you. (5)  
+     - We are not happy with the result. We need to do a complete redesign. (1)
+     
+       - Answer
+         - We are completely happy with the design. (10)  
+
+**** How do you like the mockups for the frontend?
+
+     Type: Exclusive choice
+
+     CORE: yes
+
+     CORE mode: Lower limit (5)
+
+     Mandatory: yes
+
+     - We are completely happy with the design. (10) 
+     - We are happy with your design but have small recommendations. (7.5) 
+     - We are quite happy, but we have recommendations for you. (5) 
+     - We are not happy with the result. We need to do a complete redesign. (1)
+     
+       - Answer
+         - We are completely happy with the design. (10)
+
+*** Feedback to the prototype:
+
+The email we send to our customers.
+
+#+BEGIN_VERSE
+Hello Mr. Dittmann,
+
+this is our first prototype. We have focused on their high-priority features -
+Tracking, Notifications and Eco Monitor. The prototype shows you the current
+implementation state. Using the Develop Tools page, you can trigger certain
+events and test the behavior of the frontend. We look forward to receiving
+prompt feedback so that we can respond to your wishes as quickly as possible.
+
+We also attachted you a survey. Please answer the given quesitions.
+
+With kind regards,
+DAC-Team
+——
+Dennis Müller
+
+DAC Company
+Robert-Bosch-Straße 7-9
+Plochingen
+#+END_VERSE
+
+
+The respond from our customers.
+#+BEGIN_VERSE
+Hello Mr. Müller,
+
+thank you for your prototype. My colleagues and I had a look at this yesterday.
+We are very enthusiastic about the design and usability.
+However, we would like to change the following.
+We would like the incoming alarm notifications to be visible on every page, not just on the dashboard.
+We would also like the user to manually mark them as read.
+
+With kind regards
+Stephan Dittmann
+#+END_VERSE
+
+**** How do you like the prototype? 
+Type: Exclusive choice 
+
+CORE: yes
+
+CORE mode: Lower limit (5) 
+
+Mandatory: yes 
+
+- We are completely happy with the current state of the prototype . (10) 
+- We are happy with your prototype but have small recommendations. (7.5) 
+- We are quite happy, but we have recommendations for you. (5) 
+- We are not happy with the result, you missed the requirements completely. (1)
+
+  - Answer
+  We are happy with your prototype but have small recommendations. (7.5) 
+
+
+**** How do you rate the implementation of the features in the tracking page?
+
+Type: Exclusive choice 
+
+CORE: yes
+
+CORE mode: Lower limit (5) 
+
+Mandatory: yes 
+
+- We are completely happy with implementation. (10)  
+- We are happy with your implementation but have small recommendations. (7.5)  
+- We are quite happy, but we have recommendations for you. (5)  
+- We are not happy with the implementation, you missed the requirements completely. (1) 
+
+  - Answer
+We are completely happy with implementation. (10)  
+
+**** How do you rate the implementation of the Notification features?
+
+Type: Exclusive choice 
+
+CORE: yes
+
+CORE mode: Lower limit (5) 
+
+Mandatory: yes 
+
+- We are completely happy with implementation. (10)  
+- We are happy with your implementation but have small recommendations. (7.5)  
+- We are quite happy, but we have recommendations for you. (5)  
+- We are not happy with the implementation, you missed the requirements completely. (1) 
+
+  - Answer
+  We are happy with your implementation but have small recommendations. (7.5)  
+
+**** How do you rate the implementation of the features in the eco monitor page?
+
+Type: Exclusive choice 
+
+CORE: yes
+
+CORE mode: Lower limit (5) 
+
+Mandatory: yes 
+
+- We are completely happy with implementation. (10)  
+- We are happy with your implementation but have small recommendations. (7.5)  
+- We are quite happy, but we have recommendations for you. (5)  
+- We are not happy with the implementation, you missed the requirements completely. (1)
+
+
+  - Answer
+  We are completely happy with implementation. (10)  
+**** How do you rate the comprehensibility and amount of information on the Dashboard Page?
+
+Type: Exclusive choice 
+
+CORE: yes
+
+CORE mode: Lower limit (5) 
+
+Mandatory: yes 
+
+- We are completely happy with implementation. (10)  
+- We are happy with your implementation but have small recommendations. (7.5)  
+- We are quite happy, but we have recommendations for you. (5)  
+- We are not happy with the implementation, you missed the requirements completely. (1)
+
+  - Answer
+ We are completely happy with implementation. (10)  
+**** How satisfied are you with the refresh rate of the data. Is the information up-to-date enough for you?
+
+Type: Exclusive choice 
+
+CORE: yes
+
+CORE mode: Lower limit (5) 
+
+Mandatory: yes 
+
+- We are completely happy with performance. (10)  
+- We are happy with your performance. (7.5)  
+- We are quite happy, but sometimes we would want a better performance. (5)  
+- We are not happy with the performance (1)
+
+  - Answer
+  We are completely happy with performance. (10)  
+
