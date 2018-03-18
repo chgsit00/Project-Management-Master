@@ -21,6 +21,7 @@ function updateTable() {
     let tableContent = sideVm.recent.reverse().map(n => {
         let inhabitant = InhabitantNames.find(x => x.id === n.inhabitantId)
         
+        
         let type = "success";
         switch (n.severity) {
             case "RED":
