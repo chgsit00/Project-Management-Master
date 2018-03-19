@@ -120,8 +120,6 @@ public class Inhabitant {
 		if(xPosition == 0 || xPosition == 350 || yPosition == 0 || yPosition == 100){
 			return helper;
 		}
-		
-		/*-------- Check DiningHall --------*/
 
 		if ((		xPosition < roomInterface.get("DiningHall").GetBounds().getWidth()
 				&& (yPosition < roomInterface.get("DiningHall").GetBounds().getHeight()))){
@@ -136,8 +134,9 @@ public class Inhabitant {
 			}
 		}
 		
-		if ((		xPosition <= roomInterface.get("Room1").GetBounds().getWidth() + roomInterface.get("Room1").GetBounds().getX()
-				&& (yPosition <= roomInterface.get("Room1").GetBounds().getHeight()))){
+		if ((		xPosition < roomInterface.get("Room1").GetBounds().getWidth() + roomInterface.get("Room1").GetBounds().getX()
+				&&	xPosition > roomInterface.get("Room1").GetBounds().getX()
+				&& (yPosition < roomInterface.get("Room1").GetBounds().getHeight()))){
 			// Person befindet sich im Raum
 			return true;
 		}
@@ -150,8 +149,9 @@ public class Inhabitant {
 				}
 		}
 		
-		if ((		xPosition <= roomInterface.get("Room3").GetBounds().getWidth() + roomInterface.get("Room3").GetBounds().getX()
-				&& (yPosition <= roomInterface.get("Room3").GetBounds().getHeight()))){
+		if ((		xPosition < roomInterface.get("Room3").GetBounds().getWidth() + roomInterface.get("Room3").GetBounds().getX()
+				&&	xPosition > roomInterface.get("Room3").GetBounds().getX()
+				&& (yPosition < roomInterface.get("Room3").GetBounds().getHeight()))){
 			// Person befindet sich im Raum
 			if(		yPosition == roomInterface.get("Room3").GetDoors().GetBounds().getY() 
 				&& (xPosition > roomInterface.get("Room3").GetDoors().GetBounds().getX() && xPosition < roomInterface.get("Room3").GetDoors().GetBounds().getX() + 10))	{
@@ -161,8 +161,9 @@ public class Inhabitant {
 			}
 		}
 		
-		if ((		xPosition <= roomInterface.get("Room6").GetBounds().getWidth() + roomInterface.get("Room6").GetBounds().getX()
-				&& (yPosition <= roomInterface.get("Room6").GetBounds().getHeight()))){
+		if ((		xPosition < roomInterface.get("Room6").GetBounds().getWidth() + roomInterface.get("Room6").GetBounds().getX()
+				&&	xPosition > roomInterface.get("Room6").GetBounds().getX()
+				&& (yPosition < roomInterface.get("Room6").GetBounds().getHeight()))){
 			// Person befindet sich im Raum
 			return true;
 		}
@@ -175,8 +176,9 @@ public class Inhabitant {
 				}
 		}
 		
-		if ((		xPosition <= roomInterface.get("Room8").GetBounds().getWidth() + roomInterface.get("Room8").GetBounds().getX()
-				&& (yPosition <= roomInterface.get("Room8").GetBounds().getHeight()))){
+		if ((		xPosition < roomInterface.get("Room8").GetBounds().getWidth() + roomInterface.get("Room8").GetBounds().getX()
+				&&	xPosition > roomInterface.get("Room8").GetBounds().getX()
+				&& (yPosition < roomInterface.get("Room8").GetBounds().getHeight()))){
 			// Person befindet sich im Raum
 			return true;
 		}
@@ -189,8 +191,9 @@ public class Inhabitant {
 				}
 		}
 		
-		if ((		xPosition <= roomInterface.get("Entrance").GetBounds().getWidth() + roomInterface.get("Entrance").GetBounds().getX()
-				&& (yPosition <= roomInterface.get("Entrance").GetBounds().getHeight()))){
+		if ((		xPosition < roomInterface.get("Entrance").GetBounds().getWidth() + roomInterface.get("Entrance").GetBounds().getX()
+				&&	xPosition > roomInterface.get("Entrance").GetBounds().getX()
+				&& (yPosition < roomInterface.get("Entrance").GetBounds().getHeight()))){
 			// Person befindet sich im Raum
 			return true;
 		}
@@ -203,8 +206,9 @@ public class Inhabitant {
 				}
 		}
 		
-		if ((		xPosition <= roomInterface.get("Room2").GetBounds().getWidth() + roomInterface.get("Room2").GetBounds().getX()
-				&& (yPosition >= roomInterface.get("Room2").GetBounds().getY()))){
+		if ((		xPosition < roomInterface.get("Room2").GetBounds().getWidth() + roomInterface.get("Room2").GetBounds().getX()
+				&&	xPosition > roomInterface.get("Room2").GetBounds().getX()
+				&& (yPosition > roomInterface.get("Room2").GetBounds().getY()))){
 			// Person befindet sich im Raum
 			return true;
 		}
@@ -217,8 +221,9 @@ public class Inhabitant {
 				}
 		}
 		
-		if ((		xPosition <= roomInterface.get("Room4").GetBounds().getWidth() + roomInterface.get("Room4").GetBounds().getX()
-				&& (yPosition >= roomInterface.get("Room4").GetBounds().getY()))){
+		if ((		xPosition < roomInterface.get("Room4").GetBounds().getWidth() + roomInterface.get("Room4").GetBounds().getX()
+				&&	xPosition > roomInterface.get("Room4").GetBounds().getX()
+				&& (yPosition > roomInterface.get("Room4").GetBounds().getY()))){
 			// Person befindet sich im Raum
 			return true;
 		}
@@ -231,8 +236,9 @@ public class Inhabitant {
 				}
 		}
 		
-		if ((		xPosition <= roomInterface.get("Room5").GetBounds().getWidth() + roomInterface.get("Room5").GetBounds().getX()
-				&& (yPosition >= roomInterface.get("Room5").GetBounds().getY()))){
+		if ((		xPosition < roomInterface.get("Room5").GetBounds().getWidth() + roomInterface.get("Room5").GetBounds().getX()
+				&&	xPosition > roomInterface.get("Room5").GetBounds().getX()
+				&& (yPosition > roomInterface.get("Room5").GetBounds().getY()))){
 			// Person befindet sich im Raum
 			return true;
 		}
@@ -245,8 +251,9 @@ public class Inhabitant {
 				}
 		}
 		
-		if ((		xPosition <= roomInterface.get("Room7").GetBounds().getWidth() + roomInterface.get("Room7").GetBounds().getX()
-				&& (yPosition >= roomInterface.get("Room7").GetBounds().getY()))){
+		if ((		xPosition < roomInterface.get("Room7").GetBounds().getWidth() + roomInterface.get("Room7").GetBounds().getX()
+				&&	xPosition > roomInterface.get("Room7").GetBounds().getX()
+				&& (yPosition > roomInterface.get("Room7").GetBounds().getY()))){
 			// Person befindet sich im Raum
 			return true;
 		}
@@ -259,8 +266,9 @@ public class Inhabitant {
 				}
 		}
 		
-		if ((		xPosition <= roomInterface.get("Room9").GetBounds().getWidth() + roomInterface.get("Room7").GetBounds().getX()
-				&& (yPosition >= roomInterface.get("Room9").GetBounds().getY()))){
+		if ((		xPosition < roomInterface.get("Room9").GetBounds().getWidth() + roomInterface.get("Room7").GetBounds().getX()
+				&&	xPosition > roomInterface.get("Room9").GetBounds().getX()
+				&& (yPosition > roomInterface.get("Room9").GetBounds().getY()))){
 			// Person befindet sich im Raum
 			return true;
 		}
