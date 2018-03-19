@@ -321,8 +321,8 @@ public class Inhabitant {
 	}
 	
 	public void updateHearthRate() {
-		int min = heartRate - 3;
-		int max = heartRate + 3;
+		int min = heartRate - 1;
+		int max = heartRate + 1;
 		int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
 		if (randomNum < 0) {
 			randomNum+=10;
@@ -337,13 +337,13 @@ public class Inhabitant {
 	private void updateHealthCheck(int randomNum) {
 		// generiert eine entsprechende Warnung, wenn Herzrate zu hoch oder zu niedrig
 		// ist.
-		if (randomNum <= 40) {
+		if (randomNum <= 30) {
 			this.healthCheck = new HealthCheck("imminent cardiac arrest", StatusFlag.RED);
-		} else if (randomNum > 40 && randomNum <= 65) {
+		} else if (randomNum > 30 && randomNum <= 50) {
 			this.healthCheck = new HealthCheck("Low heart rate", StatusFlag.YELLOW);
-		} else if (randomNum >= 100) {
+		} else if (randomNum >= 130) {
 			this.healthCheck = new HealthCheck("High heart rate", StatusFlag.RED);
-		} else if (randomNum >= 90 && randomNum < 100) {
+		} else if (randomNum >= 100 && randomNum < 130) {
 			this.healthCheck = new HealthCheck("Increased heart rate", StatusFlag.YELLOW);
 		} else {
 			this.healthCheck = new HealthCheck("OK", StatusFlag.GREEN);
