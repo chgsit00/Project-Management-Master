@@ -1,4 +1,38 @@
-\section{Mocks}
+\section{UI Mockups}
+
+The following section shows the mockup that where created to show the customer the 
+layout of the iCare frontend, before the implementation was started.
+
+\subsection{Dashboard}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width =0.65\textwidth]{images/mockDashboard.png}
+	\caption{Mockup for dashboard page}
+\end{figure}
+
+\subsection{Tracking}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width =0.65\textwidth]{images/mockTracking.png}
+	\caption{Mockup for tracking page}
+\end{figure}
+
+
+\subsection{Eco Monitor}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width =0.65\textwidth]{images/mockEcoMonitor.png}
+	\caption{Mockup for Eco Monitor page}
+\end{figure}
+
+
+\subsection{Cameras}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width =0.65\textwidth]{images/mockCameras.png}
+	\caption{Mockup for cameras page}
+\end{figure}
+
 
 \section{Implementation - Frontend}
 
@@ -19,11 +53,6 @@ The user must manually mark these messages as read so that these messages are no
 \subsection{Dynamic website}
 Through timers the frontend calls the backend in the background at regular intervals (1 second), this ensures that the data in the frontend is always up-to-date.
 
-\subsection{Tracking page}
-On this page you can see a floor plan of the building showing the positions of the tracked inhabitants.
-Every second the points are updated and the corresponding data is updated.
-By clicking on a point, the current values of this inhabitant are displayed below the building floor plan ( Heart rate, Health Check, Restrictions, Name and ID).
-The colors of the point have been implemented in a traffic light scheme. The dots on the floor plan, each representing an inhabitant, are displayed in these colors accordingly.
 
 
 \subsection{Dashboard / Notifications}
@@ -41,23 +70,73 @@ Clicking on this popup takes the user to an overview page in which all unread no
 If notifications are removed from the inbox, they are not deleted, but are still displayed in the recent list in the dashboard.
 
 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width =1\textwidth]{images/uiNotificationPopup.png}
+	\caption{UI screenshot Eco Monitor  page}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width =1\textwidth]{images/uiUnreadNotifications.png}
+	\caption{UI screenshot overview of unread notifications}
+\end{figure}
+
+\subsection{Tracking page}
+On this page you can see a floor plan of the building showing the positions of the tracked inhabitants.
+Every second the points are updated and the corresponding data is updated.
+By clicking on a point, the current values of this inhabitant are displayed below the building floor plan ( Heart rate, Health Check, Restrictions, Name and ID).
+The colors of the point have been implemented in a traffic light scheme. The dots on the floor plan, each representing an inhabitant, are displayed in these colors accordingly.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width =1\textwidth]{images/uiTracking2.png}
+	\caption{UI screenshot tracking page}
+\end{figure}
+
+
 \subsection{Eco Monitor}
 
 This page provides an overview of the electricity and water consumption of the last 30 days.
 In this case, the data is only loaded once when the web page is loaded, since this data does not change as frequently.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width =1\textwidth]{images/uiEcoMonitor1.png}
+	\caption{UI screenshot Eco Monitor  page}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width =1\textwidth]{images/uiEcoMonitor2.png}
+	\caption{UI screenshot Eco Monitor  page}
+\end{figure}
 
 
 \subsection{Camera page}
 
 This page shows the user the last images of the surveillance cameras installed in the Carehome.
 At the top he sees the pictures from the reception hall and below the pictures from the outside area. Additionally, a timestamp is diplayed to indicate when the image was taken.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width =1\textwidth]{images/uiCameras1.png}
+	\caption{UI screenshot of cameras page}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width =1\textwidth]{images/uiCameras2.png}
+	\caption{UI screenshot of cameras page}
+\end{figure}
 
 \subsection{Report page}
 
 This page allows you to generate a report for a specified period of time and download it as a pdf file.
-The report includes water and electricity consumption. As well as a record of each resident's health check sensors.
+The report includes water and electricity consumption. As well as a record of each resident's health check sensors. This feature was not yet implemented completely.
 
 
 \subsection{Settings page}
 This page allows you to configure certain settings on the frontend.
+This feature was not yet implemented completely.
