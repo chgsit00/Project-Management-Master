@@ -18,7 +18,6 @@ import main.java.iCareData.MoveInhabitantsController;
 public class InhabitantsController {
 	@RequestMapping("/inhabitant")
 	public List<Inhabitant> getInhabitants() {
-
 		List<Inhabitant> inhabitants = Building.getInhabitants();
 		return inhabitants;
 	}

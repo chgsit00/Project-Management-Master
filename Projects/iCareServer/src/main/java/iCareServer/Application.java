@@ -21,7 +21,7 @@ public class Application {
 					try {
 						moveInhabitantsController.moveInhabitants();
 						AlertNotifier.notifyCauseForAlert(moveInhabitantsController.getInhabitants());
-						Thread.sleep(1000);
+						Thread.sleep(500);
 					} catch (Exception e) {
 						e.printStackTrace();
 					}

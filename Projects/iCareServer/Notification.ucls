@@ -3,7 +3,7 @@
   associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="iCareServer.Notification" project="iCareServer" 
     file="/iCareServer/src/main/java/iCareServer/Notification.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="211" y="238"/>    
+    <position height="-1" width="-1" x="258" y="317"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <enumeration id="2" language="java" name="iCareServer.Severity" project="iCareServer" 
     file="/iCareServer/src/main/java/iCareServer/Severity.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="576" y="235"/>    
+    <position height="-1" width="-1" x="611" y="317"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,26 +21,51 @@
   </enumeration>  
   <class id="3" language="java" name="iCareServer.AlertNotifier" project="iCareServer" 
     file="/iCareServer/src/main/java/iCareServer/AlertNotifier.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="397" y="70"/>    
+    <position height="-1" width="-1" x="611" y="80"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="false" package="false" protected="false" private="false" static="true"/>    
     </display>  
   </class>  
-  <association id="4">    
+  <class id="4" language="java" name="iCareServer.NotificationContainer" project="iCareServer" 
+    file="/iCareServer/src/main/java/iCareServer/NotificationContainer.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="258" y="84"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <association id="5">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="5" name="severity"/>      
-      <multiplicity id="6" minimum="0" maximum="1"/>    
+      <attribute id="6" name="severity">        
+        <position height="0" width="0" x="35" y="82"/>      
+      </attribute>      
+      <multiplicity id="7" minimum="0" maximum="1">        
+        <position height="0" width="0" x="35" y="82"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="false" multiplicity="false"/>  
   </association>  
-  <dependency id="7">    
+  <dependency id="8">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
-  <dependency id="8">    
+  <association id="9">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="10" name="currentNotifications"/>      
+      <multiplicity id="11" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="false" multiplicity="true"/>  
+  </association>  
+  <dependency id="12">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="13">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="2"/>  
   </dependency>  
