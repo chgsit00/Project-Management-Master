@@ -294,5 +294,36 @@ In addition to the times, the duration and the task variance are calculated with
 	\centering
 	\includegraphics[width=\textwidth]{images/precedenceChart}
 \end{figure}
-
+\newpage
 \section{Critical Path Method}
+Once all tasks of a project have been defined, working times can be added. This allows determining how long the project takes, for example. There are tasks that can be started in parallel to others. However, this is not obvious at first glance. For this reason, this project uses the critical path method in conjunction with the GANTT diagram. Figure \ref{fig:criticalPath} shows the critical path in hatched structure. On the following page, see figure \ref{fig:pertChart}, a network plan on which the critical elements are provided with a thick red frame can be seen. 
+\\
+The critical path method is mainly used for projects that percentage of completion is calculable. Since this project has a fixed deadline, it makes sense to use the critical path method to pay particular attention to critical sections of the project.
+\begin{landscape}
+	% Header entfernt, damit das Bild mehr Platz hat
+	\thispagestyle{plain}
+	%\newgeometry{
+	%  	left=3cm,
+	%	right=3cm,
+	%	top=2cm,
+	%	bottom=4cm,
+	%	bindingoffset=5mm
+	%}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.4\textwidth]{images/criticalPath}
+		\caption{Critical Path}
+		\label{fig:criticalPath}
+	\end{figure}
+	\pagebreak
+	% Header entfernt, damit das Bild mehr Platz hat
+	\thispagestyle{plain}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.4\textwidth]{images/pertChart}
+		\caption{Network Plan with critical path}
+		\label{fig:pertChart}
+	\end{figure}
+	%\restoregeometry
+\end{landscape}
+
