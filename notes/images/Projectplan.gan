@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2017-11-27" view-index="0" gantt-divider-location="378" resource-divider-location="300" version="2.8.5" locale="de_DE">
+    <description/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Vorgang" width="329" order="0"/>
+        <field id="tpd4" name="Anfang" width="15" order="1"/>
+        <field id="tpd5" name="Ende" width="15" order="2"/>
+        <option id="color.recent">
+            <![CDATA[#ff0000 #ff0033 #ff3300 #0033ff #00cc33 #00cc00 #3333ff]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Ressource" width="206" order="0"/>
+        <field id="1" name="Rolle" width="90" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="3" name="Basic Concept" color="#0033ff" meeting="true" start="2017-12-04" duration="0" complete="100" priority="2" expand="true">
+            <depend id="171" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="5" name="create Logo for Software" color="#0033ff" meeting="false" start="2017-12-08" duration="5" complete="0" expand="true">
+            <depend id="117" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="9" name="Basic Layout" color="#3333ff" meeting="false" start="2017-12-08" duration="6" complete="0" expand="true"/>
+        <task id="11" name="Market Analysis" color="#0033ff" meeting="false" start="2018-01-08" duration="8" complete="0" expand="true">
+            <depend id="26" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="13" name="Project Management" color="#0033ff" meeting="false" start="2017-12-04" duration="7" complete="0" expand="true">
+            <depend id="211" type="2" difference="0" hardness="Strong"/>
+            <depend id="215" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="15" name="Aims and Objectives&lt;" color="#0033ff" meeting="false" start="2017-12-18" duration="2" complete="0" expand="true"/>
+        <task id="17" name="Analyze Requirements" color="#0033ff" meeting="false" start="2017-12-04" duration="4" complete="0" expand="true">
+            <depend id="20" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="20" name="Define Specification" color="#0033ff" meeting="false" start="2017-12-08" duration="6" complete="0" expand="true">
+            <depend id="15" type="2" difference="0" hardness="Strong"/>
+            <depend id="36" type="2" difference="0" hardness="Strong"/>
+            <depend id="39" type="2" difference="0" hardness="Strong"/>
+            <depend id="174" type="2" difference="0" hardness="Strong"/>
+            <depend id="183" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="21" name="Define Tasks" color="#0033ff" meeting="false" start="2017-12-11" duration="4" complete="100" expand="true">
+            <depend id="23" type="2" difference="0" hardness="Strong"/>
+            <depend id="30" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="23" name="Maintain Tasks with Kanbanflow" color="#0033ff" meeting="false" start="2017-12-15" duration="70" complete="0" expand="true"/>
+        <task id="26" name="Calculate Hardware costs" color="#0033ff" meeting="false" start="2018-01-18" duration="5" complete="100" expand="true">
+            <depend id="212" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="30" name="Resource allocation" color="#0033ff" meeting="false" start="2017-12-15" duration="3" complete="0" expand="true"/>
+        <task id="36" name="Risk Analysis" color="#0033ff" meeting="false" start="2017-12-18" duration="5" complete="0" expand="true"/>
+        <task id="39" name="Discuss Specification with Customer" color="#0033ff" meeting="false" start="2017-12-18" duration="2" complete="0" expand="true"/>
+        <task id="43" name="Work Breakdown Structure" color="#0033ff" meeting="false" start="2017-12-08" duration="2" complete="0" expand="true"/>
+        <task id="117" name="verify Logo Design in consultation with customer" color="#0033ff" meeting="false" start="2017-12-15" duration="3" complete="0" expand="true"/>
+        <task id="120" name="verify UI Design in consultation with customer" color="#0033ff" meeting="false" start="2018-01-25" duration="5" complete="100" expand="true"/>
+        <task id="115" name="Customer Survey" color="#0033ff" meeting="false" start="2018-01-25" duration="20" complete="100" expand="true"/>
+        <task id="123" name="verify features using prototypes" color="#0033ff" meeting="false" start="2018-03-13" duration="4" complete="100" expand="true">
+            <depend id="214" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="45" name="Server Frontend" color="#00cc00" meeting="false" start="2018-01-17" duration="44" complete="88" expand="true">
+            <task id="174" name="implement views" color="#00cc00" meeting="false" start="2018-01-25" duration="33" complete="100" expand="true">
+                <depend id="123" type="2" difference="0" hardness="Strong"/>
+                <depend id="191" type="1" difference="0" hardness="Strong"/>
+                <depend id="200" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="200" name="test views" color="#00cc33" meeting="false" start="2018-03-13" duration="5" complete="0" expand="true"/>
+            <task id="205" name="design UI elements" color="#00cc33" meeting="false" start="2018-01-17" duration="6" complete="100" expand="true">
+                <depend id="115" type="2" difference="0" hardness="Strong"/>
+                <depend id="120" type="2" difference="0" hardness="Strong"/>
+                <depend id="174" type="2" difference="0" hardness="Rubber"/>
+            </task>
+        </task>
+        <task id="62" name="Database" color="#00cc33" meeting="false" start="2018-01-17" duration="47" complete="13" expand="true">
+            <task id="181" name="Define Entity Model" color="#00cc33" meeting="false" start="2018-01-17" duration="7" complete="100" expand="true">
+                <depend id="183" type="2" difference="0" hardness="Rubber"/>
+                <depend id="186" type="2" difference="0" hardness="Rubber"/>
+                <depend id="187" type="2" difference="0" hardness="Strong"/>
+                <depend id="199" type="2" difference="0" hardness="Strong"/>
+                <depend id="210" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="183" name="Implement Persistence Layer" color="#00cc33" meeting="true" start="2018-01-26" duration="0" complete="100" expand="true"/>
+            <task id="186" name="Create Database (optional)" color="#00cc33" meeting="false" start="2018-01-26" duration="16" complete="0" expand="true"/>
+            <task id="187" name="implement Logic for Data Persistence" color="#00cc33" meeting="false" start="2018-01-26" duration="40" complete="0" expand="true">
+                <depend id="191" type="1" difference="0" hardness="Strong"/>
+            </task>
+            <task id="210" name="define communication interfaces for data access" color="#00cc33" meeting="false" start="2018-01-26" duration="1" complete="100" expand="true">
+                <depend id="196" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="79" name="Server Backend" color="#00cc33" meeting="false" start="2018-01-22" duration="43" complete="51" expand="true">
+            <task id="178" name="implement REST interface" color="#00cc33" meeting="false" start="2018-01-22" duration="10" complete="100" expand="true">
+                <depend id="189" type="2" difference="0" hardness="Strong"/>
+                <depend id="196" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="189" name="implement communication with backend" color="#00cc33" meeting="false" start="2018-02-05" duration="7" complete="100" expand="true">
+                <depend id="191" type="1" difference="0" hardness="Strong"/>
+            </task>
+            <task id="191" name="error handling" color="#00cc33" meeting="false" start="2018-02-05" duration="33" complete="0" expand="true"/>
+            <task id="195" name="implement security features" color="#00cc33" meeting="false" start="2018-03-16" duration="4" complete="0" expand="true"/>
+            <task id="196" name="implement business Logic" color="#00cc33" meeting="false" start="2018-02-05" duration="20" complete="100" expand="true"/>
+            <task id="199" name="Define Datamodel for Frontend" color="#00cc33" meeting="false" start="2018-01-26" duration="2" complete="100" expand="true"/>
+        </task>
+        <task id="126" name="Documentation" color="#ff3300" meeting="false" start="2017-12-11" duration="74" complete="93" expand="true">
+            <task id="166" name="Report: Requirements" color="#ff3300" meeting="false" start="2017-12-11" duration="3" complete="100" expand="true">
+                <depend id="169" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="167" name="Report: Introduction" color="#ff0000" meeting="false" start="2017-12-11" duration="5" complete="100" expand="true"/>
+            <task id="169" name="Report: Specification" color="#ff3300" meeting="false" start="2017-12-14" duration="5" complete="100" expand="true">
+                <depend id="171" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="171" name="Report: Basic Concept" color="#ff3300" meeting="false" start="2017-12-21" duration="3" complete="100" expand="true"/>
+            <task id="211" name="Report: Project Plan" color="#ff0000" meeting="false" start="2017-12-13" duration="8" complete="100" expand="true"/>
+            <task id="212" name="Report: Price Calculation" color="#ff0000" meeting="false" start="2018-01-25" duration="10" complete="100" expand="true"/>
+            <task id="213" name="Conclusion Dennis" color="#ff0000" meeting="false" start="2018-03-21" duration="2" complete="0" expand="true"/>
+            <task id="214" name="Report: UI Evaluation / Customer Survey" color="#ff0000" meeting="false" start="2018-03-19" duration="3" complete="100" expand="true"/>
+            <task id="215" name="Report: Project Management" color="#ff0000" meeting="false" start="2017-12-13" duration="50" complete="100" expand="true"/>
+            <task id="216" name="Conclusion Chris" color="#ff0033" meeting="false" start="2018-03-21" duration="2" complete="0" expand="true"/>
+            <task id="217" name="Conclusion Toni" color="#ff0000" meeting="false" start="2018-03-21" duration="2" complete="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Dennis" function="Default:1" contacts="" phone="">
+            <rate name="standard" value="100"/>
+        </resource>
+        <resource id="1" name="Chris" function="Default:0" contacts="" phone="">
+            <rate name="standard" value="100"/>
+        </resource>
+        <resource id="2" name="Toni" function="Default:0" contacts="" phone="">
+            <rate name="standard" value="100"/>
+        </resource>
+    </resources>
+    <allocations>
+        <allocation task-id="3" resource-id="0" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="5" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="9" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="13" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="15" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="17" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="20" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="21" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="23" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="30" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="39" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="43" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="45" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="115" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="117" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="120" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="123" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="126" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="166" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="167" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="169" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="171" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="174" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="189" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="191" resource-id="0" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="200" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="205" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="213" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="214" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="215" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="3" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="13" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="15" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="17" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="20" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="21" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="23" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="30" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="36" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="79" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="123" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="126" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="166" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="167" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="169" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="171" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="178" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="181" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="189" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="191" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="195" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="196" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="199" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="210" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="211" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="216" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="5" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="11" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="13" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="15" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="17" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="20" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="21" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="23" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="26" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="30" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="43" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="62" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="117" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="126" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="166" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="167" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="169" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="181" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="183" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="186" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="187" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="210" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="212" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="217" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
