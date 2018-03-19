@@ -16,7 +16,8 @@ public class Inhabitant {
 	private Position position;
 	private boolean xLast = true;
 	private boolean yLast = true;
-	private boolean collision = false;
+	private boolean xCollision = false;
+	private boolean yCollision = false;
 
 	public Inhabitant(String id, int heartRate, String name, List<String> restrictions, HealthCheck healtCheck,
 			Position position) {
@@ -78,11 +79,12 @@ public class Inhabitant {
 		int randomInt = randomGenerator.nextInt(2);
 		if (randomInt == 1) {						/* Bewegt sich Person in x Richtung? Chance  50 % */
 			randomInt = randomGenerator.nextInt(99);	/* Chance  5 %, dass Person Richtung ändert */
-			if(randomInt == 5) {
+			if(randomInt == 5 || xCollision == true) {
 				if(xLast == true)
 					xLast = false;
 				else
 					xLast = true;
+				xCollision = false;
 			}
 			
 			if(xLast == true)
@@ -94,12 +96,12 @@ public class Inhabitant {
 		randomInt = randomGenerator.nextInt(2);
 		if (randomInt == 1) {						/* Bewegt sich Person in y Richtung? Chance  50 % */
 			randomInt = randomGenerator.nextInt(89);	/* Chance  10 %, dass Person Richtung ändert */
-			if(randomInt == 5 || collision == true) {
+			if(randomInt == 5 || yCollision == true) {
 				if(yLast == true)
 					yLast = false;
 				else
 					yLast = true;
-				collision = false;
+				yCollision = false;
 			}
 			
 			if(yLast == true)
@@ -112,8 +114,6 @@ public class Inhabitant {
 			position.setX(xPosition);
 			position.setY(yPosition);
 		}
-		else
-			collision = true;
 		
 	}
 
@@ -292,7 +292,12 @@ public class Inhabitant {
 			// Person befindet sich im Korridor
 			return true;
 		}
-
+		
+		if(xPosition == 0 || xPosition == 100 || xPosition == 150 || xPosition == 200 || xPosition == 250 || xPosition == 300 || xPosition == 350)
+			xCollision = true;
+		if(yPosition == 0 || yPosition == 45 || yPosition == 55 || yPosition == 100)
+			yCollision = true;
+		
 		return helper;
 	}
 
