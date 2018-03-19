@@ -16,6 +16,7 @@ public class Inhabitant {
 	private Position position;
 	private boolean xLast = true;
 	private boolean yLast = true;
+	private boolean collision = false;
 
 	public Inhabitant(String id, int heartRate, String name, List<String> restrictions, HealthCheck healtCheck,
 			Position position) {
@@ -92,12 +93,13 @@ public class Inhabitant {
 			
 		randomInt = randomGenerator.nextInt(2);
 		if (randomInt == 1) {						/* Bewegt sich Person in y Richtung? Chance  50 % */
-			randomInt = randomGenerator.nextInt(99);	/* Chance  5 %, dass Person Richtung ändert */
-			if(randomInt == 5) {
+			randomInt = randomGenerator.nextInt(89);	/* Chance  10 %, dass Person Richtung ändert */
+			if(randomInt == 5 || collision == true) {
 				if(yLast == true)
 					yLast = false;
 				else
 					yLast = true;
+				collision = false;
 			}
 			
 			if(yLast == true)
@@ -110,6 +112,9 @@ public class Inhabitant {
 			position.setX(xPosition);
 			position.setY(yPosition);
 		}
+		else
+			collision = true;
+		
 	}
 
 	private boolean collisionDetection(double xPosition, double yPosition) {
