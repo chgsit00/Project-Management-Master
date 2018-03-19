@@ -1,9 +1,9 @@
-\chapter{Implementing iCareData}
+\section{Implementing iCareData}
 \label{chap:iCareData}
 From the System Designer's point of view, the project is divided into two parts. The building and its inhabitants. 
 \\
 The iCareData part is called periodically by the server. The tasks are to manage the data of the residents and to define the building. Figure \ref{fig:iCareDataBuilding} on the following page shows the basic structure of the building part. It consists of two interfaces and classes that represent each room in the building. 
-\section{Object models}
+\subsection{Object models}
 Each room is a composition of a door as well as bounds. The bounds are important for the building because it contains the architectural measurement of each room. This will also get more important when the building and its inhabitants are displayed on the web page. The door is basically important for the frontend. The position of the doors will make sure, that the inhabitants will walk through them and not through the walls. The two interfaces consist of the coordinates of the entire building and will make sure that every class will implement the right methods.
 \begin{figure}[h]
 	\centering
