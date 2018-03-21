@@ -1,4 +1,4 @@
-
+\newcommand\tabrotate[1]{\rotatebox{90}{#1\hspace{\tabcolsep}}}
 \chapter{Planning}
 \label{sec:org2610146}
 \section{Requirements}
@@ -61,7 +61,7 @@
 \end{itemize}
 \begin{center}
 \begin{tabular}{lllllll}
- & Admin & Medical Staff & Technical Staff & residents & cleaning staff & manager\\
+ & \tabrotate{Admin} & \tabrotate{Medical Staff} & \tabrotate{Technical Staff} & \tabrotate{Residents} & \tabrotate{Cleaning staff} & \tabrotate{Manager}\\
 \hline
 survaillance of public spaces & x &  & x &  &  & \\
 state of windows and doors & x & x & x &  &  & \\
@@ -272,7 +272,7 @@ temperature, cleanliness of rooms, (maybe) staff kindness)
 \input{architecture}
 \section{Project Plan}
 \label{sec:org8452a3e}
-At the beginning of a project, it is important to set up a project plan for scheduling over the entire project period and determine when certain tasks need to be completed. This simplifies the allocation of resources and can reveal problems at an early stage in the project's development. Resources can also be allocated to the individual tasks within a project plan. The number of resources available can vary within a project. It depends on how many people are involved in the project and how much time they can invest in the project. Of course, the performance of the individual team members also plays a role. The expected effort for the individual tasks is measured in hours. These are recorded for each individual task in the project plan. In addition, there is a progress bar, which is moved by the person responsible for the task during processing according to their own judgement. This allows the project manager in charge to quickly gain an overview of the progress of the individual tasks and identify where problems may occur. Planhammer\footnote{https://planhammer.io/}'s online project management tool was used to create and edit the project plan. Figure \ref{project-plan1} and figure \ref{project-plan2} shows the status of the project plan at the beginning of march.
+At the beginning of a project, it is important to set up a project plan for scheduling over the entire project period and determine when certain tasks need to be completed. This simplifies the allocation of resources and can reveal problems at an early stage in the project's development. Resources can also be allocated to the individual tasks within a project plan. The number of resources available can vary within a project. It depends on how many people are involved in the project and how much time they can invest in the project. Of course, the performance of the individual team members also plays a role. The expected effort for the individual tasks is measured in hours. These are recorded for each individual task in the project plan. In addition, there is a progress bar, which is moved by the person responsible for the task during processing according to their own judgement. This allows the project manager in charge to quickly gain an overview of the progress of the individual tasks and identify where problems may occur. GanttProject\footnote{http://www.ganttproject.biz/} was used to create and edit the project plan. Figure \ref{project-plan1} and figure \ref{project-plan2} shows the status of the project plan at the beginning of march.
 % Ab hier im Querformat
 \begin{landscape}
 % Header entfernt, damit das Bild mehr Platz hat
@@ -286,7 +286,7 @@ At the beginning of a project, it is important to set up a project plan for sche
 %}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width =1.4\textwidth]{images/Projectplan1.png}
+	\includegraphics[width =1.4\textwidth]{images/Projectplan1_neu.png}
 	\caption{Project plan part 1}
 	\label{project-plan1}
 \end{figure}
@@ -295,16 +295,30 @@ At the beginning of a project, it is important to set up a project plan for sche
 \thispagestyle{plain}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width =1.4\textwidth]{images/Projectplan2.png}
+	\includegraphics[width =1.4\textwidth]{images/Projectplan2_neu.png}
 	\caption{Project plan part 2}
 	\label{project-plan2}
 \end{figure}
 %\restoregeometry
 \end{landscape}
 % Ab jetzt wieder hochkant
-In order to get a better overview of which tasks have already been completed, which tasks are still in progress and which are still completely open, the large tasks have been split into many smaller parts. This also makes it easy to identify which periods were planned for which type of tasks. The start of the implementation on January 15th, for example, is very easy to find, as many tasks related to the implementation of the system start here. As can be seen by the progress bars, much of the implementation and documentation has already been completed. However, all activities that require an operational product such as the evaluation of user interfaces are still in progress.
+In order to get a better overview of which tasks have already been completed, which tasks are still in progress and which are still completely open, the large tasks have been split into many smaller parts. All task The implementation tasks are green, while all tasks related to writing this document are displayed in red.
+This also makes it easy to identify which periods were planned for which type of tasks. The start of the implementation on January 17th, for example, is very easy to find, as many tasks related to the implementation of the system start here. As can be seen by the progress bars, much of the implementation and documentation has already been completed. However, all activities that require an operational product such as the evaluation of user interfaces are still in progress.
 \subsection{Resource Plan}
-\textbf{// TODO: Tool für Resourcenplanung suchen !!!}
+In order to allow a division of resources, a resource plan with GanttProject was created for this project. The purpose of a resource plan is to put the available manpower in relation to the tasks to be completed and to allocate the corresponding amount of resources to the tasks according to their expected effort. How employees are distributed among the various tasks depends on several factors. On the one hand, it depends on the role within the team. For example, the project manager takes care of customer contact, the designer implements UI elements, the system architect takes care of the system architecture and so on. On the other hand, it also depends strongly on how the tasks are distributed over time in the project plan. An employee who is already working to capacity in a particular week cannot take on any more tasks this week. In this case, someone else who still has enough time has to take on this task. The project manager is usually responsible for scheduling the allocation of resources in such a way that all tasks are completed on time and none of his employees is overloaded. Figure \ref{resource-plan} shows the Resource-plan for this project expanded for a team member.
+% Ab hier im Querformat
+\begin{landscape}
+	% Header entfernt, damit das Bild mehr Platz hat
+	\thispagestyle{plain}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width =1.4\textwidth]{images/Resourcenplan.PNG}
+		\caption{Resource Plan}
+		\label{resource-plan}
+	\end{figure}
+	%\restoregeometry
+\end{landscape}
+% Ab jetzt wieder hochkant
 \section{Tracking Work}
 Since the project plan is already fixed at the beginning of the project and is only used for planning, another tool is needed to keep track of the work in the course of the project. This allows the team to react to smaller, short-term changes in planning. For this purpose, the free website tool KanbanFlow\footnote{https://kanbanflow.com} was used. Kanban is a method of production process control that is often used in agile process models in software development. The various tasks from the project plan are further broken down into smaller subtasks, each of which represents a card on the virtual Kanban board. The board consists of four different sections:
 \begin{itemize}
