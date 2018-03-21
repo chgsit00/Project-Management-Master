@@ -6,7 +6,6 @@
 /Projects/iCareServer/.settings/.gitignore
 *.aux
 *.log
-*.pdf
 *.synctex.gz
 /notes/AssignmentPCM.lof
 /notes/AssignmentPCM.out
