@@ -36,7 +36,12 @@
 \begin{spacing}{1} % Vorspiel immer mit Standard-Zeilenabstand setzen
 	\frontmatter
 	% % Titelblatt
-	\include{preamble/ch-aa-titel}
+	%\include{preamble/ch-aa-titel}
+	
+	\includepdf{Deckblatt-Assignment1}
+	\includepdf{submission}
+	\includepdf{submission}
+	\includepdf{submission}
 	%\include{chapters/ch-aa-vorspiel}
 	%\include{chapters/ch-aa-zusfasg}
 	% % Verzeichnisse
@@ -61,7 +66,7 @@
 %
 \ofoot[\pagemark\, \textbf{of \pageref*{LastPage}}]{\pagemark\, \textbf{of \pageref*{LastPage}}}
 
-
+\input{authorTable}
 \input{introduction}
 \input{planing}		
 \input{projectmanagment}

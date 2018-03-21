@@ -22,17 +22,19 @@ By taking the criteria into account, the closer decision was made on two models.
 	\subfloat[Recorder for Dome Camera]{ 
 		\includegraphics[width=0.4\textwidth]{images/CostAnalysis/recorder-pr4}% 
 	} 
-	\caption{Dome Camera System}% 
+	\caption[Dome Camera System]{Dome Camera System\footnotemark}% 
 	\label{fig:domeCameraSystem}% 
 \end{figure}
-
+\footnotetext{https://www.bascom-kameras.ch/media/catalog/product/cache/11/small\_image/\\9df78eab33525d08d6e5fb8d27136e95/b/e/beveiligingscamera-pd20.png\newline\newline https://www.bascom-kameras.de/media/catalog/product/cache/8/small\_image/\\9df78eab33525d08d6e5fb8d27136e95/r/e/recorder-pr4\_3.png}
+\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.5\textwidth]{images/CostAnalysis/sony-ip-bullet-kamera} 
-	\caption{Sony IP Bullet Camera}
+	\caption[Sony IP Bullet Camera]{Sony IP Bullet Camera\footnotemark}
 	\label{fig:sonyCamera}
 \end{figure}
 
+\footnotetext{https://www.heise.de/imgs/18/2/0/9/9/2/5/1/a61e878124bd70716eff46ce11fbb533-b6b5a4ea1295fee9.jpeg }
 %=================================================================================
 \section{Smoke detector}
 In the event of a fire, it is essential to have reliable smoke detectors in operation. Since this project aims to score points above all with customer satisfaction, inconspicuous and simple smoke detectors are preferable. There are several manufacturers that produce, for example, smart smoke detectors. Examples are Bosch, Nest or innogy. Smart devices have the advantage of being relatively easy to integrate into a system. The data can be retrieved via Wifi, Bluetooth or via web app. It is even possible to integrate the functions of the smoke detector into your own application via the API.
@@ -42,10 +44,10 @@ Considering the above mentioned criteria, the choice was made for the second gen
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.4\textwidth]{images/CostAnalysis/NestProtect} 
-	\caption{Nest Protect Smoke Detector}
+	\caption[Nest Protect Smoke Detector]{Nest Protect Smoke Detector\footnotemark}
 	\label{fig:smokeDetection}
 \end{figure}
-
+\footnotetext{https://www.conrad.com/medias/global/ce/8000\_8999/8800/8880/\\8888/1529552\_BB\_00\_FB.EPS\_1000.jpg}
 %=================================================================================
 \section{NAS }
 The network hard disk is a device that must function reliably. Important data is stored there and must be quickly accessible. That's why sufficient RAM (at least 8 GB) and a modern processor is of great importance. Another important point is of course the scalability, as well as the integration into the system, and commissioning.
@@ -53,65 +55,66 @@ The network hard disk is a device that must function reliably. Important data is
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.6\textwidth]{images/CostAnalysis/synologyFS1018} 
-	\caption{NAS}
+	\caption[NAS]{NAS\footnotemark}
 	\label{fig:nas}
 \end{figure}
 
 At this point, the \textit{Synology FlashStation FS1018} was chosen. With 12 SSD disks, it has sufficient storage capacity to store the most important data over a long period of time. The specifications are also appealing. Synology advertises their product with low latency, which is important for the application because emergency data, for example, must be retrieved quickly.
-
+\footnotetext{https://www.synology.com/api/products/getPhoto?product=FS1018\&type=img\&sort=6}
 %=================================================================================
+\newpage
 \section{Inductive and smart sensors}
 In this application, inductive sensors are required to obtain the status of different furnishing objects. Examples of this are e. g. whether a door or a window is open or closed. Inductive sensors are available in different sizes, from different manufacturers. However, the choice fell on a certain sensor from Sick. The \textit{Sick IME08-1B5PSZT0S} is an inconspicuous and reliable proximity sensor that fits well into our concept. 
-\newpage
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.4\textwidth]{images/CostAnalysis/sickIni} 
-	\caption{Sick inductive sensor}
+	\caption[Sick inductive sensor]{Sick inductive sensor\footnotemark}
 	\label{fig:sickIni}
 \end{figure}
 
 Another idea is to use a smart sensor instead of an inductive sensor. The smart heating system (chapter \ref{sec:smartHeating}) enables these two systems to interact with each other in order to create an efficient cooperation. A certain smart door and window contact from Panasonic has stood out. The \textit{Panasonic KX-HNS101}.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=.4\textwidth]{images/CostAnalysis/panasonicfensterkontakt} 
-	\caption{Sick inductive sensor}
-	\label{fig:panasonicSmart}
-\end{figure}
-
-%=================================================================================
-\section{Database Server}
-An important aspect of this project is the storage of data in a database. For this it is important that it is both scalable and robust. Data must be transported quickly and securely. And a lot of memory must be available. The \textit{Dell EMC PowerEdge T640} was selected for this. Because it is a tower server and not a server for the rack, the consumption is lower, which fits our needs for this project.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=.6\textwidth]{images/CostAnalysis/DellEMCPowerEdgeT640} 
-	\caption{Dell EMC PowerEdge T640}
-	\label{fig:dbServer}
-\end{figure}
-
-%=================================================================================
-\section{CPU for PLC System}
-PLC systems are used to process sensor data and send signals to devices. In this way, controllers can be written that receive, process sensor data and supply outputs that control actuators. This can be used to realize comfort functions. When a sensor receives a certain value, an actuator is activated which automatically opens doors or switches lights on or off, for example. Since we gained a lot of positive experience with B\&R through other projects, the choice was made for the \textit{X20CP1485 CPU}. It is characterised by its compact size, low energy consumption and extensibility. It is also capable of supporting various protocols such as POWERLINK or CAN. Thus we are flexible in development and can react dynamically to hardware changes.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=.5\textwidth]{images/CostAnalysis/BR-Automation-X20-CP-1484} 
-	\caption{B\&R CPU}
-	\label{fig:brCPU}
-\end{figure}
-
-%=================================================================================
-\section{Motion detectors}
-Motion detectors are an important part of our application. Since mostly elderly people live in the care home, it is important that they come into contact with technical equipment as little as possible. This increases the comfort factor enormously. They do not have to deal with technical innovations, but can enjoy their stay. The motion detectors are required to control lights, for example, when a resident is in a certain area. Since we don't want the residents to feel observed, the motion detector must be very simple. It must not interfere with the environment or be technically impaired by the exterior. Since there are also many manufacturers with good equipment like Philips, Elgato or Lupusec, the choice is not easy. The price-performance ratio and simplicity are an important point. That's why we chose the \textit{Lupusec DUAL Way}.
+\footnotetext{http://sensorstrade.com/media/sick/51704/sick-ime08-1b5pszt0s.jpg}
 \newpage
 \begin{figure}[h]
 	\centering
+	\includegraphics[width=.4\textwidth]{images/CostAnalysis/panasonicfensterkontakt} 
+	\caption[Panasonic KX-HNS101]{Panasonic KX-HNS101\footnotemark}
+	\label{fig:panasonicSmart}
+\end{figure}
+\footnotetext{https://cdn.tink.de/cdn/483606/media/catalog/product/cache/1/small\_image/\\640x/85e4522595efc69f496374d01ef2bf13/p/a/panasonic\_tu\_r-\_fensterkontakt\_kx-hns101\_white\_1.jpg}
+%=================================================================================
+\section{Database Server}
+An important aspect of this project is the storage of data in a database. For this it is important that it is both scalable and robust. Data must be transported quickly and securely. And a lot of memory must be available. The \textit{Dell EMC PowerEdge T640} was selected for this. Because it is a tower server and not a server for the rack, the consumption is lower, which fits our needs for this project.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.6\textwidth]{images/CostAnalysis/DellEMCPowerEdgeT640} 
+	\caption[Dell EMC PowerEdge T640]{Dell EMC PowerEdge T640\footnotemark}
+	\label{fig:dbServer}
+\end{figure}
+\footnotetext{http://www.storagereview.com/images/StorageReview-DellEMC-PowerEdge-T640.jpg}
+%=================================================================================
+\section{CPU for PLC System}
+PLC systems are used to process sensor data and send signals to devices. In this way, controllers can be written that receive, process sensor data and supply outputs that control actuators. This can be used to realize comfort functions. When a sensor receives a certain value, an actuator is activated which automatically opens doors or switches lights on or off, for example. Since we gained a lot of positive experience with B\&R through other projects, the choice was made for the \textit{X20CP1485 CPU}. It is characterised by its compact size, low energy consumption and extensibility. It is also capable of supporting various protocols such as POWERLINK or CAN. Thus we are flexible in development and can react dynamically to hardware changes.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.5\textwidth]{images/CostAnalysis/BR-Automation-X20-CP-1484} 
+	\caption[B\&R CPU]{B\&R CPU\footnotemark}
+	\label{fig:brCPU}
+\end{figure}
+\footnotetext{https://www.picclickimg.com/d/l400/pict/173155640079\_/BR-Automation-X20-CP-1484.jpg}
+%=================================================================================
+\section{Motion detectors}
+Motion detectors are an important part of our application. Since mostly elderly people live in the care home, it is important that they come into contact with technical equipment as little as possible. This increases the comfort factor enormously. They do not have to deal with technical innovations, but can enjoy their stay. The motion detectors are required to control lights, for example, when a resident is in a certain area. Since we don't want the residents to feel observed, the motion detector must be very simple. It must not interfere with the environment or be technically impaired by the exterior. Since there are also many manufacturers with good equipment like Philips, Elgato or Lupusec, the choice is not easy. The price-performance ratio and simplicity are an important point. That's why we chose the \textit{Lupusec DUAL Way}.
+\begin{figure}[h]
+	\centering
 	\includegraphics[width=.4\textwidth, trim=3cm 3cm 3cm 4cm, clip]{images/CostAnalysis/lupusecBewegungsmelder} 
-	\caption{Lupusec DUAL Way}
+	\caption[Lupusec DUAL Way]{Lupusec DUAL Way\footnotemark}
 	\label{fig:lupusecDual}
 \end{figure}
-
+\footnotetext{https://cdn.tink.de/cdn/483606/media/catalog/product/cache/1/image/\\85e4522595efc69f496374d01ef2bf13/1/\_/1.lupusec\_dual\_way\_bewegungsmelder\_1.jpg}
 %=================================================================================
 \section{Healthcare Wristband}
 A constant control of body values for patients can be very helpful to the caregivers. Classical methods such as pulse measurement or blood pressure measurement must be done manually by helpers and cost the patient time. During this time they are often not allowed to move, otherwise they can influence the values. Long-term measurements with old devices are complex and error-prone and do not give the patient a good and relaxing feeling. Our aim is to carry out long-term measurements, which the patient does not notice in the best case scenario. We use the \textit{Lenovo HW01 Smart Wristband}, which comes with a variety of features. 
@@ -127,52 +130,56 @@ A constant control of body values for patients can be very helpful to the caregi
 	\item movement memory
 	\item GPS run mode
 \end{itemize}
+\newpage
 Of course, this device does not replace special medical devices. However, it can be used for forecasting and unobtrusive monitoring, which can react quickly in an emergency.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.5\textwidth, trim=1cm 4cm 2cm 4cm, clip]{images/CostAnalysis/LenovoHW01} 
-	\caption{Lenovo HW01 Smart Wristband}
+	\caption[Lenovo HW01 Smart Wristband]{Lenovo HW01 Smart Wristband\footnotemark}
 	\label{fig:lenovoHealth}
 \end{figure}
-
+\footnotetext{https://ae01.alicdn.com/kf/HTB1EDmCRVXXXXajXXXXq6xXFXXX5/Original-Lenovo-HW01-Smart-Armband-Herzfrequenz-Moniter-Passometer-Fitness-Tracker-Bluetooth-4-2-Smartband-F-r.jpg}
 %=================================================================================
+\newpage
 \section{Emergency button}
 In order to offer patients the possibility to submit a message in case of emergency, we have decided to implement an emergency button. The data is then stored and evaluated centrally to prevent emergencies from being simulated or inadvertently activated. The \textit{FIBARO The Button (Z-Wave)} is a good and efficient way to realize this idea.
-\newpage
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.4\textwidth]{images/CostAnalysis/fibaroEmergency} 
-	\caption{FIBARO The Button (Z-Wave)}
+	\caption[FIBARO The Button (Z-Wave)]{FIBARO The Button (Z-Wave)\footnotemark}
 	\label{fig:fibaroEmergency}
 \end{figure}
-
+\footnotetext{https://cdn.tink.de/cdn/589991/media/catalog/product/optimized/4/3/\\4346c840dcdf07514061fa185a37ec49/1.fibaro\_the\_button\_z-wave\_rot.jpg}
 %=================================================================================
 \section{Smart heating system}
 \label{sec:smartHeating}
 A very important point in our product development is the heating of rooms. A lot of energy is lost there if the heating is not efficient. One of the market leaders in smart heating is the manufacturer Elgato. The product of our choice is the \textit{second-generation Elgato Eve Thermo}. 
 \\
 In addition to a simple installation, simple appearance and display, it comes with a variety of useful functions. Schedules can be set for heating schedules. It is also possible to view a consumption analysis. Both for the heating behaviour and for the energy. Another useful feature is the possibility to connect doors and window sensors with the smart heating system. As a result, the system knows when the windows and doors are opened and can regulate the heating process efficiently.
-\newpage
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.5\textwidth, trim=0 3cm 0 3cm, clip]{images/CostAnalysis/elgato-eve-thermo} 
-	\caption{Elgato Eve Thermo}
+	\caption[Elgato Eve Thermo]{Elgato Eve Thermo\footnotemark}
 	\label{fig:elgatoEve}
 \end{figure}
-
+\footnotetext{https://cdn.tink.de/cdn/483606/media/catalog/product/cache/1/small\_image/640x/\\85e4522595efc69f496374d01ef2bf13/e/l/elgato\_eve\_thermo\_1\_5.jpg}
 %=================================================================================
+\newpage
 \section{Water consumption}
 A very important point in the care home system is the analysis and monitoring of water consumption. The data should be collected automatically and forwarded to a central point so that water consumption can be regulated. Abnormal behaviour can also be detected, for example, if someone has forgotten to turn off the water. In this case, warning signals can be sent to the staff to check that everything is in order and can act quickly in an emergency. A very interesting product is the \textit{FLUID meter}, which is used in our project.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=.6\textwidth]{images/CostAnalysis/fluidMeter} 
-	\caption[FLUID meter]{FLUID meter\protect\footnotemark}
+	\caption[FLUID meter]{FLUID meter\footnotemark}
 	\label{fig:fluidMeter}
 \end{figure}
-\footnotetext{Source:\\http://www.fluidwatermeter.com/wp-content/uploads/2014/11/Fluid-Campaign.00\_00\_57\_18.Still002.png}
+\footnotetext{http://www.fluidwatermeter.com/wp-content/uploads/\\2014/11/Fluid-Campaign.00\_00\_57\_18.Still002.png}
 %=================================================================================
+\newpage
 \section{HMI Tablets}
 It makes sense to use a portable tablets to transfer information quickly to the staff. The idea is that nurses can digitally enter and retrieve patient records. With one click statistics about patients and rooms can be retrieved and managed. Another use case is that the cleaning staff has a possibility to document the cleaned rooms. Things like cleanliness or contamination can be noted. Our product of choice is the \textit{iPad Pro}, which scores points for its performance and simple appearance. Although it is more expensive than the competition, we have had good experiences with these tablets in the past, which has made our decision easier.
 \\
@@ -183,7 +190,7 @@ It makes sense to use a portable tablets to transfer information quickly to the 
 	\caption[12,9" iPad Pro]{12,9" iPad Pro\footnotemark}
 	\label{fig:iPadPro}
 \end{figure}
-\footnotetext{Source: \\https://media.nbb-cdn.de/images/products/310000/316143/Apple\_iPadPro\_2017\_space\_Hero.jpg}
+\footnotetext{https://media.nbb-cdn.de/images/products/310000/316143/Apple\_iPadPro\_2017\_space\_Hero.jpg}
 \clearpage
 %=================================================================================
 \section{Cost Calculation}
