@@ -2,6 +2,7 @@ package iCareServer;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.UUID;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -27,7 +28,7 @@ public class NotificationController {
 	public ResponseEntity<?> addNotification(@RequestBody DebugNotification debugNotification) {
 		Notification notification = new Notification(debugNotification.getInhabitantId(),
 				debugNotification.getMessage().toString(), debugNotification.getRoomId(), "", Severity.RED, new Date(),
-				debugNotification.getInhabitant());
+				debugNotification.getInhabitant(), UUID.randomUUID());
 		NotificationContainer.addNotification(notification);
 		return ResponseEntity.noContent().build();
 	}

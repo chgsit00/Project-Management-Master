@@ -1,6 +1,7 @@
 package iCareServer;
 
 import java.util.Date;
+import java.util.UUID;
 
 public class Notification {
 	private String inhabitantId;
@@ -10,8 +11,17 @@ public class Notification {
 	private Severity severity;
 	private Date timeStamp;
 	private String inhabitant;
+	private String notificationId;
 
-	public Notification(String inhabitantId,String message, String roomId, String sender, Severity severity, Date timeStamp, String inhabitant) {
+	public String getNotificationId() {
+		return notificationId;
+	}
+
+	public void setNotificationId(UUID notificationId) {
+		this.notificationId = notificationId.toString();
+	}
+
+	public Notification(String inhabitantId,String message, String roomId, String sender, Severity severity, Date timeStamp, String inhabitant, UUID notificationId) {
 		this.inhabitantId = inhabitantId;
 		this.message = message;
 		this.roomId = roomId;
@@ -19,6 +29,7 @@ public class Notification {
 		this.severity = severity;
 		this.timeStamp = timeStamp;
 		this.inhabitant = inhabitant;
+		this.notificationId = notificationId.toString();
 	}
 
 	public String getMessage() {

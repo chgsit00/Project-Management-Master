@@ -3,6 +3,7 @@ package iCareServer;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import main.java.iCareData.Bounds;
 import main.java.iCareData.Building;
@@ -21,17 +22,17 @@ public class AlertNotifier {
 			String roomId = room != null ? room.getID() : "UNKNOWN";
 			if (inhabitant.getHealthCheck().getStatus().equals(Severity.RED.toString())) {
 				Notification notification = new Notification(inhabitant.getId(),
-						inhabitant.getHealthCheck().getMessage(), roomId, WRIST_BAND, Severity.RED, new Date(), inhabitant.getName());
+						inhabitant.getHealthCheck().getMessage(), roomId, WRIST_BAND, Severity.RED, new Date(), inhabitant.getName(), UUID.randomUUID());
 				NotificationContainer.addNotification(notification);
 			} else if (inhabitant.getHealthCheck().getStatus().equals(Severity.YELLOW.toString())) {
 				Notification notification = new Notification(inhabitant.getId(),
-						inhabitant.getHealthCheck().getMessage(), roomId, WRIST_BAND, Severity.YELLOW, new Date(), inhabitant.getName());
+						inhabitant.getHealthCheck().getMessage(), roomId, WRIST_BAND, Severity.YELLOW, new Date(), inhabitant.getName(), UUID.randomUUID());
 				NotificationContainer.addNotification(notification);
 			}
 			for (String restriction : inhabitant.getRestrictions()) {
 				if (roomId.equals(restriction)) {
 					Notification notification = new Notification(inhabitant.getId(), RESTRICTIONALERT, roomId,
-							MOTION_DETECTOR, Severity.RED, new Date(), inhabitant.getName());
+							MOTION_DETECTOR, Severity.RED, new Date(), inhabitant.getName(), UUID.randomUUID());
 					NotificationContainer.addNotification(notification);
 				}
 			}
