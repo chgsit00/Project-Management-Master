@@ -9,14 +9,16 @@ public class Notification {
 	private String sender;
 	private Severity severity;
 	private Date timeStamp;
+	private String inhabitant;
 
-	public Notification(String inhabitantId,String message, String roomId, String sender, Severity severity, Date timeStamp) {
+	public Notification(String inhabitantId,String message, String roomId, String sender, Severity severity, Date timeStamp, String inhabitant) {
 		this.inhabitantId = inhabitantId;
 		this.message = message;
 		this.roomId = roomId;
 		this.sender = sender;
 		this.severity = severity;
 		this.timeStamp = timeStamp;
+		this.inhabitant = inhabitant;
 	}
 
 	public String getMessage() {
@@ -65,5 +67,13 @@ public class Notification {
 
 	public void setInhabitantId(String inhabitantId) {
 		this.inhabitantId = inhabitantId;
+	}
+
+	public String getInhabitant() {
+		return inhabitant;
+	}
+
+	public void setInhabitant(String inhabitant) {
+		this.inhabitant = inhabitant;
 	}
 }

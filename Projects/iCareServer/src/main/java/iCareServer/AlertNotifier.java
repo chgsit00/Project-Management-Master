@@ -21,17 +21,17 @@ public class AlertNotifier {
 			String roomId = room != null ? room.getID() : "UNKNOWN";
 			if (inhabitant.getHealthCheck().getStatus().equals(Severity.RED.toString())) {
 				Notification notification = new Notification(inhabitant.getId(),
-						inhabitant.getHealthCheck().getMessage(), roomId, WRIST_BAND, Severity.RED, new Date());
+						inhabitant.getHealthCheck().getMessage(), roomId, WRIST_BAND, Severity.RED, new Date(), inhabitant.getName());
 				NotificationContainer.addNotification(notification);
 			} else if (inhabitant.getHealthCheck().getStatus().equals(Severity.YELLOW.toString())) {
 				Notification notification = new Notification(inhabitant.getId(),
-						inhabitant.getHealthCheck().getMessage(), roomId, WRIST_BAND, Severity.YELLOW, new Date());
+						inhabitant.getHealthCheck().getMessage(), roomId, WRIST_BAND, Severity.YELLOW, new Date(), inhabitant.getName());
 				NotificationContainer.addNotification(notification);
 			}
 			for (String restriction : inhabitant.getRestrictions()) {
 				if (roomId.equals(restriction)) {
 					Notification notification = new Notification(inhabitant.getId(), RESTRICTIONALERT, roomId,
-							MOTION_DETECTOR, Severity.RED, new Date());
+							MOTION_DETECTOR, Severity.RED, new Date(), inhabitant.getName());
 					NotificationContainer.addNotification(notification);
 				}
 			}

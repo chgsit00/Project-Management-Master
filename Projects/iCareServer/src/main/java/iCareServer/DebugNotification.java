@@ -15,6 +15,9 @@ public class DebugNotification {
 	@JsonProperty("inhabitantId")
 	private String inhabitantId;
 	
+	@JsonProperty("inhabitant")
+	private String inhabitant;
+	
 	@JsonProperty("message")
 	private String message;
 
@@ -92,6 +95,14 @@ public class DebugNotification {
 
 	public void setInhabitantId(String inhabitantId) {
 		this.inhabitantId = inhabitantId;
+	}
+		
+	public String getInhabitant() {
+		return inhabitant;
+	}
+
+	public void setInhabitant(String inhabitant) {
+		this.inhabitant = inhabitant;
 	}
 	@Override
 	public boolean equals(java.lang.Object o) {
