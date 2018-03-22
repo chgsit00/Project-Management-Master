@@ -38,8 +38,11 @@ public class NotificationContainer {
 	}
 
 	public synchronized static List<Notification> purgeOldNotifications() {
+		if(null == lastCall) {
+			return currentNotifications;
+		}
 		List<Notification> allOldNotifications = currentNotifications.stream()
-				.filter(key -> (null != lastCall && key.getTimeStamp().after(lastCall))).collect(Collectors.toList());
+				.filter(key -> key.getTimeStamp().after(lastCall)).collect(Collectors.toList());
 		return allOldNotifications;
 	}
 }
