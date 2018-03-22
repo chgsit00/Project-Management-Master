@@ -1,5 +1,9 @@
 # RUN the backend
- TODO
+- Java 9 is required to start the backend
+- install Java 9 and make sure, that the environment variables are set correctly
+- go to the folder Projects and execute the following command:
+	java -jar iCareServer-0.0.1-SNAPSHOT.jar
+- or execute start-server.bat when you're on a Windows Environment
 # RUN the frontend
 There are two ways to do that:
 
