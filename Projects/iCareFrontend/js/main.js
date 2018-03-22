@@ -83,8 +83,12 @@ function updateUnreadNotifications() {
     let json = GET("http://localhost:8080/notification/new");
     json = JSON.parse(json);
     let vm = GetSideWideVm();
+    
     json.map(newN => {
-        vm.unreadNotifications.push(newN);
+        console.log(newN.notificationId)
+        let found = vm.unreadNotifications.find(n => n.notificationId === newN.notificationId)
+        if(!found)
+            vm.unreadNotifications.push(newN);
     });
     SetSideWideVm(vm);
 }

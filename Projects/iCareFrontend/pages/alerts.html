@@ -14,19 +14,7 @@
     <script src="alerts.js" type="text/javascript"></script>
 
     <link href="/css/site.css" rel="stylesheet" type="text/css">
-    <script>
-        $(function () {
-            var includes = $('[data-include]');
-            jQuery.each(includes, function () {
-                var file = $(this).data('include') + '.html';
-                $(this).load(file);
-            });
-
-
-        });
-        // $(document).ready(function () { updateTable() })
-        
-    </script>
+   
 </head>
 
 <body>
@@ -102,7 +90,34 @@
 
             </div>
             <div class="col-sm-10">
-                <div data-include="/views/notifications"></div>
+                    <br>
+                    <h4>
+                        <small>NOTIFICATIONS</small>
+                    </h4>
+                    <hr>
+                    <div class="row">
+                        <h2>Unread Notifications</h2>
+                        <p>Your unread notifictions. After you cleared them, you can still see them on the dashboard in the recent table
+                        </p>
+                        <hr>
+                    
+                        <button onclick="setToRead()" type="button" class="btn btn-primary">Set all to read</button>
+                    
+                    
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th width="140px">Sender</th>
+                                    <th width="100px">Timestamp</th>
+                                    <th width="140px">Inhabitant</th>
+                                    <th width="100px">Room</th>
+                                    <th>Message</th>
+                                </tr>
+                            </thead>
+                            <tbody id="alertsTableBody">
+                            </tbody>
+                        </table>
+                    </div>
             </div>
         </div>
     </div>
