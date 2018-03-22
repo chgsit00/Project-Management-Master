@@ -7,6 +7,7 @@ There are two ways to do that:
     java -jar SimpleWebServer.jar
 - navigate in the browser to http://localhost:80/
 ### Use the python SimpleWebServer
-python -m SimpleHTTPServer 5001
+- go to the folder iCareFrontend and execute the following command:
+    python -m SimpleHTTPServer 5001
 - navigate in the browser to http://localhost:5001/
 
