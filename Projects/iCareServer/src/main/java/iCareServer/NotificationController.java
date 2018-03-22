@@ -29,7 +29,7 @@ public class NotificationController {
 		Notification notification = new Notification(debugNotification.getInhabitantId(),
 				debugNotification.getMessage().toString(), debugNotification.getRoomId(), "", Severity.RED, new Date(),
 				debugNotification.getInhabitant(), UUID.randomUUID());
-		NotificationContainer.addNotification(notification);
+		NotificationContainer.addDebugNotification(notification);
 		return ResponseEntity.noContent().build();
 	}
 }

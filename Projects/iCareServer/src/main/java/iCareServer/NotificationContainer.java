@@ -13,12 +13,22 @@ public class NotificationContainer {
 		if (null == currentNotifications) {
 			currentNotifications = new CopyOnWriteArrayList<Notification>();
 		}
-		if(currentNotifications.size() >= 100) {
+		if (currentNotifications.size() >= 100) {
 			currentNotifications.remove(0);
 		}
 		if (!currentNotifications.stream().filter(x -> x.equals(notification)).findAny().isPresent()) {
 			currentNotifications.add(notification);
 		}
+	}
+	
+	public static synchronized void addDebugNotification(Notification notification) {
+		if (null == currentNotifications) {
+			currentNotifications = new CopyOnWriteArrayList<Notification>();
+		}
+		if (currentNotifications.size() >= 100) {
+			currentNotifications.remove(0);
+		}
+		currentNotifications.add(notification);
 	}
 
 	public synchronized static CopyOnWriteArrayList<Notification> getCurrentNotifications() {
@@ -38,7 +48,7 @@ public class NotificationContainer {
 	}
 
 	public synchronized static List<Notification> purgeOldNotifications() {
-		if(null == lastCall) {
+		if (null == lastCall) {
 			return currentNotifications;
 		}
 		List<Notification> allOldNotifications = currentNotifications.stream()
