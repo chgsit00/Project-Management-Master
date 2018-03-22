@@ -87,4 +87,28 @@ public class Notification {
 	public void setInhabitant(String inhabitant) {
 		this.inhabitant = inhabitant;
 	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if(!(o instanceof Notification)) {
+			return false;
+		} 
+		Notification notification = (Notification) o;
+		if(!notification.inhabitantId.equals(this.inhabitantId)) {
+			return false;
+		}
+		if(!notification.message.equals(this.message)) {
+			return false;
+		} 
+		if(!notification.roomId.equals(this.roomId)) {
+			return false;
+		}
+		if(!notification.sender.equals(this.sender)) {
+			return false;
+		}
+		if(!notification.severity.equals(this.severity)) {
+			return false;
+		}
+		return true;
+	}
 }
