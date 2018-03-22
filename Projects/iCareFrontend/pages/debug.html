@@ -105,14 +105,23 @@
 
     <script>
         function onDebugPushClicked(type) {
-            let vm = GetSideWideVm()
-            vm.unreadNotifications.push({
+
+            POST("http:localhost:8080/debug/notification", {
+                inhabitantId: null,
+                name : null,
                 message: "Debug Notification",
                 sender: "Debug",
                 roomId: 0,
                 severity: type
-            })
-            SetSideWideVm(vm)
+            });
+            // let vm = GetSideWideVm()
+            // vm.unreadNotifications.push({
+            //     message: "Debug Notification",
+            //     sender: "Debug",
+            //     roomId: 0,
+            //     severity: type
+            // })
+            // SetSideWideVm(vm)
 
         }
     </script>

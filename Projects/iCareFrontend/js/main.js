@@ -48,18 +48,7 @@ function SetSideWideVm(sideWideVm) {
 function resetSideWideVm() {
     let sideWideVm = {
         unreadNotifications: [
-            {
-                message: "hello",
-                sender: "peter",
-                roomId: 2,
-                severity: "red"
-            },
-            {
-                message: "peace",
-                sender: "pan",
-                roomId: 2,
-                severity: "yellow"
-            }
+          
         ]
     }
     SetSideWideVm(sideWideVm)
@@ -102,7 +91,7 @@ function showNotificationPopup() {
         return;
     }
     let html = `
-    <div class=" notification alert alert-danger" role="alert">
+    <div class="notification alert alert-danger" role="alert">
                             <a href="/pages/alerts.html" class="alert-link">Unread notifications <span class="badge">${unreadCount}</span> </a>
                           </div>
                  
